@@ -286,9 +286,45 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        ソフトウェアの設定
+      </label>
+    
     <a href="./" title="ソフトウェアの設定" class="md-nav__link md-nav__link--active">
       ソフトウェアの設定
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fabo-pca9685" title="FaBo PCA9685のインストール" class="md-nav__link">
+    FaBo PCA9685のインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jetbotfabo-support" title="JetbotのFaBo Support" class="md-nav__link">
+    JetbotのFaBo Support
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -315,6 +351,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fabo-pca9685" title="FaBo PCA9685のインストール" class="md-nav__link">
+    FaBo PCA9685のインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jetbotfabo-support" title="JetbotのFaBo Support" class="md-nav__link">
+    JetbotのFaBo Support
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -328,6 +387,20 @@
                 
                 <h1 id="_1">ソフトウェアの設定</h1>
 <p>FaBo JetBotに対応させたRepoをGit cloneし、インストールする。</p>
+<h2 id="fabo-pca9685">FaBo PCA9685のインストール</h2>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ git clone https://github.com/FaBoPlatform/FaBoPWM-PCA9685-Python
+$ pip3 install FaBoPWM-PCA9685-Python/
+</pre></div></td></tr></table></p>
+<h2 id="jetbotfabo-support">JetbotのFaBo Support</h2>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ git clone https://github.com/FaBoPlatform/jetbot
+$ <span class=nb>cd</span> jetbot
+$ git checkout FaBo
+$ sudo python3 setup.py install
+</pre></div></td></tr></table></p>
                 
                   
                 
