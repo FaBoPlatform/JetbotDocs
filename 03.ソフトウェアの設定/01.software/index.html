@@ -323,6 +323,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5w-power" title="5W Powerモードの設定" class="md-nav__link">
+    5W Powerモードの設定
+  </a>
+  
+</li>
+      
       
       
       
@@ -402,6 +409,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5w-power" title="5W Powerモードの設定" class="md-nav__link">
+    5W Powerモードの設定
+  </a>
+  
+</li>
+      
       
       
       
@@ -424,6 +438,27 @@
 <h2 id="terminal">Terminalの起動</h2>
 <p><img alt="" src="../img/setting01.png" /></p>
 <p><img alt="" src="../img/setting02.png" /></p>
+<p>最新版のjetbotプロジェクトをインストールします。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span>cd ~/
+git clone https://github.com/NVIDIA-AI-IOT/jetbot
+cd jetbot
+sudo python3 setup.py install
+</pre></div></td></tr></table></p>
+<p>最新版のJetbotプロジェクトのnotebookを~/Notebooksフォルダにrsyncします。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span>cd ~/
+sudo apt-get install rsync
+rsync -r jetbot/notebooks ~/Notebooks
+</pre></div></td></tr></table></p>
+<h2 id="5w-power">5W Powerモードの設定</h2>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo nvpmodel -m1
+sudo nvpmodel -q
+</pre></div></td></tr></table></p>
                 
                   
                 
