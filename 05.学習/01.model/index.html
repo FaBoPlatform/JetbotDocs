@@ -36,7 +36,7 @@
     
     
       
-        <title>Jupyer - FaBo JetBot Docs</title>
+        <title>JetBotのSample - FaBo JetBot Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#jupyer" tabindex="1" class="md-skip">
+      <a href="#jetbotsample" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -102,7 +102,7 @@
                 FaBo JetBot Docs
               </span>
               <span class="md-header-nav__topic">
-                Jupyer
+                JetBotのSample
               </span>
             
           
@@ -383,11 +383,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
-      05.Jupyter
+      05.学習
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        05.Jupyter
+        05.学習
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -406,9 +406,38 @@
       
     
     
-    <a href="./" title="Jupyer" class="md-nav__link md-nav__link--active">
-      Jupyer
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        JetBotのSample
+      </label>
+    
+    <a href="./" title="JetBotのSample" class="md-nav__link md-nav__link--active">
+      JetBotのSample
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample" title="Sample" class="md-nav__link">
+    Sample
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -471,6 +500,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample" title="Sample" class="md-nav__link">
+    Sample
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -482,26 +527,41 @@
               
                 
                 
-                <h1 id="jupyer">Jupyer</h1>
-<p>JetbotのIPアドレスを調べる</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ ifconfig -a
-</pre></div></td></tr></table></p>
-<p>ブラウザから、</p>
-<blockquote>
-<p>https://IPアドレス:8888/
-でJupyterに接続する。</p>
-</blockquote>
+                <h1 id="jetbotsample">JetBotのSample</h1>
+<h2 id="sample">Sample</h2>
 <table>
 <thead>
 <tr>
-<th align="left">項目</th>
+<th align="left">モデル</th>
 <th align="left">内容</th>
+<th align="left">学習方法</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Pass</td>
-<td align="left">jetbot</td>
+<td align="left">basic_motion</td>
+<td align="left">モーター制御周りのサンプル</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">collision_avoidance</td>
+<td align="left">画像による境界線認識</td>
+<td align="left">alexnetの転移学習</td>
+</tr>
+<tr>
+<td align="left">object_following</td>
+<td align="left">オブジェクト認識による追従</td>
+<td align="left">SSD Mobilenetの転移学習</td>
+</tr>
+<tr>
+<td align="left">road_following</td>
+<td align="left">道路認識</td>
+<td align="left">resnet18の転移学習</td>
+</tr>
+<tr>
+<td align="left">teleoperation</td>
+<td align="left">Joystickのサンプル</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
