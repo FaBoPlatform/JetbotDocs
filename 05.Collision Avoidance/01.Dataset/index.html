@@ -36,7 +36,7 @@
     
     
       
-        <title>JetBotのSample - FaBo JetBot Docs</title>
+        <title>Datasetの作成 - FaBo JetBot Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#jetbotsample" tabindex="1" class="md-skip">
+      <a href="#dataset" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -102,7 +102,7 @@
                 FaBo JetBot Docs
               </span>
               <span class="md-header-nav__topic">
-                JetBotのSample
+                Datasetの作成
               </span>
             
           
@@ -366,6 +366,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../04.動作確認/02.model/" title="JetBotのSample" class="md-nav__link">
+      JetBotのSample
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -383,11 +395,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
-      05.学習
+      05.Collision Avoidance
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        05.学習
+        05.Collision Avoidance
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -407,11 +419,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        JetBotのSample
+        Datasetの作成
       </label>
     
-    <a href="./" title="JetBotのSample" class="md-nav__link md-nav__link--active">
-      JetBotのSample
+    <a href="./" title="Datasetの作成" class="md-nav__link md-nav__link--active">
+      Datasetの作成
     </a>
     
       
@@ -425,8 +437,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sample" title="Sample" class="md-nav__link">
-    Sample
+  <a href="#notebook" title="Notebook" class="md-nav__link">
+    Notebook
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="データ・セットの作成" class="md-nav__link">
+    データ・セットの作成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasetzip" title="Dataset.zipの作成とローカルへのダウンロード" class="md-nav__link">
+    Dataset.zipの作成とローカルへのダウンロード
   </a>
   
 </li>
@@ -439,18 +465,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../02.collision/" title="Collision Avoidance" class="md-nav__link">
-      Collision Avoidance
-    </a>
   </li>
 
         
@@ -516,8 +530,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sample" title="Sample" class="md-nav__link">
-    Sample
+  <a href="#notebook" title="Notebook" class="md-nav__link">
+    Notebook
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="データ・セットの作成" class="md-nav__link">
+    データ・セットの作成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasetzip" title="Dataset.zipの作成とローカルへのダウンロード" class="md-nav__link">
+    Dataset.zipの作成とローカルへのダウンロード
   </a>
   
 </li>
@@ -539,44 +567,49 @@
               
                 
                 
-                <h1 id="jetbotsample">JetBotのSample</h1>
-<h2 id="sample">Sample</h2>
+                <h1 id="dataset">Datasetの作成</h1>
+<p>障害物を避けるための50枚+50枚程度(合計 100枚)のデータ・セットを作成し、学習させます。</p>
+<h2 id="notebook">Notebook</h2>
+<p>Jupyter上で、~/Notebooks/collision_avoidanceを開きます。</p>
+<p><img alt="" src="../img/co001.png" /></p>
 <table>
 <thead>
 <tr>
-<th align="left">モデル</th>
-<th align="left">内容</th>
-<th align="left">学習方法</th>
+<th align="left">Notebook</th>
+<th align="left">用途</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">basic_motion</td>
-<td align="left">モーター制御周りのサンプル</td>
-<td align="left">-</td>
+<td align="left">data_collecion.ipynb</td>
+<td align="left">データ・セット作成用</td>
 </tr>
 <tr>
-<td align="left">collision_avoidance</td>
-<td align="left">画像による境界線認識</td>
-<td align="left">alexnetの転移学習</td>
+<td align="left">live_demo.ipynb</td>
+<td align="left">実行用</td>
 </tr>
 <tr>
-<td align="left">object_following</td>
-<td align="left">オブジェクト認識による追従</td>
-<td align="left">SSD Mobilenetの転移学習</td>
-</tr>
-<tr>
-<td align="left">road_following</td>
-<td align="left">道路認識</td>
-<td align="left">resnet18の転移学習</td>
-</tr>
-<tr>
-<td align="left">teleoperation</td>
-<td align="left">Joystickのサンプル</td>
-<td align="left"></td>
+<td align="left">train_model.ipynb</td>
+<td align="left">トレーニング用</td>
 </tr>
 </tbody>
 </table>
+<h2 id="_1">データ・セットの作成</h2>
+<p>data_collecion.ipynbを開きます。</p>
+<p><img alt="" src="../img/co001.png" /></p>
+<p>カメラを起動します。</p>
+<p><img alt="" src="../img/co002.png" /></p>
+<p><img alt="" src="../img/co003.png" /></p>
+<p>Create New view for Outputを選択し、Cellを独立させます。</p>
+<p><img alt="" src="../img/co004.png" /></p>
+<p><img alt="" src="../img/co005.png" /></p>
+<p>Jupyterを実行していくと、datasetフォルダが生成され、フォルダ下に画像が保存されていきます。</p>
+<p><img alt="" src="../img/co006.png" /></p>
+<p>障害物の時はadd blocked, 開放エリアの時はadd freeで写真を登録していきます。</p>
+<p><img alt="" src="../img/co007.png" /></p>
+<h2 id="datasetzip">Dataset.zipの作成とローカルへのダウンロード</h2>
+<p><img alt="" src="../img/co008.png" /></p>
+<p><img alt="" src="../img/co009.png" /></p>
                 
                   
                 
@@ -597,7 +630,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../04.動作確認/01.test/" title="JetBotの動作確認" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../04.動作確認/02.model/" title="JetBotのSample" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -606,19 +639,19 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                JetBotの動作確認
+                JetBotのSample
               </span>
             </div>
           </a>
         
         
-          <a href="../02.collision/" title="Collision Avoidance" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../06.etc/01.package/" title="パッケージ" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                Collision Avoidance
+                パッケージ
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
