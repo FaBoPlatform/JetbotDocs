@@ -36,7 +36,7 @@
     
     
       
-        <title>クラウドでの学習 - FaBo JetBot Docs</title>
+        <title>Jetbotでの学習 - FaBo JetBot Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#_1" tabindex="1" class="md-skip">
+      <a href="#jetbot" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -102,7 +102,7 @@
                 FaBo JetBot Docs
               </span>
               <span class="md-header-nav__topic">
-                クラウドでの学習
+                Jetbotでの学習
               </span>
             
           
@@ -443,11 +443,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        クラウドでの学習
+        Jetbotでの学習
       </label>
     
-    <a href="./" title="クラウドでの学習" class="md-nav__link md-nav__link--active">
-      クラウドでの学習
+    <a href="./" title="Jetbotでの学習" class="md-nav__link md-nav__link--active">
+      Jetbotでの学習
     </a>
     
       
@@ -461,22 +461,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#git-clone" title="Git clone" class="md-nav__link">
-    Git clone
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#datasetupload" title="DatasetのUpload" class="md-nav__link">
-    DatasetのUpload
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notebook" title="学習用のNotebook" class="md-nav__link">
-    学習用のNotebook
+  <a href="#notebook" title="学習用 Notebook" class="md-nav__link">
+    学習用 Notebook
   </a>
   
 </li>
@@ -602,22 +588,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#git-clone" title="Git clone" class="md-nav__link">
-    Git clone
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#datasetupload" title="DatasetのUpload" class="md-nav__link">
-    DatasetのUpload
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notebook" title="学習用のNotebook" class="md-nav__link">
-    学習用のNotebook
+  <a href="#notebook" title="学習用 Notebook" class="md-nav__link">
+    学習用 Notebook
   </a>
   
 </li>
@@ -639,23 +611,17 @@
               
                 
                 
-                <h1 id="_1">クラウドでの学習</h1>
-<p>dataset.zipを用いてクラウドで学習します。</p>
-<h2 id="git-clone">Git clone</h2>
-<p>JuoyterのTerminalを開き、JetbotプロジェクトをCloneします。</p>
-<p><img alt="" src="../img/cloud001.png" /></p>
-<p><img alt="" src="../img/cloud002.png" /></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>git clone https://github.com/NVIDIA-AI-IOT/jetbot
-</pre></div></td></tr></table></p>
-<h2 id="datasetupload">DatasetのUpload</h2>
-<p>dataset.zipをJuputerのcollision_avoidanceと同じ階層のフォルダの下にUploadします。</p>
-<p><img alt="" src="../img/cloud003.png" /></p>
-<p><img alt="" src="../img/cloud004.png" /></p>
-<p><img alt="" src="../img/cloud005.png" /></p>
-<p><img alt="" src="../img/cloud006.png" /></p>
-<h2 id="notebook">学習用のNotebook</h2>
-<p>jetbot/notebooks/collision_avoidance のtrain_mode.ipynpをjupyterで開きます。</p>
-<p><img alt="" src="../img/cloud007.png" /></p>
+                <h1 id="jetbot">Jetbotでの学習</h1>
+<p>Jetson nanoでは、Jetson nano上で、そのまま学習が可能です。</p>
+<h2 id="notebook">学習用 Notebook</h2>
+<p>Jupyter上で、~/Notebooks/collision_avoidanceを開きます。</p>
+<p><img alt="" src="../img/jet001.png" /></p>
+<p>Datasetはすでに展開済みなので、下記処理はSkipします。</p>
+<p><img alt="" src="../img/jet002.png" /></p>
+<p>順番に実行していき、最後の学習が始まるとAccuracyが表示されます。</p>
+<p><img alt="" src="../img/jet003.png" /></p>
+<p>best_model.pthが生成されれば、学習は成功です。</p>
+<p><img alt="" src="../img/jet004.png" /></p>
                 
                   
                 
