@@ -36,7 +36,7 @@
     
     
       
-        <title>Wifiへの接続 - FaBo JetBot Docs</title>
+        <title>USB経由でJetBotに接続 - FaBo JetBot Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#wifi" tabindex="1" class="md-skip">
+      <a href="#usbjetbot" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -102,7 +102,7 @@
                 FaBo JetBot Docs
               </span>
               <span class="md-header-nav__topic">
-                Wifiへの接続
+                USB経由でJetBotに接続
               </span>
             
           
@@ -312,63 +312,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Wifiへの接続
-      </label>
-    
-    <a href="./" title="Wifiへの接続" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../01.wifi/" title="Wifiへの接続" class="md-nav__link">
       Wifiへの接続
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">目次</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#wifi-spot" title="Wifi spotへ接続" class="md-nav__link">
-    Wifi spotへ接続
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#terminalip" title="TerminalでIPアドレスの確認" class="md-nav__link">
-    TerminalでIPアドレスの確認
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#oled" title="OLEDでの確認" class="md-nav__link">
-    OLEDでの確認
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -400,11 +348,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../04.usb_wifi/" title="USB経由でJetBotに接続" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        USB経由でJetBotに接続
+      </label>
+    
+    <a href="./" title="USB経由でJetBotに接続" class="md-nav__link md-nav__link--active">
       USB経由でJetBotに接続
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ip" title="IPの割り振り" class="md-nav__link">
+    IPの割り振り
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="ブラウザのからの接続" class="md-nav__link">
+    ブラウザのからの接続
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wifi" title="コマンドでのWifiへの接続" class="md-nav__link">
+    コマンドでのWifiへの接続
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -614,22 +614,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wifi-spot" title="Wifi spotへ接続" class="md-nav__link">
-    Wifi spotへ接続
+  <a href="#ip" title="IPの割り振り" class="md-nav__link">
+    IPの割り振り
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#terminalip" title="TerminalでIPアドレスの確認" class="md-nav__link">
-    TerminalでIPアドレスの確認
+  <a href="#_1" title="ブラウザのからの接続" class="md-nav__link">
+    ブラウザのからの接続
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#oled" title="OLEDでの確認" class="md-nav__link">
-    OLEDでの確認
+  <a href="#wifi" title="コマンドでのWifiへの接続" class="md-nav__link">
+    コマンドでのWifiへの接続
   </a>
   
 </li>
@@ -651,16 +651,50 @@
               
                 
                 
-                <h1 id="wifi">Wifiへの接続</h1>
-<h2 id="wifi-spot">Wifi spotへ接続</h2>
-<p><img alt="" src="../img/nano001.png" /></p>
-<h2 id="terminalip">TerminalでIPアドレスの確認</h2>
-<p><img alt="" src="../img/nano002.png" /></p>
-<p>ifconfig -a でwlan0のIPアドレスを確認します。</p>
-<p><img alt="" src="../img/nano003.png" /></p>
-<p><img alt="" src="../img/nano004.png" /></p>
-<h2 id="oled">OLEDでの確認</h2>
-<p><img alt="" src="../img/nano005.png" /></p>
+                <h1 id="usbjetbot">USB経由でJetBotに接続</h1>
+<h2 id="ip">IPの割り振り</h2>
+<p>J48にJunperピンを差し込み、PCとJetBotをUSBで接続します。下記IPアドレスがそれぞれ割り振られます。</p>
+<table>
+<thead>
+<tr>
+<th align="left">項目</th>
+<th align="left">値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">JetBot</td>
+<td align="left">192.168.55.1</td>
+</tr>
+<tr>
+<td align="left">PC</td>
+<td align="left">192.168.55.100</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_1">ブラウザのからの接続</h2>
+<p>PCのブラウザで、</p>
+<p><code>http://192.168.55.1:8888</code></p>
+<p>に接続します。</p>
+<table>
+<thead>
+<tr>
+<th align="left">Password</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">jetbot</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wifi">コマンドでのWifiへの接続</h2>
+<p>アクセスポイントの一覧を表示</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>nmcli device wifi list
+</pre></div></td></tr></table></p>
+<p>アクセスポイントへの接続</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo nmcli device wifi connect &#39;アクセスポイント名&#39; password &#39;パスワード&#39; ifname wlan0
+</pre></div></td></tr></table></p>
                 
                   
                 
@@ -681,7 +715,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../02.組み立て/04.wifi/" title="対応Wifi" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../03.jupyter/" title="JupyerのChromeとの相性問題" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -690,19 +724,19 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                対応Wifi
+                JupyerのChromeとの相性問題
               </span>
             </div>
           </a>
         
         
-          <a href="../02.software/" title="ソフトウェアの設定" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../04.動作確認/01.test/" title="JetBotの動作確認" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                ソフトウェアの設定
+                JetBotの動作確認
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
