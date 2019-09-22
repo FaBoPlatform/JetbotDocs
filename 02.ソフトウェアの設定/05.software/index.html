@@ -350,13 +350,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#5w-power" title="5W Powerモードの設定" class="md-nav__link">
-    5W Powerモードの設定
-  </a>
-  
-</li>
-      
       
       
       
@@ -707,13 +700,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#5w-power" title="5W Powerモードの設定" class="md-nav__link">
-    5W Powerモードの設定
-  </a>
-  
-</li>
-      
       
       
       
@@ -758,15 +744,6 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is an
 2</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt-get install rsync
 rsync -av ~/jetbot/notebooks/ ~/Notebooks
 </pre></div></td></tr></table></p>
-<h2 id="5w-power">5W Powerモードの設定</h2>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo nvpmodel -m 1
-sudo nvpmodel -q
-</pre></div></td></tr></table></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>-m 1 が省電力モードになり、-m 0が標準電力モードになります。-m 0では電力が4A程度必要になります。</p>
-</div>
                 
                   
                 
