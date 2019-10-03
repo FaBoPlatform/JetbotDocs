@@ -792,15 +792,14 @@
                 <h1 id="tensorrt">TensorRT化</h1>
 <h2 id="train_model">train_model修正箇所</h2>
 <p>RESNETの読み込み。</p>
-<p>新規で追加</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
-4</pre></div></td><td class=code><div class=codehilite><pre><span></span>device = torch.device(&#39;cuda&#39;)
-model = models.resnet18(pretrained=False)
-model.fc = torch.nn.Linear(512, 2)
-model = model.cuda().eval().half()
-</pre></div></td></tr></table></p>
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=n>device</span> <span class=o>=</span> <span class=n>torch</span><span class=o>.</span><span class=n>device</span><span class=p>(</span><span class=s1>&#39;cuda&#39;</span><span class=p>)</span>
+<span class=n>model</span> <span class=o>=</span> <span class=n>models</span><span class=o>.</span><span class=n>resnet18</span><span class=p>(</span><span class=n>pretrained</span><span class=o>=</span><span class=bp>False</span><span class=p>)</span>
+<span class=n>model</span><span class=o>.</span><span class=n>fc</span> <span class=o>=</span> <span class=n>torch</span><span class=o>.</span><span class=n>nn</span><span class=o>.</span><span class=n>Linear</span><span class=p>(</span><span class=mi>512</span><span class=p>,</span> <span class=mi>2</span><span class=p>)</span>
+<span class=hll><span class=n>model</span> <span class=o>=</span> <span class=n>model</span><span class=o>.</span><span class=n>cuda</span><span class=p>()</span><span class=o>.</span><span class=n>eval</span><span class=p>()</span><span class=o>.</span><span class=n>half</span><span class=p>()</span>
+</span></pre></div></td></tr></table></p>
 <p>作成したモデルの読み込み。</p>
 <p>新規で追加</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>model.load_state_dict(torch.load(&#39;best_steering_model_xy.pth&#39;))
