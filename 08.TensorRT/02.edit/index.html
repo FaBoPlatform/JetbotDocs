@@ -850,7 +850,7 @@ print(&#39;max error: %f&#39; % float(torch.max(torch.abs(output - output_trt)))
 <span class=kn>from</span> <span class=nn>torch2trt</span> <span class=kn>import</span> <span class=n>TRTModule</span> 
 
 <span class=n>model_trt</span> <span class=o>=</span> <span class=n>TRTModule</span><span class=p>()</span>
-<span class=n>model_trt</span><span class=o>.</span><span class=n>load_state_dict</span><span class=p>(</span><span class=n>torch</span><span class=o>.</span><span class=n>load</span><span class=p>(</span><span class=s1>&#39;road_following_model_xy_trt&#39;</span><span class=p>))</span>
+<span class=n>model_trt</span><span class=o>.</span><span class=n>load_state_dict</span><span class=p>(</span><span class=n>torch</span><span class=o>.</span><span class=n>load</span><span class=p>(</span><span class=s1>&#39;road_following_model_xy_trt.pth&#39;</span><span class=p>))</span>
 <span class=n>device</span> <span class=o>=</span> <span class=n>torch</span><span class=o>.</span><span class=n>device</span><span class=p>(</span><span class=s1>&#39;cuda&#39;</span><span class=p>)</span>
 <span class=n>model</span> <span class=o>=</span> <span class=n>model_trt</span><span class=o>.</span><span class=n>to</span><span class=p>(</span><span class=n>device</span><span class=p>)</span>
 <span class=n>model</span> <span class=o>=</span> <span class=n>model_trt</span><span class=o>.</span><span class=n>eval</span><span class=p>()</span>
