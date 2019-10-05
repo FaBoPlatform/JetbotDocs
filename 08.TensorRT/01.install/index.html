@@ -798,6 +798,11 @@
 cd torch2trt
 sudo python3 setup.py install
 </pre></div></td></tr></table></p>
+<p>torch2trtに対応したPyTotchにUpdateします。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>wget https://nvidia.box.com/shared/static/06vlvedmqpqstu1dym49fo7aapgfyyu9.whl -O torch-1.2.0a0+8554416-cp36-cp36m-linux_aarch64.whl
+sudo pip3 install numpy torch-1.2.0a0+8554416-cp36-cp36m-linux_aarch64.whl
+</pre></div></td></tr></table></p>
 <h2 id="_2">推論のスピードアップ</h2>
 <p>FPSの単位で、JetBotのサンプルも下記程度の速度アップが可能です。</p>
 <table>

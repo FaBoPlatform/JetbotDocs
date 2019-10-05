@@ -800,18 +800,15 @@
 <span class=n>model</span><span class=o>.</span><span class=n>fc</span> <span class=o>=</span> <span class=n>torch</span><span class=o>.</span><span class=n>nn</span><span class=o>.</span><span class=n>Linear</span><span class=p>(</span><span class=mi>512</span><span class=p>,</span> <span class=mi>2</span><span class=p>)</span>
 <span class=hll><span class=n>model</span> <span class=o>=</span> <span class=n>model</span><span class=o>.</span><span class=n>cuda</span><span class=p>()</span><span class=o>.</span><span class=n>eval</span><span class=p>()</span><span class=o>.</span><span class=n>half</span><span class=p>()</span>
 </span></pre></div></td></tr></table></p>
-<p>作成したモデルの読み込み。</p>
-<p>新規で追加</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>model.load_state_dict(torch.load(&#39;best_steering_model_xy.pth&#39;))
-</pre></div></td></tr></table></p>
-<p>PyTorchからTensorRTに変換。</p>
+<p>すでに学習済みのモデルに対して、学習が終わった後でTensorRTに変換する。</p>
 <p>新規で追加</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span>data = torch.randn((1, 3, 224, 224)).cuda().half()
-model_trt = torch2trt(model, [data], fp16_mode=True)
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=kn>from</span> <span class=nn>troch2trt</span> <span class=kn>import</span> <span class=n>troch2trt</span> 
+<span class=n>data</span> <span class=o>=</span> <span class=n>torch</span><span class=o>.</span><span class=n>randn</span><span class=p>((</span><span class=mi>1</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>224</span><span class=p>,</span> <span class=mi>224</span><span class=p>))</span><span class=o>.</span><span class=n>cuda</span><span class=p>()</span><span class=o>.</span><span class=n>half</span><span class=p>()</span>
+<span class=n>model_trt</span> <span class=o>=</span> <span class=n>torch2trt</span><span class=p>(</span><span class=n>model</span><span class=p>,</span> <span class=p>[</span><span class=n>data</span><span class=p>],</span> <span class=n>fp16_mode</span><span class=o>=</span><span class=bp>True</span><span class=p>)</span>
 </pre></div></td></tr></table></p>
-<p>変換前と変換後の比較。</p>
-<p>新規で追加</p>
+<p>変換が正しく行われたか、変換前と変換後の比較をおこなう。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
@@ -830,8 +827,7 @@ print(&#39;max error: %f&#39; % float(torch.max(torch.abs(output - output_trt)))
     tensor([ 0.6763,  2.5742,  2.9551,  2.6562,  3.9531,  3.5449,  3.5840,  0.3359, -1.0742, -0.3525], device='cuda:0', dtype=torch.float16)
     max error: 0.020508</p>
 </blockquote>
-<p>TensorRTのモデルとして保存。</p>
-<p>新規で追加</p>
+<p>最後に、TensorRTのモデルとして保存する。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>torch.save(model_trt.state_dict(), &#39;road_following_model_xy_trt.pth&#39;)
 </pre></div></td></tr></table></p>
 <h2 id="live_demo">live_demo 修正箇所</h2>
