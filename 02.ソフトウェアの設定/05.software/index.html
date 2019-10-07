@@ -367,7 +367,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../06.power/" title="電力モード" class="md-nav__link">
+    <a href="../06.onoff/" title="JetBotのOn/Off" class="md-nav__link">
+      JetBotのOn/Off
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../07.power/" title="電力モード" class="md-nav__link">
       電力モード
     </a>
   </li>
@@ -803,8 +815,7 @@ sudo python3 setup.py install
 <p>Rebootを実行します。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo reboot
 </pre></div></td></tr></table></p>
-<p>Jetbotの電源をOffにし、再度 Onにします。</p>
-<p><img alt="" src="../img/onoff001.png" /></p>
+<p>再起動には、2分程度かかります。2分程度経過したらBrowserをReloadすると、再びJetBotに接続されます。</p>
 <div class="admonition warning">
 <p>Rebootしないと、次の処理実行時に、下記エラーが発生します。
 E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
@@ -851,13 +862,13 @@ rsync -av ~/jetbot/notebooks/ ~/Notebooks
           </a>
         
         
-          <a href="../06.power/" title="電力モード" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../06.onoff/" title="JetBotのOn/Off" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                電力モード
+                JetBotのOn/Off
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
