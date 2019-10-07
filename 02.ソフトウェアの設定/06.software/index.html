@@ -36,7 +36,7 @@
     
     
       
-        <title>電力モード - FaBo JetBot Docs</title>
+        <title>ソフトウェアの設定 - FaBo JetBot Docs</title>
       
     
     
@@ -110,7 +110,7 @@
                 FaBo JetBot Docs
               </span>
               <span class="md-header-nav__topic">
-                電力モード
+                ソフトウェアの設定
               </span>
             
           
@@ -298,32 +298,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../04.wifi/" title="JetBotをWifiに接続" class="md-nav__link">
+    <a href="../04.camera/" title="Cameraの認識確認" class="md-nav__link">
+      Cameraの認識確認
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../05.wifi/" title="JetBotをWifiに接続" class="md-nav__link">
       JetBotをWifiに接続
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../05.software/" title="ソフトウェアの設定" class="md-nav__link">
-      ソフトウェアの設定
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../06.onoff/" title="JetBotの充電と電源" class="md-nav__link">
-      JetBotの充電と電源
     </a>
   </li>
 
@@ -343,11 +331,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        電力モード
+        ソフトウェアの設定
       </label>
     
-    <a href="./" title="電力モード" class="md-nav__link md-nav__link--active">
-      電力モード
+    <a href="./" title="ソフトウェアの設定" class="md-nav__link md-nav__link--active">
+      ソフトウェアの設定
     </a>
     
       
@@ -361,8 +349,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#5w-power" title="5W Powerモードの設定" class="md-nav__link">
-    5W Powerモードの設定
+  <a href="#git-clone" title="最新のプロジェクトをGit clone" class="md-nav__link">
+    最新のプロジェクトをGit clone
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notebook" title="Notebookの同期" class="md-nav__link">
+    Notebookの同期
   </a>
   
 </li>
@@ -375,6 +370,30 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../07.onoff/" title="JetBotの充電と電源" class="md-nav__link">
+      JetBotの充電と電源
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../08.power/" title="電力モード" class="md-nav__link">
+      電力モード
+    </a>
   </li>
 
         
@@ -752,8 +771,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#5w-power" title="5W Powerモードの設定" class="md-nav__link">
-    5W Powerモードの設定
+  <a href="#git-clone" title="最新のプロジェクトをGit clone" class="md-nav__link">
+    最新のプロジェクトをGit clone
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notebook" title="Notebookの同期" class="md-nav__link">
+    Notebookの同期
   </a>
   
 </li>
@@ -775,38 +801,32 @@
               
                 
                 
-                <h1 id="_1">電力モード</h1>
-<p>Jetson Nanoでは、2つの電力モードが存在しています。</p>
-<table>
-<thead>
-<tr>
-<th align="left">モード</th>
-<th align="left">コマンド</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">5W</td>
-<td align="left">sudo nvpmodel -m 1</td>
-</tr>
-<tr>
-<td align="left">MAXN</td>
-<td align="left">sudo nvpmodel -m 0</td>
-</tr>
-</tbody>
-</table>
-<h2 id="5w-power">5W Powerモードの設定</h2>
-<p>5Wモードに変更します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo nvpmodel -m 1
+                <h1 id="_1">ソフトウェアの設定</h1>
+<h2 id="git-clone">最新のプロジェクトをGit clone</h2>
+<p>最新版のjetbotプロジェクトをインストールします。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span>cd ~/
+git clone https://github.com/FaBoPlatform/jetbot.git
+cd jetbot
+sudo python3 setup.py install
 </pre></div></td></tr></table></p>
-<p>電力モードが変更されたかの確認をおこないます。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>nvpmodel -q --verbose
+<p>Rebootを実行します。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo reboot
 </pre></div></td></tr></table></p>
-<p><img alt="" src="../img/power001.png" /></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p><code>sudo nvpmodel -m 1</code> が省電力モードになり、<code>sudo nvpmodel -m 0</code>が標準電力モードになります。<code>sudo nvpmodel -m 0</code>では電力が4A程度必要になります。</p>
+<p>再起動には、2分程度かかります。2分程度経過したらBrowserをReloadすると、再びJetBotに接続されます。</p>
+<div class="admonition warning">
+<p>Rebootしないと、次の処理実行時に、下記エラーが発生します。
+E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?</p>
 </div>
+<h2 id="notebook">Notebookの同期</h2>
+<p>最新版のJetbotプロジェクトのnotebookを~/Notebooksフォルダにrsyncします。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt-get install rsync
+rsync -av ~/jetbot/notebooks/ ~/Notebooks
+</pre></div></td></tr></table></p>
                 
                   
                 
@@ -827,7 +847,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../06.onoff/" title="JetBotの充電と電源" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../05.wifi/" title="JetBotをWifiに接続" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -836,19 +856,19 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                JetBotの充電と電源
+                JetBotをWifiに接続
               </span>
             </div>
           </a>
         
         
-          <a href="../../03.Sample/01.model/" title="JetBotのSample" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../07.onoff/" title="JetBotの充電と電源" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                JetBotのSample
+                JetBotの充電と電源
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
