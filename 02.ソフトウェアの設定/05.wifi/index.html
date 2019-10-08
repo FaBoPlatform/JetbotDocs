@@ -343,6 +343,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#wifiip" title="Wifiで割り振られたIPアドレスの確認" class="md-nav__link">
+    Wifiで割り振られたIPアドレスの確認
+  </a>
+  
+</li>
+      
       
       
       
@@ -770,6 +777,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#wifiip" title="Wifiで割り振られたIPアドレスの確認" class="md-nav__link">
+    Wifiで割り振られたIPアドレスの確認
+  </a>
+  
+</li>
+      
       
       
       
@@ -795,6 +809,14 @@
 <p>アクセスポイントへの接続</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo nmcli device wifi connect &#39;アクセスポイント名&#39; password &#39;パスワード&#39; ifname wlan0
 </pre></div></td></tr></table></p>
+<h2 id="wifiip">Wifiで割り振られたIPアドレスの確認</h2>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>ifconfig -a
+</pre></div></td></tr></table></p>
+<p><img alt="" src="../img/wifi003.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Wifiが安定した環境ではWifiを使用が可能ですが、遅延等の可能性が高まるために、Wifiはパッケージインストール用と割り切り、チュートリアルは、USB接続で割り振られる<code>192.168.55.1:8888</code>で進行してください。</p>
+</div>
                 
                   
                 
