@@ -36,7 +36,7 @@
     
     
       
-        <title>PyTorchのUpdate - FaBo JetBot Docs</title>
+        <title>JetBotの充電と電源 - FaBo JetBot Docs</title>
       
     
     
@@ -84,7 +84,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#pytorchupdate" tabindex="1" class="md-skip">
+      <a href="#jetbot" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -110,7 +110,7 @@
                 FaBo JetBot Docs
               </span>
               <span class="md-header-nav__topic">
-                PyTorchのUpdate
+                JetBotの充電と電源
               </span>
             
           
@@ -274,8 +274,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../02.usb/" title="USB経由でJetBotに接続" class="md-nav__link">
-      USB経由でJetBotに接続
+    <a href="../02.router/" title="ルーターの設定" class="md-nav__link">
+      ルーターの設定
     </a>
   </li>
 
@@ -286,8 +286,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../03.i2c/" title="I2Cの認識確認" class="md-nav__link">
-      I2Cの認識確認
+    <a href="../03.usb/" title="USB経由でJetBotに接続" class="md-nav__link">
+      USB経由でJetBotに接続
     </a>
   </li>
 
@@ -310,7 +310,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../05.wifi/" title="JetBotをWifiに接続" class="md-nav__link">
+    <a href="../05.i2c/" title="I2Cの認識確認" class="md-nav__link">
+      I2Cの認識確認
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../06.wifi/" title="JetBotをWifiに接続" class="md-nav__link">
       JetBotをWifiに接続
     </a>
   </li>
@@ -322,32 +334,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../06.software/" title="JetbotとNotebookの更新" class="md-nav__link">
+    <a href="../07.software/" title="JetbotとNotebookの更新" class="md-nav__link">
       JetbotとNotebookの更新
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../07.onoff/" title="JetBotの充電と電源" class="md-nav__link">
-      JetBotの充電と電源
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../08.power/" title="電力モード" class="md-nav__link">
-      電力モード
     </a>
   </li>
 
@@ -367,11 +355,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        PyTorchのUpdate
+        JetBotの充電と電源
       </label>
     
-    <a href="./" title="PyTorchのUpdate" class="md-nav__link md-nav__link--active">
-      PyTorchのUpdate
+    <a href="./" title="JetBotの充電と電源" class="md-nav__link md-nav__link--active">
+      JetBotの充電と電源
     </a>
     
       
@@ -385,8 +373,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pytotch120update" title="PyTotchを1.2.0にUpdate" class="md-nav__link">
-    PyTotchを1.2.0にUpdate
+  <a href="#jetbotonoff" title="JetBotのバッテリーのOn/Off" class="md-nav__link">
+    JetBotのバッテリーのOn/Off
   </a>
   
 </li>
@@ -408,7 +396,31 @@
 
 
   <li class="md-nav__item">
-    <a href="../10.jupyter/" title="JupyerのChromeとの相性問題" class="md-nav__link">
+    <a href="../09.power/" title="電力モード" class="md-nav__link">
+      電力モード
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../10.pytorch/" title="PyTorchのUpdate" class="md-nav__link">
+      PyTorchのUpdate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../11.jupyter/" title="JupyerのChromeとの相性問題" class="md-nav__link">
       JupyerのChromeとの相性問題
     </a>
   </li>
@@ -836,8 +848,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pytotch120update" title="PyTotchを1.2.0にUpdate" class="md-nav__link">
-    PyTotchを1.2.0にUpdate
+  <a href="#jetbotonoff" title="JetBotのバッテリーのOn/Off" class="md-nav__link">
+    JetBotのバッテリーのOn/Off
   </a>
   
 </li>
@@ -859,14 +871,16 @@
               
                 
                 
-                <h1 id="pytorchupdate">PyTorchのUpdate</h1>
-<h2 id="pytotch120update">PyTotchを1.2.0にUpdate</h2>
-<p>TensorRTにモデルを変換する事を考えて、PyTorchを最新版の1.2.0にUpdateしておきます。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span>wget https://nvidia.box.com/shared/static/06vlvedmqpqstu1dym49fo7aapgfyyu9.whl -O torch-1.2.0a0+8554416-cp36-cp36m-linux_aarch64.whl
-sudo pip3 install numpy torch-1.2.0a0+8554416-cp36-cp36m-linux_aarch64.whl
-</pre></div></td></tr></table></p>
-<p><a href="https://devtalk.nvidia.com/default/topic/1049071/jetson-nano/pytorch-for-jetson-nano/">参考のページ</a></p>
+                <h1 id="jetbot">JetBotの充電と電源</h1>
+<h2 id="jetbotonoff">JetBotのバッテリーのOn/Off</h2>
+<p>Jetbotの電源をOffにし、再度 Onにします。</p>
+<p><img alt="" src="../img/onoff001.png" /></p>
+<h1 id="jetbot_1">JetBotのバッテリーの充電</h1>
+<p>データ通信用USBケーブルとは、反対側にバッテリーの充電用のUSBがあります。</p>
+<p><img alt="" src="../img/charge001.png" /></p>
+<p><img alt="" src="../img/charge002.png" /></p>
+<p>充電時は、Fanが回ってしまうので、DC Jackを外してください。</p>
+<p><img alt="" src="../img/charge003.png" /></p>
                 
                   
                 
@@ -887,7 +901,7 @@ sudo pip3 install numpy torch-1.2.0a0+8554416-cp36-cp36m-linux_aarch64.whl
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../08.power/" title="電力モード" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../07.software/" title="JetbotとNotebookの更新" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -896,19 +910,19 @@ sudo pip3 install numpy torch-1.2.0a0+8554416-cp36-cp36m-linux_aarch64.whl
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                電力モード
+                JetbotとNotebookの更新
               </span>
             </div>
           </a>
         
         
-          <a href="../10.jupyter/" title="JupyerのChromeとの相性問題" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../09.power/" title="電力モード" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                JupyerのChromeとの相性問題
+                電力モード
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
