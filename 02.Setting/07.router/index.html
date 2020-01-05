@@ -927,15 +927,15 @@
     <span class=k>return</span> <span class=s1>&#39;jetson-nano&#39;</span> <span class=ow>in</span> <span class=n>platform_model_str</span><span class=p>()</span>
 
 
-<span class=hll><span class=k>def</span> <span class=nf>get_ip_address</span><span class=p>(</span><span class=n>interface</span><span class=p>):</span>
-</span><span class=hll>    <span class=k>try</span><span class=p>:</span>
+<span class=k>def</span> <span class=nf>get_ip_address</span><span class=p>(</span><span class=n>interface</span><span class=p>):</span>
+<span class=hll>    <span class=k>try</span><span class=p>:</span>
 </span><span class=hll>        <span class=k>if</span> <span class=n>get_network_interface_state</span><span class=p>(</span><span class=n>interface</span><span class=p>)</span> <span class=o>==</span> <span class=s1>&#39;down&#39;</span><span class=p>:</span>
 </span><span class=hll>            <span class=k>return</span> <span class=bp>None</span>
 </span><span class=hll>        <span class=n>cmd</span> <span class=o>=</span> <span class=s2>&quot;ifconfig </span><span class=si>%s</span><span class=s2> | grep -Eo &#39;inet (addr:)?([0-9]*\.){3}[0-9]*&#39; | grep -Eo &#39;([0-9]*\.){3}[0-9]*&#39; | grep -v &#39;127.0.0.1&#39;&quot;</span> <span class=o>%</span> <span class=n>interface</span>
 </span><span class=hll>        <span class=k>return</span> <span class=n>subprocess</span><span class=o>.</span><span class=n>check_output</span><span class=p>(</span><span class=n>cmd</span><span class=p>,</span> <span class=n>shell</span><span class=o>=</span><span class=bp>True</span><span class=p>)</span><span class=o>.</span><span class=n>decode</span><span class=p>(</span><span class=s1>&#39;ascii&#39;</span><span class=p>)[:</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span>
-</span>    <span class=k>except</span><span class=p>:</span>
-        <span class=k>return</span> <span class=bp>None</span>
-
+</span><span class=hll>    <span class=k>except</span><span class=p>:</span>
+</span><span class=hll>        <span class=k>return</span> <span class=bp>None</span>
+</span>
 <span class=k>def</span> <span class=nf>get_network_interface_state</span><span class=p>(</span><span class=n>interface</span><span class=p>):</span>
     <span class=k>return</span> <span class=n>subprocess</span><span class=o>.</span><span class=n>check_output</span><span class=p>(</span><span class=s1>&#39;cat /sys/class/net/</span><span class=si>%s</span><span class=s1>/operstate&#39;</span> <span class=o>%</span> <span class=n>interface</span><span class=p>,</span> <span class=n>shell</span><span class=o>=</span><span class=bp>True</span><span class=p>)</span><span class=o>.</span><span class=n>decode</span><span class=p>(</span><span class=s1>&#39;ascii&#39;</span><span class=p>)[:</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span>
 </pre></div></td></tr></table></p>
