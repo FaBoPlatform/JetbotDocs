@@ -262,6 +262,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../00.usb/" title="USB経由でJetBotに接続" class="md-nav__link">
+      USB経由でJetBotに接続
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../01.sd/" title="SDカードの作成" class="md-nav__link">
       SDカードの作成
     </a>
@@ -301,16 +313,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wifi-spot" title="Wifi spotへ接続" class="md-nav__link">
-    Wifi spotへ接続
+  <a href="#_1" title="コマンドラインでの接続" class="md-nav__link">
+    コマンドラインでの接続
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#gui" title="GUIでの接続" class="md-nav__link">
+    GUIでの接続
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wifi-spot" title="Wifi spotへ接続" class="md-nav__link">
+    Wifi spotへ接続
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#terminalip" title="TerminalでIPアドレスの確認" class="md-nav__link">
     TerminalでIPアドレスの確認
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -886,16 +918,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wifi-spot" title="Wifi spotへ接続" class="md-nav__link">
-    Wifi spotへ接続
+  <a href="#_1" title="コマンドラインでの接続" class="md-nav__link">
+    コマンドラインでの接続
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#gui" title="GUIでの接続" class="md-nav__link">
+    GUIでの接続
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wifi-spot" title="Wifi spotへ接続" class="md-nav__link">
+    Wifi spotへ接続
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#terminalip" title="TerminalでIPアドレスの確認" class="md-nav__link">
     TerminalでIPアドレスの確認
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -924,9 +976,15 @@
                 
                 
                 <h1 id="wifi">Wifiへの接続</h1>
-<h2 id="wifi-spot">Wifi spotへ接続</h2>
+<h2 id="_1">コマンドラインでの接続</h2>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo -S nmcli device wifi connect &#39;アクセスポイント名&#39; password &#39;パスワード&#39; ifname wlan0
+</pre></div></td></tr></table></p>
+<p>sudoのパスワードは、<code>jetbot</code>です。</p>
+<h2 id="gui">GUIでの接続</h2>
+<p>JetbotにHDMIケーブルを接続し、GUIベースでWifiに接続する場合は、下記の手順で接続します。</p>
+<h3 id="wifi-spot">Wifi spotへ接続</h3>
 <p><img alt="" src="../img/nano001.png" /></p>
-<h2 id="terminalip">TerminalでIPアドレスの確認</h2>
+<h3 id="terminalip">TerminalでIPアドレスの確認</h3>
 <p><img alt="" src="../img/nano002.png" /></p>
 <p>ifconfig -a でwlan0のIPアドレスを確認します。</p>
 <p><img alt="" src="../img/nano003.png" /></p>
