@@ -1,5 +1,8 @@
 # JetBot Docs
 
+![](./img/JETBOT_SIDE_VIEW1400.jpg)
+FaBo JetBot Kit
+
 ## JetBot Docsについて
 
 JetBot Docsは、FaBo JetBotの学習用ドキュメントです。
