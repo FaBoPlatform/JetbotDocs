@@ -391,18 +391,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../08.software/" title="JetbotとNotebookの更新" class="md-nav__link">
-      JetbotとNotebookの更新
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../09.power/" title="電力モード" class="md-nav__link">
       電力モード
     </a>
@@ -927,14 +915,14 @@
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
-4</pre></div></td><td class=code><div class=codehilite><pre><span></span>cd ~/
-git clone https://github.com/FaBoPlatform/jetbot.git
-cd jetbot
-sudo python3 setup.py install --force 
-</pre></div></td></tr></table></p>
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>cd ~/</span>
+<span class=err>git clone https://github.com/FaBoPlatform/jetbot.git</span>
+<span class=err>cd jetbot</span>
+<span class=err>sudo python3 setup.py install --force </span>
+</code></pre></div></td></tr></table></p>
 <p>Rebootを実行します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo reboot
-</pre></div></td></tr></table></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo reboot</span>
+</code></pre></div></td></tr></table></p>
 <p>再起動には、2分程度かかります。2分程度経過したらBrowserをReloadすると、再びJetBotに接続されます。</p>
 <div class="admonition warning">
 <p>Rebootしないと、次の処理実行時に、下記エラーが発生します。
@@ -944,9 +932,14 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is an
 <h2 id="notebook">Notebookの同期</h2>
 <p>最新版のJetbotプロジェクトのnotebookを~/Notebooksフォルダにrsyncします。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt-get install rsync
-rsync -av ~/jetbot/notebooks/ ~/Notebooks
-</pre></div></td></tr></table></p>
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo apt-get install rsync</span>
+<span class=err>rsync -av ~/jetbot/notebooks/ ~/Notebooks</span>
+</code></pre></div></td></tr></table></p>
+<div class="admonition warning">
+<p><code>E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+jetbot@jetbot:~$ rm -rf /var/lib/dpkg/lock-frontend</code>のエラーが出る場合は、<code>sudo rm -rf /var/lib/dpkg/lock-frontend</code>でロックファイルを削除します。</p>
+</div>
                 
                   
                 

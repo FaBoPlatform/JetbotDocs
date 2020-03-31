@@ -344,18 +344,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../02.Setting/08.software/" title="JetbotとNotebookの更新" class="md-nav__link">
-      JetbotとNotebookの更新
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../02.Setting/09.power/" title="電力モード" class="md-nav__link">
       電力モード
     </a>
@@ -864,19 +852,19 @@
                 
                 <h1 id="_1">カメラのトラブルシューティング</h1>
 <p>カメラ関連のエラー</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>journalctl -u nvargus-daemon.service -f
-</pre></div></td></tr></table></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>journalctl -u nvargus-daemon.service -f</span>
+</code></pre></div></td></tr></table></p>
 <p><img alt="" src="../img/error001.png" /></p>
 <p>カメラ関連のDaemon再起動</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>本作業を実施する際、Jupyter notebookの全notebookのプロセスをシャットダウンして、下記手順を実施してください。</p>
 </div>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo systemctl restart nvargus-daemon
-</pre></div></td></tr></table></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo systemctl restart nvargus-daemon</span>
+</code></pre></div></td></tr></table></p>
 <p>を実行しnvargus-daemonを再起動します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>journalctl -u nvargus-daemon.service -f
-</pre></div></td></tr></table></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>journalctl -u nvargus-daemon.service -f</span>
+</code></pre></div></td></tr></table></p>
 <p>を実行し、nvargus-daemonが再起動された事をログで確認します。</p>
 <p><img alt="" src="../img/error002.png" /></p>
                 

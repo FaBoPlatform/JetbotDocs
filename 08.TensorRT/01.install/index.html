@@ -344,18 +344,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../02.Setting/08.software/" title="JetbotとNotebookの更新" class="md-nav__link">
-      JetbotとNotebookの更新
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../02.Setting/09.power/" title="電力モード" class="md-nav__link">
       電力モード
     </a>
@@ -926,15 +914,15 @@
 <p>torch2trtは、PyTorchからTensorRTに変換するコンバーターです。まず、Touch2rtrのインストールします。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span>git clone https://github.com/NVIDIA-AI-IOT/torch2trt
-cd torch2trt
-sudo python3 setup.py install
-</pre></div></td></tr></table></p>
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>git clone https://github.com/NVIDIA-AI-IOT/torch2trt</span>
+<span class=err>cd torch2trt</span>
+<span class=err>sudo python3 setup.py install</span>
+</code></pre></div></td></tr></table></p>
 <p>torch2trtに対応したPyTotchにUpdateします。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span>wget https://nvidia.box.com/shared/static/06vlvedmqpqstu1dym49fo7aapgfyyu9.whl -O torch-1.2.0a0+8554416-cp36-cp36m-linux_aarch64.whl
-sudo pip3 install numpy torch-1.2.0a0+8554416-cp36-cp36m-linux_aarch64.whl
-</pre></div></td></tr></table></p>
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>wget https://nvidia.box.com/shared/static/06vlvedmqpqstu1dym49fo7aapgfyyu9.whl -O torch-1.2.0a0+8554416-cp36-cp36m-linux_aarch64.whl</span>
+<span class=err>sudo pip3 install numpy torch-1.2.0a0+8554416-cp36-cp36m-linux_aarch64.whl</span>
+</code></pre></div></td></tr></table></p>
 <h2 id="_2">推論のスピードアップ</h2>
 <p>FPSの単位で、JetBotのサンプルも下記程度の速度アップが可能です。</p>
 <table>
