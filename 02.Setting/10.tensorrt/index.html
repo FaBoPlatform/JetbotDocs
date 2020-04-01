@@ -36,7 +36,7 @@
     
     
       
-        <title>JupyerのChromeとの相性問題 - FaBo JetBot Docs</title>
+        <title>Torch2trtのインストール - FaBo JetBot Docs</title>
       
     
     
@@ -84,7 +84,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#jupyerchrome" tabindex="1" class="md-skip">
+      <a href="#torch2trt" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -110,7 +110,7 @@
                 FaBo JetBot Docs
               </span>
               <span class="md-header-nav__topic">
-                JupyerのChromeとの相性問題
+                Torch2trtのインストール
               </span>
             
           
@@ -356,18 +356,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../10.pytorch/" title="PyTorchのUpdate" class="md-nav__link">
-      PyTorchのUpdate
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -379,11 +367,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        JupyerのChromeとの相性問題
+        Torch2trtのインストール
       </label>
     
-    <a href="./" title="JupyerのChromeとの相性問題" class="md-nav__link md-nav__link--active">
-      JupyerのChromeとの相性問題
+    <a href="./" title="Torch2trtのインストール" class="md-nav__link md-nav__link--active">
+      Torch2trtのインストール
     </a>
     
       
@@ -397,22 +385,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jupyterdowngrade" title="JupyterのDowngrade" class="md-nav__link">
-    JupyterのDowngrade
+  <a href="#torch2trt_1" title="Torch2trt" class="md-nav__link">
+    Torch2trt
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cors" title="CORS問題の解消" class="md-nav__link">
-    CORS問題の解消
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" title="再起動" class="md-nav__link">
-    再起動
+  <a href="#_1" title="推論のスピードアップ" class="md-nav__link">
+    推論のスピードアップ
   </a>
   
 </li>
@@ -886,22 +867,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jupyterdowngrade" title="JupyterのDowngrade" class="md-nav__link">
-    JupyterのDowngrade
+  <a href="#torch2trt_1" title="Torch2trt" class="md-nav__link">
+    Torch2trt
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cors" title="CORS問題の解消" class="md-nav__link">
-    CORS問題の解消
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" title="再起動" class="md-nav__link">
-    再起動
+  <a href="#_1" title="推論のスピードアップ" class="md-nav__link">
+    推論のスピードアップ
   </a>
   
 </li>
@@ -923,23 +897,44 @@
               
                 
                 
-                <h1 id="jupyerchrome">JupyerのChromeとの相性問題</h1>
-<div class="admonition note">
-<p class="admonition-title">JupyterとChromeの相性問題</p>
-<p>JupyterLabのissue<a href="https://github.com/jupyterlab/jupyterlab/issues/6149">#6149</a>の指摘にあるように、JupyterLab 5.7.6以降と Chrome 73以降でデータのダウンロードに失敗する</p>
-</div>
-<h2 id="jupyterdowngrade">JupyterのDowngrade</h2>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo pip3 install jupyter notebook==5.7.5
+                <h1 id="torch2trt">Torch2trtのインストール</h1>
+<h2 id="torch2trt_1">Torch2trt</h2>
+<p>torch2trtは、PyTorchからTensorRTに変換するコンバーターです。まず、Touch2rtrのインストールします。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span>git clone https://github.com/NVIDIA-AI-IOT/torch2trt
+cd torch2trt
+sudo python3 setup.py install
 </pre></div></td></tr></table></p>
-<h2 id="cors">CORS問題の解消</h2>
-<p>/home/jetbot/.jupyter/jupyter_notebook_config.py</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>c.NotebookApp.allow_origin = &#39;*&#39;
-</pre></div></td></tr></table></p>
-<h2 id="_1">再起動</h2>
-<p>修正を反映させるために再起動します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo reboot
-</pre></div></td></tr></table></p>
-<p>2分程度で再起動が完了しますので、再度ブラウザで接続します。</p>
+<h2 id="_1">推論のスピードアップ</h2>
+<p>FPSの単位で、JetBotのサンプルも下記程度の速度アップが可能です。</p>
+<table>
+<thead>
+<tr>
+<th align="left">Model</th>
+<th align="left">Nano (PyTorch)</th>
+<th align="left">Nano (TensorRT)</th>
+<th align="left">Xavier (PyTorch)</th>
+<th align="left">Xavier (TensorRT)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">alexnet</td>
+<td align="left">46.4</td>
+<td align="left">69.9</td>
+<td align="left">250</td>
+<td align="left">580</td>
+</tr>
+<tr>
+<td align="left">resnet18</td>
+<td align="left">29.4</td>
+<td align="left">90.2</td>
+<td align="left">140</td>
+<td align="left">712</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
@@ -960,7 +955,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../10.pytorch/" title="PyTorchのUpdate" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../09.power/" title="電力モード" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -969,7 +964,7 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                PyTorchのUpdate
+                電力モード
               </span>
             </div>
           </a>
