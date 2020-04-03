@@ -36,7 +36,7 @@
     
     
       
-        <title>環境設定 - FaBo JetBot Docs</title>
+        <title>TensorRT化 - FaBo JetBot Docs</title>
       
     
     
@@ -84,7 +84,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#_1" tabindex="1" class="md-skip">
+      <a href="#tensorrt" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -110,7 +110,7 @@
                 FaBo JetBot Docs
               </span>
               <span class="md-header-nav__topic">
-                環境設定
+                TensorRT化
               </span>
             
           
@@ -655,11 +655,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        環境設定
+        TensorRT化
       </label>
     
-    <a href="./" title="環境設定" class="md-nav__link md-nav__link--active">
-      環境設定
+    <a href="./" title="TensorRT化" class="md-nav__link md-nav__link--active">
+      TensorRT化
     </a>
     
       
@@ -673,15 +673,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#torch2trt" title="Torch2trt" class="md-nav__link">
-    Torch2trt
+  <a href="#train_model" title="train_model修正箇所" class="md-nav__link">
+    train_model修正箇所
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="推論のスピードアップ" class="md-nav__link">
-    推論のスピードアップ
+  <a href="#live_demo" title="live_demo 修正箇所" class="md-nav__link">
+    live_demo 修正箇所
   </a>
   
 </li>
@@ -694,18 +694,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../02.edit/" title="TensorRT化" class="md-nav__link">
-      TensorRT化
-    </a>
   </li>
 
         
@@ -891,15 +879,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#torch2trt" title="Torch2trt" class="md-nav__link">
-    Torch2trt
+  <a href="#train_model" title="train_model修正箇所" class="md-nav__link">
+    train_model修正箇所
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="推論のスピードアップ" class="md-nav__link">
-    推論のスピードアップ
+  <a href="#live_demo" title="live_demo 修正箇所" class="md-nav__link">
+    live_demo 修正箇所
   </a>
   
 </li>
@@ -921,44 +909,67 @@
               
                 
                 
-                <h1 id="_1">環境設定</h1>
-<h2 id="torch2trt">Torch2trt</h2>
-<p>torch2trtは、PyTorchからTensorRTに変換するコンバーターです。まず、Touch2rtrのインストールします。</p>
+                <h1 id="tensorrt">TensorRT化</h1>
+<h2 id="train_model">train_model修正箇所</h2>
+<p>RESNETの読み込み。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span>git clone https://github.com/NVIDIA-AI-IOT/torch2trt
-cd torch2trt
-sudo python3 setup.py install
+3
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=n>device</span> <span class=o>=</span> <span class=n>torch</span><span class=o>.</span><span class=n>device</span><span class=p>(</span><span class=s1>&#39;cuda&#39;</span><span class=p>)</span>
+<span class=n>model</span> <span class=o>=</span> <span class=n>models</span><span class=o>.</span><span class=n>resnet18</span><span class=p>(</span><span class=n>pretrained</span><span class=o>=</span><span class=bp>False</span><span class=p>)</span>
+<span class=n>model</span><span class=o>.</span><span class=n>fc</span> <span class=o>=</span> <span class=n>torch</span><span class=o>.</span><span class=n>nn</span><span class=o>.</span><span class=n>Linear</span><span class=p>(</span><span class=mi>512</span><span class=p>,</span> <span class=mi>2</span><span class=p>)</span>
+<span class=n>model</span> <span class=o>=</span> <span class=n>model</span><span class=o>.</span><span class=n>cuda</span><span class=p>()</span><span class=o>.</span><span class=n>eval</span><span class=p>()</span><span class=o>.</span><span class=n>half</span><span class=p>()</span>
 </pre></div></td></tr></table></p>
-<h2 id="_2">推論のスピードアップ</h2>
-<p>FPSの単位で、JetBotのサンプルも下記程度の速度アップが可能です。</p>
-<table>
-<thead>
-<tr>
-<th align="left">Model</th>
-<th align="left">Nano (PyTorch)</th>
-<th align="left">Nano (TensorRT)</th>
-<th align="left">Xavier (PyTorch)</th>
-<th align="left">Xavier (TensorRT)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">alexnet</td>
-<td align="left">46.4</td>
-<td align="left">69.9</td>
-<td align="left">250</td>
-<td align="left">580</td>
-</tr>
-<tr>
-<td align="left">resnet18</td>
-<td align="left">29.4</td>
-<td align="left">90.2</td>
-<td align="left">140</td>
-<td align="left">712</td>
-</tr>
-</tbody>
-</table>
+<p>すでに学習済みのモデルに対して、学習が終わった後でTensorRTに変換する。</p>
+<p>新規で追加</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=kn>from</span> <span class=nn>torch2trt</span> <span class=kn>import</span> <span class=n>torch2trt</span> 
+<span class=n>data</span> <span class=o>=</span> <span class=n>torch</span><span class=o>.</span><span class=n>randn</span><span class=p>((</span><span class=mi>1</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>224</span><span class=p>,</span> <span class=mi>224</span><span class=p>))</span><span class=o>.</span><span class=n>cuda</span><span class=p>()</span><span class=o>.</span><span class=n>half</span><span class=p>()</span>
+<span class=n>model_trt</span> <span class=o>=</span> <span class=n>torch2trt</span><span class=p>(</span><span class=n>model</span><span class=p>,</span> <span class=p>[</span><span class=n>data</span><span class=p>],</span> <span class=n>fp16_mode</span><span class=o>=</span><span class=bp>True</span><span class=p>)</span>
+</pre></div></td></tr></table></p>
+<p>変換が正しく行われたか、変換前と変換後の比較をおこなう。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class=code><div class=codehilite><pre><span></span>output_trt = model_trt(data)
+output = model(data)
+
+print(output.flatten()[0:10])
+print(output_trt.flatten()[0:10])
+print(&#39;max error: %f&#39; % float(torch.max(torch.abs(output - output_trt))))
+</pre></div></td></tr></table></p>
+<blockquote>
+<p>tensor([ 0.6694,  2.5645,  2.9473,  2.6445,  3.9434,  3.5391,  3.5820,  0.3401, -1.0713, -0.3494], device='cuda:0', dtype=torch.float16, 
+    grad_fn=<SliceBackward>)
+    tensor([ 0.6763,  2.5742,  2.9551,  2.6562,  3.9531,  3.5449,  3.5840,  0.3359, -1.0742, -0.3525], device='cuda:0', dtype=torch.float16)
+    max error: 0.020508</p>
+</blockquote>
+<p>最後に、TensorRTのモデルとして保存する。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>torch.save(model_trt.state_dict(), &#39;road_following_model_xy_trt.pth&#39;)
+</pre></div></td></tr></table></p>
+<h2 id="live_demo">live_demo 修正箇所</h2>
+<p>TensorRTでモデルを読み込む。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=kn>import</span> <span class=nn>torchvision</span>
+<span class=kn>import</span> <span class=nn>torch</span>
+<span class=hll><span class=kn>from</span> <span class=nn>torch2trt</span> <span class=kn>import</span> <span class=n>TRTModule</span> 
+</span>
+<span class=hll><span class=n>model_trt</span> <span class=o>=</span> <span class=n>TRTModule</span><span class=p>()</span>
+</span><span class=hll><span class=n>model_trt</span><span class=o>.</span><span class=n>load_state_dict</span><span class=p>(</span><span class=n>torch</span><span class=o>.</span><span class=n>load</span><span class=p>(</span><span class=s1>&#39;road_following_model_xy_trt.pth&#39;</span><span class=p>))</span>
+</span><span class=n>device</span> <span class=o>=</span> <span class=n>torch</span><span class=o>.</span><span class=n>device</span><span class=p>(</span><span class=s1>&#39;cuda&#39;</span><span class=p>)</span>
+<span class=hll><span class=n>model</span> <span class=o>=</span> <span class=n>model_trt</span><span class=o>.</span><span class=n>to</span><span class=p>(</span><span class=n>device</span><span class=p>)</span>
+</span><span class=hll><span class=n>model</span> <span class=o>=</span> <span class=n>model_trt</span><span class=o>.</span><span class=n>eval</span><span class=p>()</span>
+</span></pre></div></td></tr></table></p>
                 
                   
                 
@@ -994,13 +1005,13 @@ sudo python3 setup.py install
           </a>
         
         
-          <a href="../02.edit/" title="TensorRT化" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../09.Trouble Shooting/01.camera/" title="カメラのトラブルシューティング" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                TensorRT化
+                カメラのトラブルシューティング
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
