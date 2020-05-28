@@ -7,6 +7,10 @@ FaBo JetBot Kit
 
 JetBot Docsは、FaBo JetBotの学習用ドキュメントです。
 
+## サポート Discord
+
+[https://discord.gg/StJ84Hb](https://discord.gg/StJ84Hb)
+
 ## 修正依頼等
 
 GithubのRepoに[Issues](https://github.com/FaBoPlatform/JetbotDocs/issues)をあげる。
