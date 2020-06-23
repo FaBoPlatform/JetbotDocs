@@ -15,7 +15,7 @@
     
     
       
-        <title>ハードウェア構成 - FaBo JetBot Docs</title>
+        <title>TensorRT化 - FaBo JetBot Docs</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#tensorrt" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              ハードウェア構成
+              TensorRT化
             
           </span>
         </div>
@@ -172,12 +172,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       01.Building
@@ -201,7 +199,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../00.build0/" title="組み立てマニュアル(BOM)" class="md-nav__link">
+    <a href="../../01.Building/00.build0/" title="組み立てマニュアル(BOM)" class="md-nav__link">
       組み立てマニュアル(BOM)
     </a>
   </li>
@@ -213,7 +211,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../01.build1/" title="組み立てマニュアル(前半)" class="md-nav__link">
+    <a href="../../01.Building/01.build1/" title="組み立てマニュアル(前半)" class="md-nav__link">
       組み立てマニュアル(前半)
     </a>
   </li>
@@ -225,7 +223,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../02.build2/" title="組み立てマニュアル(後半)" class="md-nav__link">
+    <a href="../../01.Building/02.build2/" title="組み立てマニュアル(後半)" class="md-nav__link">
       組み立てマニュアル(後半)
     </a>
   </li>
@@ -235,20 +233,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="ハードウェア構成" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../01.Building/03.block/" title="ハードウェア構成" class="md-nav__link">
       ハードウェア構成
     </a>
-    
   </li>
 
         
@@ -807,10 +796,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" checked>
     
     <label class="md-nav__link" for="nav-10">
       09.TensorRT
@@ -832,11 +823,60 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../09.TensorRT/01.edit/" title="TensorRT化" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        TensorRT化
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="TensorRT化" class="md-nav__link md-nav__link--active">
       TensorRT化
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#train_model" class="md-nav__link">
+    train_model修正箇所
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live_demo" class="md-nav__link">
+    live_demo 修正箇所
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1018,6 +1058,30 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#train_model" class="md-nav__link">
+    train_model修正箇所
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live_demo" class="md-nav__link">
+    live_demo 修正箇所
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1032,8 +1096,67 @@
                   
                 
                 
-                <h1 id="_1">ハードウェア構成</h1>
-<p><img alt="" src="../img/data001.png" /></p>
+                <h1 id="tensorrt">TensorRT化</h1>
+<h2 id="train_model">train_model修正箇所</h2>
+<p>RESNETの読み込み。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=n>device</span> <span class=o>=</span> <span class=n>torch</span><span class=o>.</span><span class=n>device</span><span class=p>(</span><span class=s1>&#39;cuda&#39;</span><span class=p>)</span>
+<span class=n>model</span> <span class=o>=</span> <span class=n>models</span><span class=o>.</span><span class=n>resnet18</span><span class=p>(</span><span class=n>pretrained</span><span class=o>=</span><span class=kc>False</span><span class=p>)</span>
+<span class=n>model</span><span class=o>.</span><span class=n>fc</span> <span class=o>=</span> <span class=n>torch</span><span class=o>.</span><span class=n>nn</span><span class=o>.</span><span class=n>Linear</span><span class=p>(</span><span class=mi>512</span><span class=p>,</span> <span class=mi>2</span><span class=p>)</span>
+<span class=n>model</span> <span class=o>=</span> <span class=n>model</span><span class=o>.</span><span class=n>cuda</span><span class=p>()</span><span class=o>.</span><span class=n>eval</span><span class=p>()</span><span class=o>.</span><span class=n>half</span><span class=p>()</span>
+</code></pre></div></td></tr></table></p>
+<p>すでに学習済みのモデルに対して、学習が終わった後でTensorRTに変換する。</p>
+<p>新規で追加</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=kn>from</span> <span class=nn>torch2trt</span> <span class=kn>import</span> <span class=n>torch2trt</span> 
+<span class=n>data</span> <span class=o>=</span> <span class=n>torch</span><span class=o>.</span><span class=n>randn</span><span class=p>((</span><span class=mi>1</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>224</span><span class=p>,</span> <span class=mi>224</span><span class=p>))</span><span class=o>.</span><span class=n>cuda</span><span class=p>()</span><span class=o>.</span><span class=n>half</span><span class=p>()</span>
+<span class=n>model_trt</span> <span class=o>=</span> <span class=n>torch2trt</span><span class=p>(</span><span class=n>model</span><span class=p>,</span> <span class=p>[</span><span class=n>data</span><span class=p>],</span> <span class=n>fp16_mode</span><span class=o>=</span><span class=bp>True</span><span class=p>)</span>
+</code></pre></div></td></tr></table></p>
+<p>変換が正しく行われたか、変換前と変換後の比較をおこなう。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=n>output_trt</span> <span class=o>=</span> <span class=n>model_trt</span><span class=p>(</span><span class=k>data</span><span class=p>)</span>
+<span class=k>output</span> <span class=o>=</span> <span class=n>model</span><span class=p>(</span><span class=k>data</span><span class=p>)</span>
+
+<span class=n>print</span><span class=p>(</span><span class=k>output</span><span class=p>.</span><span class=n>flatten</span><span class=p>()[</span><span class=mi>0</span><span class=p>:</span><span class=mi>10</span><span class=p>])</span>
+<span class=n>print</span><span class=p>(</span><span class=n>output_trt</span><span class=p>.</span><span class=n>flatten</span><span class=p>()[</span><span class=mi>0</span><span class=p>:</span><span class=mi>10</span><span class=p>])</span>
+<span class=n>print</span><span class=p>(</span><span class=s1>&#39;max error: %f&#39;</span> <span class=o>%</span> <span class=nb>float</span><span class=p>(</span><span class=n>torch</span><span class=p>.</span><span class=k>max</span><span class=p>(</span><span class=n>torch</span><span class=p>.</span><span class=k>abs</span><span class=p>(</span><span class=k>output</span> <span class=o>-</span> <span class=n>output_trt</span><span class=p>))))</span>
+</code></pre></div></td></tr></table></p>
+<blockquote>
+<p>tensor([ 0.6694,  2.5645,  2.9473,  2.6445,  3.9434,  3.5391,  3.5820,  0.3401, -1.0713, -0.3494], device='cuda:0', dtype=torch.float16, 
+    grad_fn=<SliceBackward>)
+    tensor([ 0.6763,  2.5742,  2.9551,  2.6562,  3.9531,  3.5449,  3.5840,  0.3359, -1.0742, -0.3525], device='cuda:0', dtype=torch.float16)
+    max error: 0.020508</p>
+</blockquote>
+<p>最後に、TensorRTのモデルとして保存する。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>torch.save(model_trt.state_dict(), &#39;road_following_model_xy_trt.pth&#39;)</span>
+</code></pre></div></td></tr></table></p>
+<h2 id="live_demo">live_demo 修正箇所</h2>
+<p>TensorRTでモデルを読み込む。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=kn>import</span> <span class=nn>torchvision</span>
+<span class=kn>import</span> <span class=nn>torch</span>
+<span class=hll><span class=kn>from</span> <span class=nn>torch2trt</span> <span class=kn>import</span> <span class=n>TRTModule</span> 
+</span>
+<span class=hll><span class=n>model_trt</span> <span class=o>=</span> <span class=n>TRTModule</span><span class=p>()</span>
+</span><span class=hll><span class=n>model_trt</span><span class=o>.</span><span class=n>load_state_dict</span><span class=p>(</span><span class=n>torch</span><span class=o>.</span><span class=n>load</span><span class=p>(</span><span class=s1>&#39;road_following_model_xy_trt.pth&#39;</span><span class=p>))</span>
+</span><span class=n>device</span> <span class=o>=</span> <span class=n>torch</span><span class=o>.</span><span class=n>device</span><span class=p>(</span><span class=s1>&#39;cuda&#39;</span><span class=p>)</span>
+<span class=hll><span class=n>model</span> <span class=o>=</span> <span class=n>model_trt</span><span class=o>.</span><span class=n>to</span><span class=p>(</span><span class=n>device</span><span class=p>)</span>
+</span><span class=hll><span class=n>model</span> <span class=o>=</span> <span class=n>model_trt</span><span class=o>.</span><span class=n>eval</span><span class=p>()</span>
+</span></code></pre></div></td></tr></table></p>
                 
               
               
@@ -1052,7 +1175,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="">
         
-          <a href="../02.build2/" title="組み立てマニュアル(後半)" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../08.Road%20Following/01.roadfollowing/" title="Road Following" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1061,19 +1184,19 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                組み立てマニュアル(後半)
+                Road Following
               </div>
             </div>
           </a>
         
         
-          <a href="../../02.Setting%28Nano%29/00.sd/" title="SDカードの作成" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../10.Trouble%20Shooting/01.camera/" title="カメラのトラブルシューティング" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                SDカードの作成
+                カメラのトラブルシューティング
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
