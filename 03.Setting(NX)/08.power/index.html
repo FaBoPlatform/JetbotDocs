@@ -15,7 +15,7 @@
     
     
       
-        <title>I2Cの認識確認 - FaBo JetBot Docs</title>
+        <title>電力モード - FaBo JetBot Docs</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#i2c" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              I2Cの認識確認
+              電力モード
             
           </span>
         </div>
@@ -441,7 +441,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../02.usb/" title="USB経由でJetBotに接続" class="md-nav__link">
+    <a href="../02.jetcard/" title="JetCardのインストール" class="md-nav__link">
+      JetCardのインストール
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03.usb/" title="USB経由でJetBotに接続" class="md-nav__link">
       USB経由でJetBotに接続
     </a>
   </li>
@@ -453,7 +465,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../03.wifi/" title="Wifiへの接続" class="md-nav__link">
+    <a href="../04.wifi/" title="Wifiへの接続" class="md-nav__link">
       Wifiへの接続
     </a>
   </li>
@@ -465,8 +477,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../04.camera/" title="Cameraの認識確認" class="md-nav__link">
+    <a href="../05.camera/" title="Cameraの認識確認" class="md-nav__link">
       Cameraの認識確認
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../06.i2c/" title="I2Cの認識確認" class="md-nav__link">
+      I2Cの認識確認
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../07.software/" title="JetbotとNotebookの更新" class="md-nav__link">
+      JetbotとNotebookの更新
     </a>
   </li>
 
@@ -486,14 +522,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        I2Cの認識確認
+        電力モード
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="I2Cの認識確認" class="md-nav__link md-nav__link--active">
-      I2Cの認識確認
+    <a href="./" title="電力モード" class="md-nav__link md-nav__link--active">
+      電力モード
     </a>
     
       
@@ -512,8 +548,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#terminal" class="md-nav__link">
-    Terminalの起動
+  <a href="#_2" class="md-nav__link">
+    モードの変更
   </a>
   
 </li>
@@ -531,43 +567,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../08.software/" title="JetbotとNotebookの更新" class="md-nav__link">
-      JetbotとNotebookの更新
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../09.jetcard/" title="JetCardのインストール" class="md-nav__link">
-      JetCardのインストール
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../09.power/" title="電力モード" class="md-nav__link">
-      電力モード
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../10.tensorrt/" title="Torch2trtのインストール" class="md-nav__link">
+    <a href="../09.tensorrt/" title="Torch2trtのインストール" class="md-nav__link">
       Torch2trtのインストール
     </a>
   </li>
@@ -1060,8 +1060,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#terminal" class="md-nav__link">
-    Terminalの起動
+  <a href="#_2" class="md-nav__link">
+    モードの変更
   </a>
   
 </li>
@@ -1082,39 +1082,46 @@
                   
                 
                 
-                <h1 id="i2c">I2Cの認識確認</h1>
-<p>まず、最初にI2Cの認識の確認をおこないます。</p>
-<h2 id="terminal">Terminalの起動</h2>
-<p><img alt="" src="../img/i2c001.png" /></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo i2cdetect -r -y 1</span>
-</code></pre></div></td></tr></table></p>
-<p><img alt="" src="../img/i2c002.png" /></p>
+                <h1 id="_1">電力モード</h1>
+<p>Jetson Nanoでは、2つの電力モードが存在しています。</p>
 <table>
 <thead>
 <tr>
-<th align="left">I2Cアドレス</th>
-<th align="left">チップ</th>
-<th align="left">処理</th>
+<th align="left">モード</th>
+<th align="left">コマンド</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">0x3c</td>
-<td align="left">SSD1306</td>
-<td align="left">OLEDの制御</td>
+<td align="left">MODE_15W_2CORE</td>
+<td align="left">sudo nvpmodel -m 0</td>
 </tr>
 <tr>
-<td align="left">0x60</td>
-<td align="left">PCA9685</td>
-<td align="left">PWMでモータードライバーのTB6612を制御</td>
+<td align="left">MODE_15W_4CORE</td>
+<td align="left">sudo nvpmodel -m 1</td>
 </tr>
 <tr>
-<td align="left">0x70</td>
-<td align="left">PCA9685</td>
-<td align="left">All call用のアドレス</td>
+<td align="left">MODE_15W_6CORE</td>
+<td align="left">sudo nvpmodel -m 2</td>
+</tr>
+<tr>
+<td align="left">MODE_10W_2CORE</td>
+<td align="left">sudo nvpmodel -m 3</td>
+</tr>
+<tr>
+<td align="left">MODE_10W_4CORE</td>
+<td align="left">sudo nvpmodel -m 4</td>
 </tr>
 </tbody>
 </table>
+<h2 id="_2">モードの変更</h2>
+<p>MODE_10W_4COREに変更します。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo nvpmodel -m 4</span>
+</code></pre></div></td></tr></table></p>
+<p>電力モードが変更されたかの確認をおこないます。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>nvpmodel -q --verbose</span>
+</code></pre></div></td></tr></table></p>
+<p><img alt="" src="../img/power002.png" /></p>
                 
               
               
@@ -1133,7 +1140,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="">
         
-          <a href="../04.camera/" title="Cameraの認識確認" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../07.software/" title="JetbotとNotebookの更新" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1142,19 +1149,19 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                Cameraの認識確認
+                JetbotとNotebookの更新
               </div>
             </div>
           </a>
         
         
-          <a href="../08.software/" title="JetbotとNotebookの更新" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../09.tensorrt/" title="Torch2trtのインストール" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                JetbotとNotebookの更新
+                Torch2trtのインストール
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
