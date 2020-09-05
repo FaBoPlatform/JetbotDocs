@@ -15,7 +15,7 @@
     
     
       
-        <title>Jupyterの注意事項 - FaBo JetBot Docs</title>
+        <title>学習 - FaBo JetBot Docs</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#jupyter" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Jupyterの注意事項
+              学習
             
           </span>
         </div>
@@ -570,20 +570,56 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
-      04.Sample
+      04.Study
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="04.Sample" data-md-level="1">
+    <nav class="md-nav" aria-label="04.Study" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        04.Sample
+        04.Study
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../01.%E4%BD%BF%E7%94%A8%E7%AB%AF%E6%9C%AB/" title="使用端末" class="md-nav__link">
+      使用端末
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02.jupyter/" title="Jupyterの注意事項" class="md-nav__link">
+      Jupyterの注意事項
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03.model/" title="JetBotのSample" class="md-nav__link">
+      JetBotのSample
+    </a>
+  </li>
+
         
           
           
@@ -600,14 +636,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Jupyterの注意事項
+        学習
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Jupyterの注意事項" class="md-nav__link md-nav__link--active">
-      Jupyterの注意事項
+    <a href="./" title="学習" class="md-nav__link md-nav__link--active">
+      学習
     </a>
     
       
@@ -626,15 +662,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jupyter_1" class="md-nav__link">
-    Jupyterのメモリ管理
+  <a href="#_2" class="md-nav__link">
+    学習の位置づけ
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#jupyterkill" class="md-nav__link">
-    JupyterのプロセスをKillする
+  <a href="#_3" class="md-nav__link">
+    転移学習
   </a>
   
 </li>
@@ -643,30 +679,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../02.model/" title="JetBotのSample" class="md-nav__link">
-      JetBotのSample
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../03.train/" title="学習" class="md-nav__link">
-      学習
-    </a>
   </li>
 
         
@@ -1103,15 +1115,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jupyter_1" class="md-nav__link">
-    Jupyterのメモリ管理
+  <a href="#_2" class="md-nav__link">
+    学習の位置づけ
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#jupyterkill" class="md-nav__link">
-    JupyterのプロセスをKillする
+  <a href="#_3" class="md-nav__link">
+    転移学習
   </a>
   
 </li>
@@ -1132,19 +1144,72 @@
                   
                 
                 
-                <h1 id="jupyter">Jupyterの注意事項</h1>
-<h2 id="jupyter_1">Jupyterのメモリ管理</h2>
-<p>Jupyterでは、開かれたNotebookは、プロセスとして常駐します。プロセスをKillする場合は、Shutdownの処理を必ず実行します。(Linuxの再起動時でも、Killしないプロセスは再び常駐します)</p>
-<p><img alt="" src="../img/jupyter001.png" /></p>
-<p>Notebookは、同時に1つ以上起動しないようにしてください。メモリ不足に至る可能性があります。</p>
-<h2 id="jupyterkill">JupyterのプロセスをKillする</h2>
-<p>Notebookを閉じます。</p>
-<p><img alt="" src="../img/kill001.png" /></p>
-<p>緑色の丸が点灯しているのでプロセス自体は残っています。</p>
-<p><img alt="" src="../img/kill002.png" /></p>
-<p>プロセスをShutdownします。</p>
-<p><img alt="" src="../img/kill003.png" /></p>
-<p>この状態で初めてメモリが開放されます。</p>
+                <h1 id="_1">学習</h1>
+<p>JetRacerでは、走行用の推論は、<a href="https://arxiv.org/abs/1512.03385">ResNet</a>の転移学習でおこないます。</p>
+<p>データセット規模は、標準コースでCollision Avoidanceで50*2枚、Road Followingで、100枚程度必要です。</p>
+<table>
+<thead>
+<tr>
+<th align="left">サンプル</th>
+<th align="left">データセット数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Collision Avoidance</td>
+<td align="left">50枚*2パターン</td>
+</tr>
+<tr>
+<td align="left">Road Following</td>
+<td align="left">100枚</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">学習の位置づけ</h2>
+<p><img alt="" src="../img/train001.png" /></p>
+<table>
+<thead>
+<tr>
+<th align="left">手順</th>
+<th align="left">対応</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">教師あり学習</td>
+<td align="left">○</td>
+</tr>
+<tr>
+<td align="left">教師なし学習</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">強化学習</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>今回は、<code>教師あり学習</code>の転移学習を用いてコースの学習をおこないます。</p>
+<h2 id="_3">転移学習</h2>
+<p>転移学習で用いる学習済みモデルは、<a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">AlexaNet</a>と<a href="https://arxiv.org/pdf/1512.03385.pdf">ResNet</a>です。<a href="">AlexaNet</a>と<a href="https://arxiv.org/pdf/1512.03385.pdf">ResNet</a>の学習済みモデルに、新たな層を追加し、学習させる事で、JetBotの自動走行を実現します。</p>
+<table>
+<thead>
+<tr>
+<th align="left">サンプル</th>
+<th align="left">論文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Collision Avoidance</td>
+<td align="left">[AlexaNet</td>
+</tr>
+<tr>
+<td align="left">Road Following</td>
+<td align="left"><a href="https://arxiv.org/pdf/1512.03385.pdf">ResNet</a></td>
+</tr>
+</tbody>
+</table>
                 
               
               
@@ -1163,7 +1228,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="">
         
-          <a href="../../03.Setting%28NX%29/09.tensorrt/" title="Torch2trtのインストール" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../03.model/" title="JetBotのSample" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1172,19 +1237,19 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                Torch2trtのインストール
+                JetBotのSample
               </div>
             </div>
           </a>
         
         
-          <a href="../02.model/" title="JetBotのSample" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../05.Basic%20Motion/01.motion/" title="Basic motionの実行" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                JetBotのSample
+                Basic motionの実行
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
