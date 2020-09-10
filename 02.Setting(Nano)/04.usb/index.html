@@ -412,8 +412,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usbmac" class="md-nav__link">
-    USB経由でうまく接続できない場合（Mac偏)
+  <a href="#wifi" class="md-nav__link">
+    Wifiに接続
   </a>
   
 </li>
@@ -1160,8 +1160,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usbmac" class="md-nav__link">
-    USB経由でうまく接続できない場合（Mac偏)
+  <a href="#wifi" class="md-nav__link">
+    Wifiに接続
   </a>
   
 </li>
@@ -1242,13 +1242,19 @@
 <p class="admonition-title">注意事項</p>
 <p>Chromeブラウザを必ず使うようにしてください。Safariブラウザを使用する場合、キーボードのソースを変更しないとパスワードが入力できない可能性があります。Edgeブラウザを使った場合、Securityの設定でローカルホストに接続できない可能性があります。</p>
 </div>
-<h2 id="usbmac">USB経由でうまく接続できない場合（Mac偏)</h2>
-<p>Macのシステム環境設定ー＞　ネットワークを選択し、</p>
-<p><img alt="" src="../img/usb_LinuxForTegraSelect.png" /></p>
-<p>画面下の＋ボタンを押して、ダイアログが出てきますので、Linux for Tegraを選択します。</p>
-<p>右下の適用ボタンを押します。</p>
-<p><img alt="" src="../img/usb_IPAddressAssignment.png" /></p>
-<p>成功するとI Pアドレスが割り振られます。</p>
+<h2 id="wifi">Wifiに接続</h2>
+<p>ソフトウェアのパッケージのUpdate等をおこなう時は、Wifiへの接続もおこなっておきます。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo -S nmcli device wifi connect &#39;アクセスポイント名&#39; password &#39;パスワード&#39; ifname wlan0</span>
+</code></pre></div></td></tr></table></p>
+<div class="admonition warming">
+<p class="admonition-title">USB経由でうまく接続できない場合（Mac偏)</p>
+<p>Macのシステム環境設定ー＞　ネットワークを選択し、
+<img alt="" src="../img/usb_LinuxForTegraSelect.png" />
+画面下の＋ボタンを押して、ダイアログが出てきますので、Linux for Tegraを選択します。
+右下の適用ボタンを押します。
+<img alt="" src="../img/usb_IPAddressAssignment.png" />
+成功するとI Pアドレスが割り振られます。</p>
+</div>
                 
               
               
