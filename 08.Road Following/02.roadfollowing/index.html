@@ -1025,7 +1025,6 @@
                 
                 
                 <h1 id="road-following">Road Following</h1>
-<p>Road Followingは、<a href="https://github.com/FaBoPlatform/jetbot.git">https://github.com/FaBoPlatform/jetbot.git</a> のサンプルを使って実行します。</p>
 <h2 id="dataset">Datasetの登録</h2>
 <table>
 <thead>
@@ -1036,24 +1035,22 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">data_collecion.ipynb</td>
+<td align="left">1.data_collecion.ipynb</td>
 <td align="left">データ・セット作成用</td>
 </tr>
 <tr>
-<td align="left">live_demo.ipynb</td>
-<td align="left">実行用</td>
+<td align="left">2.train_model.ipynb</td>
+<td align="left">トレーニング用</td>
 </tr>
 <tr>
-<td align="left">train_model.ipynb</td>
-<td align="left">トレーニング用</td>
+<td align="left">3.live_demo.ipynb</td>
+<td align="left">実行用</td>
 </tr>
 </tbody>
 </table>
-<p><a href="https://github.com/FaBoPlatform/jetbot.git">https://github.com/FaBoPlatform/jetbot.git</a> のサンプルでは、マウスだけでdatasetが作成できるように改造してあります。</p>
 <h2 id="dataset_1">Datasetの作り方</h2>
-<p>JetBotを対わせたい方向に、○を移動し、addボタンで、データセットとして登録します。</p>
-<p><img alt="" src="../img/data001.png" /></p>
-<p>Datasetの作成が終わったら、<code>train_model.ipynb</code> で学習し、<code>live_demo.ipynb</code>で実行します。</p>
+<p>Jetbotをコースに設置し、Jetbotを走行させたい方向をマウスでクリックし、データセットを作成していきます。1つのコーナーでも、様々な角度でJetbotがコーナーに入ってくる可能性がありますので、3パターン程度の入射角度に対応するデータセットを作成しておきます。</p>
+<p><img alt="" src="../img/data001.jpg" /></p>
                 
               
               
