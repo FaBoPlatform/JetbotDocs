@@ -15,7 +15,7 @@
     
     
       
-        <title>Torch2trtのインストール - FaBo JetBot Docs</title>
+        <title>電力モード - FaBo JetBot Docs</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#torch2trt" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Torch2trtのインストール
+              電力モード
             
           </span>
         </div>
@@ -351,32 +351,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../04.camera/" title="Cameraの認識確認" class="md-nav__link">
-      Cameraの認識確認
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../04.usb/" title="4.USB経由でJetbotに接続" class="md-nav__link">
       4.USB経由でJetbotに接続
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../05.i2c/" title="I2Cの認識確認" class="md-nav__link">
-      I2Cの認識確認
     </a>
   </li>
 
@@ -399,8 +375,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../07.software/" title="JetbotとNotebookの更新" class="md-nav__link">
-      JetbotとNotebookの更新
+    <a href="../06.camera/" title="Cameraの認識確認" class="md-nav__link">
+      Cameraの認識確認
     </a>
   </li>
 
@@ -411,8 +387,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../08.power/" title="電力モード" class="md-nav__link">
-      電力モード
+    <a href="../07.i2c/" title="I2Cの認識確認" class="md-nav__link">
+      I2Cの認識確認
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../08.software/" title="JetbotとNotebookの更新" class="md-nav__link">
+      JetbotとNotebookの更新
     </a>
   </li>
 
@@ -432,14 +420,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Torch2trtのインストール
+        電力モード
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Torch2trtのインストール" class="md-nav__link md-nav__link--active">
-      Torch2trtのインストール
+    <a href="./" title="電力モード" class="md-nav__link md-nav__link--active">
+      電力モード
     </a>
     
       
@@ -458,15 +446,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#torch2trt_1" class="md-nav__link">
-    Torch2trt
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    推論のスピードアップ
+  <a href="#5w-power" class="md-nav__link">
+    5W Powerモードの設定
   </a>
   
 </li>
@@ -475,6 +456,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../10.tensorrt/" title="Torch2trtのインストール" class="md-nav__link">
+      Torch2trtのインストール
+    </a>
   </li>
 
         
@@ -1139,15 +1132,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#torch2trt_1" class="md-nav__link">
-    Torch2trt
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    推論のスピードアップ
+  <a href="#5w-power" class="md-nav__link">
+    5W Powerモードの設定
   </a>
   
 </li>
@@ -1168,44 +1154,38 @@
                   
                 
                 
-                <h1 id="torch2trt">Torch2trtのインストール</h1>
-<h2 id="torch2trt_1">Torch2trt</h2>
-<p>torch2trtは、PyTorchからTensorRTに変換するコンバーターです。まず、Touch2rtrのインストールします。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>git clone https://github.com/NVIDIA-AI-IOT/torch2trt</span>
-<span class=err>cd torch2trt</span>
-<span class=err>sudo python3 setup.py install</span>
-</code></pre></div></td></tr></table></p>
-<h2 id="_1">推論のスピードアップ</h2>
-<p>FPSの単位で、JetBotのサンプルも下記程度の速度アップが可能です。</p>
+                <h1 id="_1">電力モード</h1>
+<p>Jetson Nanoでは、2つの電力モードが存在しています。</p>
 <table>
 <thead>
 <tr>
-<th align="left">Model</th>
-<th align="left">Nano (PyTorch)</th>
-<th align="left">Nano (TensorRT)</th>
-<th align="left">Xavier (PyTorch)</th>
-<th align="left">Xavier (TensorRT)</th>
+<th align="left">モード</th>
+<th align="left">コマンド</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">alexnet</td>
-<td align="left">46.4</td>
-<td align="left">69.9</td>
-<td align="left">250</td>
-<td align="left">580</td>
+<td align="left">5W</td>
+<td align="left">sudo nvpmodel -m 1</td>
 </tr>
 <tr>
-<td align="left">resnet18</td>
-<td align="left">29.4</td>
-<td align="left">90.2</td>
-<td align="left">140</td>
-<td align="left">712</td>
+<td align="left">MAXN</td>
+<td align="left">sudo nvpmodel -m 0</td>
 </tr>
 </tbody>
 </table>
+<h2 id="5w-power">5W Powerモードの設定</h2>
+<p>5Wモードに変更します。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo nvpmodel -m 1</span>
+</code></pre></div></td></tr></table></p>
+<p>電力モードが変更されたかの確認をおこないます。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>nvpmodel -q --verbose</span>
+</code></pre></div></td></tr></table></p>
+<p><img alt="" src="../img/power001.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>sudo nvpmodel -m 1</code> が省電力モードになり、<code>sudo nvpmodel -m 0</code>が標準電力モードになります。<code>sudo nvpmodel -m 0</code>では電力が4A程度必要になります。</p>
+</div>
                 
               
               
@@ -1224,7 +1204,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="">
         
-          <a href="../08.power/" title="電力モード" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../08.software/" title="JetbotとNotebookの更新" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1233,19 +1213,19 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                電力モード
+                JetbotとNotebookの更新
               </div>
             </div>
           </a>
         
         
-          <a href="../../03.Setting%28NX%29/00.sd/" title="SDカードの作成" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../10.tensorrt/" title="Torch2trtのインストール" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                SDカードの作成
+                Torch2trtのインストール
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
