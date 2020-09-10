@@ -475,7 +475,7 @@
       
         <li class="md-nav__item">
   <a href="#jetbot" class="md-nav__link">
-    Jetbotのコード更新
+    Jetbotのコードの更新
   </a>
   
 </li>
@@ -1067,7 +1067,7 @@
       
         <li class="md-nav__item">
   <a href="#jetbot" class="md-nav__link">
-    Jetbotのコード更新
+    Jetbotのコードの更新
   </a>
   
 </li>
@@ -1132,26 +1132,16 @@
 <p>FaBo Jetbotでは、最新版のJetBotプロジェクト(https://github.com/NVIDIA-AI-IOT/jetbot) をベースとして日本語訳等の改良をおこなっています。FaBo JetbotのRepoをJetbotに反映させる方法について解説します。</p>
 <h2 id="_1">データのバックアップ</h2>
 <p>重要な学習やカスタマイズしたコードがある場合は、バックアップをとっておいた方がいいでしょう。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>mv ~/Notebook ~/Notebook_old</span>
-</code></pre></div></td></tr></table></p>
 <h2 id="_2">電力モードの変更</h2>
 <p>ビルド時間を短くするために、最大性能となるMAX-Nモードに変更します</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo nvpmodel -m 0</span>
 </code></pre></div></td></tr></table></p>
-<h2 id="jetbot">Jetbotのコード更新</h2>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>cd ~/jetbot</span>
-<span class=err>git pull</span>
-<span class=err>sudo python3 setup.py install --force </span>
-</code></pre></div></td></tr></table></p>
-<p>もしエラーで失敗するときは、新しくダウンロードしなおします。</p>
+<h2 id="jetbot">Jetbotのコードの更新</h2>
+<p>FaBo JetbotをGit cloneして、インストールします。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
-4
-5</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>cd</span>
-<span class=err>sudo rm -rf jetbot</span>
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>cd</span>
 <span class=err>git clone https://github.com/FaBoPlatform/jetbot</span>
 <span class=err>cd jetbot</span>
 <span class=err>sudo python3 setup.py install --force </span>
