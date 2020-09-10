@@ -15,7 +15,7 @@
     
     
       
-        <title>9.JetbotとNotebookの更新 - FaBo JetBot Docs</title>
+        <title>JetbotとNotebookの更新(fabo_2020版) - FaBo JetBot Docs</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#9jetbotnotebook" class="md-skip">
+        <a href="#jetbotnotebookfabo_2020" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              9.JetbotとNotebookの更新
+              JetbotとNotebookの更新(fabo_2020版)
             
           </span>
         </div>
@@ -420,14 +420,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        9.JetbotとNotebookの更新
+        JetbotとNotebookの更新(fabo_2020版)
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="9.JetbotとNotebookの更新" class="md-nav__link md-nav__link--active">
-      9.JetbotとNotebookの更新
+    <a href="./" title="JetbotとNotebookの更新(fabo_2020版)" class="md-nav__link md-nav__link--active">
+      JetbotとNotebookの更新(fabo_2020版)
     </a>
     
       
@@ -446,15 +446,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#git-clone" class="md-nav__link">
-    最新のプロジェクトをGit clone
+  <a href="#jetbot-fabo_2020" class="md-nav__link">
+    JetBot fabo_2020での変更点
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notebook" class="md-nav__link">
-    Notebookの同期
+  <a href="#git-clone" class="md-nav__link">
+    最新のプロジェクトをGit clone
   </a>
   
 </li>
@@ -1139,15 +1139,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#git-clone" class="md-nav__link">
-    最新のプロジェクトをGit clone
+  <a href="#jetbot-fabo_2020" class="md-nav__link">
+    JetBot fabo_2020での変更点
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notebook" class="md-nav__link">
-    Notebookの同期
+  <a href="#git-clone" class="md-nav__link">
+    最新のプロジェクトをGit clone
   </a>
   
 </li>
@@ -1168,31 +1168,102 @@
                   
                 
                 
-                <h1 id="9jetbotnotebook">9.JetbotとNotebookの更新</h1>
+                <h1 id="jetbotnotebookfabo_2020">JetbotとNotebookの更新(fabo_2020版)</h1>
+<h2 id="jetbot-fabo_2020">JetBot fabo_2020での変更点</h2>
+<ul>
+<li>Object Followingの追跡ターゲット設定をラベル選択に変更</li>
+<li>Collision AvoidanceにResNet18モデルを追加(NVIDIA公式対応)</li>
+<li>Collision AvoidanceにResNet18のTensorRT化を追加(NVIDIA公式対応)</li>
+<li>学習時にグラフ表示を追加(NVIDIA公式対応)</li>
+<li>ResNet18学習にaccuracy追加(ベストモデルの保存、グラフ表示)</li>
+<li>Road Followingのデータ保存方法をJetRacerと同じ画面クリックに変更(NVIDIA公式対応)</li>
+<li>Road Followingの学習にファインチューニングの方法を追加</li>
+<li>日本語解説の更新</li>
+</ul>
 <h2 id="git-clone">最新のプロジェクトをGit clone</h2>
-<p>最新版のjetbotプロジェクト(https://github.com/NVIDIA-AI-IOT/jetbot) をFaBoでForkし、日本語訳をつけたNotebookを取り込むため、FaBoPlatformのJetbotレポをGit cloneします。中身は、本体と同じです。</p>
+<p>最新版のJetBotプロジェクト(https://github.com/NVIDIA-AI-IOT/jetbot) をベースとして日本語訳と多少変更をおこなったNotebookを取り込むために、FaBoPlatformのJetbotをGit cloneします。</p>
+<ul>
+<li>データのバックアップ</li>
+</ul>
+<p>重要な学習やカスタマイズしたコードがある場合は、バックアップをとっておいた方がいいでしょう。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>mv ~/Notebook ~/Notebook_old</span>
+</code></pre></div></td></tr></table></p>
+<ul>
+<li>ビルド時間を短くするために、最大性能となるMAX-Nモードに変更します</li>
+</ul>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo nvpmodel -m 0</span>
+</code></pre></div></td></tr></table></p>
+<ul>
+<li>コード更新</li>
+</ul>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>cd ~/jetbot</span>
+<span class=err>git pull</span>
+<span class=err>sudo python3 setup.py install --force </span>
+</code></pre></div></td></tr></table></p>
+<p>もしエラーで失敗するときは、新しくダウンロードしなおします。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
-4</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>cd ~/</span>
-<span class=err>git clone https://github.com/FaBoPlatform/jetbot.git</span>
+4
+5</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>cd</span>
+<span class=err>sudo rm -rf jetbot</span>
+<span class=err>git clone https://github.com/FaBoPlatform/jetbot</span>
 <span class=err>cd jetbot</span>
 <span class=err>sudo python3 setup.py install --force </span>
 </code></pre></div></td></tr></table></p>
-<p>Rebootを実行します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo reboot</span>
-</code></pre></div></td></tr></table></p>
-<p>再起動には、2分程度かかります。2分程度経過したらBrowserをReloadすると、再びJetBotに接続されます。</p>
-<div class="admonition warning">
-<p>Rebootしないと、次の処理実行時に、下記エラーが発生します。
-E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
-E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?</p>
-</div>
-<h2 id="notebook">Notebookの同期</h2>
+<ul>
+<li>Notebookの同期</li>
+</ul>
 <p>最新版のJetbotプロジェクトのnotebookを~/Notebooksフォルダにrsyncします。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo apt-get install rsync</span>
 <span class=err>rsync -av ~/jetbot/notebooks/ ~/Notebooks</span>
+</code></pre></div></td></tr></table></p>
+<ul>
+<li>pipライブラリをインストール(15分)</li>
+</ul>
+<p>traitletsとnodejsをインストール</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo python3 -m pip install git+https://github.com/ipython/traitlets@dead2b8cdde</span>
+<span class=err>sudo apt-get install -y curl</span>
+<span class=err>curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -</span>
+<span class=err>sudo apt-get install -y nodejs libffi-dev</span>
+</code></pre></div></td></tr></table></p>
+<p>クリックライブラリをインストール</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>cd</span>
+<span class=err>git clone https://github.com/jaybdub/jupyter_clickable_image_widget</span>
+<span class=err>cd jupyter_clickable_image_widget</span>
+<span class=err>sudo -H pip3 install -e .</span>
+<span class=err>sudo jupyter labextension install js</span>
+<span class=err>sudo jupyter lab build</span>
+</code></pre></div></td></tr></table></p>
+<p>グラフ表示ライブラリをインストール</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo apt-get install -y python3-matplotlib</span>
+<span class=err>sudo -H pip3 install bokeh</span>
+<span class=err>sudo jupyter labextension install @bokeh/jupyter_bokeh</span>
+</code></pre></div></td></tr></table></p>
+<ul>
+<li>5Wモードに変更</li>
+</ul>
+<p>MAX-Nモードのままだと、モバイルバッテリーの電力供給量が足りずにJetsonが落ちることがあります。<br />
+特にバッテリー残量が低下したり、バッテリーが劣化している場合に頻発するため、普段は5Wモードにしておきます。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo nvpmodel -m 1</span>
+</code></pre></div></td></tr></table></p>
+<ul>
+<li>再起動</li>
+</ul>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo reboot</span>
 </code></pre></div></td></tr></table></p>
 <div class="admonition warning">
 <p><code>E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
