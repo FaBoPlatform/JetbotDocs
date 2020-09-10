@@ -1244,9 +1244,26 @@
 </div>
 <h2 id="wifi">Wifiに接続</h2>
 <p>ソフトウェアのパッケージのUpdate等をおこなう時は、Wifiへの接続もおこなっておきます。</p>
+<p><code>http://192.168.55.1:8888</code>で接続しているJupyterLabの<code>Terminal</code>の機能を使います。</p>
+<p><img alt="" src="../img/connection005.jpg" /></p>
+<p>Terminialで、Wifi接続のコマンドを実行します。<code>アクセスポイント名</code>と<code>パスワード</code>はお使いのネットワーク環境に合わせた値にします。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo -S nmcli device wifi connect &#39;アクセスポイント名&#39; password &#39;パスワード&#39; ifname wlan0</span>
 </code></pre></div></td></tr></table></p>
-<div class="admonition warming">
+<p><img alt="" src="../img/connection006.jpg" /></p>
+<p>sudo実行の際に、パスワードを聞かれますので、下記を入力します。</p>
+<table>
+<thead>
+<tr>
+<th align="left">password</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">jetbot</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
 <p class="admonition-title">USB経由でうまく接続できない場合（Mac偏)</p>
 <p>Macのシステム環境設定ー＞　ネットワークを選択し、
 <img alt="" src="../img/usb_LinuxForTegraSelect.png" />
