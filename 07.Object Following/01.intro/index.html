@@ -15,7 +15,7 @@
     
     
       
-        <title>Object Following - FaBo JetBot Docs</title>
+        <title>1.学習のススメ方 - FaBo JetBot Docs</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#object-following" class="md-skip">
+        <a href="#1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Object Following
+              1.学習のススメ方
             
           </span>
         </div>
@@ -750,14 +750,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Object Following
+        1.学習のススメ方
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Object Following" class="md-nav__link md-nav__link--active">
-      Object Following
+    <a href="./" title="1.学習のススメ方" class="md-nav__link md-nav__link--active">
+      1.学習のススメ方
     </a>
     
       
@@ -776,8 +776,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#notebook" class="md-nav__link">
-    Notebookの実行
+  <a href="#_1" class="md-nav__link">
+    学習のススメ方
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    必要なもの
   </a>
   
 </li>
@@ -786,6 +793,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02.objectfollowing/" title="Object Following" class="md-nav__link">
+      Object Following
+    </a>
   </li>
 
         
@@ -994,8 +1013,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#notebook" class="md-nav__link">
-    Notebookの実行
+  <a href="#_1" class="md-nav__link">
+    学習のススメ方
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    必要なもの
   </a>
   
 </li>
@@ -1016,32 +1042,55 @@
                   
                 
                 
-                <h1 id="object-following">Object Following</h1>
-<p>Object Followingは、学習済みモデルを使ったデモのみサンプルになります。</p>
+                <h1 id="1">1.学習のススメ方</h1>
+<p>Object Followingでは、データの収集と学習はおこなわず、既存モデルのssd mobilenet version 2をつかった物体認識の学習済みモデルをつかって、指定したオブジェクトへの追従をおこないます。</p>
+<h2 id="_1">学習のススメ方</h2>
+<p>各項目が終わったらNotebookのShutdownを忘れないようにしてください。</p>
 <table>
 <thead>
 <tr>
-<th align="left">JetPack</th>
-<th align="left">Download</th>
+<th align="left">項目</th>
+<th align="left">Notebook</th>
+<th align="left">操作</th>
+<th align="left">写真</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">4.3用</td>
-<td align="left"><a href="https://drive.google.com/file/d/1KjlDMRD8uhgQmQK-nC2CZGHFTbq4qQQH/view">ssd_mobilenet_v2_coco.engine</a></td>
-</tr>
-<tr>
-<td align="left">4.2用</td>
-<td align="left"><a href="https://drive.google.com/file/d/1RnNBHPDphIOWwHCSfeMCWQ7XN3w3tKFD/view">ssd_mobilenet_v2_coco.engine</a></td>
+<td align="left">1.デモ走行</td>
+<td align="left">live_demo.ipynb</td>
+<td align="left">学習結果でデモ走行</td>
+<td align="left"><img alt="" src="../img/demo001.jpg" /></td>
 </tr>
 </tbody>
 </table>
-<p>をダウンロードし、Object FollowingのNotebookのフォルダにアップロードします。</p>
-<p><img alt="" src="../img/up001.png" /></p>
-<p><img alt="" src="../img/up002.png" /></p>
-<h2 id="notebook">Notebookの実行</h2>
-<p>Object FollowingのNotebookは、データセット作成はおこなわず、学習済みモデルでのデモになります。</p>
-<p>デモでは、人を追従して、後を追ってきます。</p>
+<h2 id="_2">必要なもの</h2>
+<table>
+<thead>
+<tr>
+<th align="left">項目</th>
+<th align="left">概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Collision Avoidanceでの学習済みモデル</td>
+<td align="left">境界線に差し掛かったら回転させる用途で使用</td>
+</tr>
+<tr>
+<td align="left">Collision Avoidanceで使ったコース</td>
+<td align="left">Collision Avoidanceの認識用</td>
+</tr>
+<tr>
+<td align="left">ssd_mobilenet_v2_cocoの学習済みモデル</td>
+<td align="left"><a href="https://drive.google.com/file/d/1KjlDMRD8uhgQmQK-nC2CZGHFTbq4qQQH/view">ssd_mobilenet_v2_coco.engine</a>(JetPack4.3用)</td>
+</tr>
+<tr>
+<td align="left">認識させる物体</td>
+<td align="left">バナナ等</td>
+</tr>
+</tbody>
+</table>
                 
               
               
@@ -1075,13 +1124,13 @@
           </a>
         
         
-          <a href="../../08.Road%20Following/01.roadfollowing/" title="Road Following" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../02.objectfollowing/" title="Object Following" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                Road Following
+                Object Following
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
