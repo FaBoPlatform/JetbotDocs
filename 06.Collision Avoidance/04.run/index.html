@@ -15,7 +15,7 @@
     
     
       
-        <title>Jetbotでの学習 - FaBo JetBot Docs</title>
+        <title>JetBotでの実行 - FaBo JetBot Docs</title>
       
     
     
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Jetbotでの学習
+              JetBotでの実行
             
           </span>
         </div>
@@ -663,8 +663,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../01.dataset/" title="Datasetの作成" class="md-nav__link">
+    <a href="../01.intro/" title="1.学習のススメ方" class="md-nav__link">
+      1.学習のススメ方
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02.dataset/" title="Datasetの作成" class="md-nav__link">
       Datasetの作成
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03.train/" title="Jetbotでの学習" class="md-nav__link">
+      Jetbotでの学習
     </a>
   </li>
 
@@ -684,14 +708,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Jetbotでの学習
+        JetBotでの実行
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Jetbotでの学習" class="md-nav__link md-nav__link--active">
-      Jetbotでの学習
+    <a href="./" title="JetBotでの実行" class="md-nav__link md-nav__link--active">
+      JetBotでの実行
     </a>
     
       
@@ -711,14 +735,21 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    学習済みモデル
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     プロセスのシャットダウン
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notebook" class="md-nav__link">
-    学習用 Notebook
+  <a href="#live-demo" class="md-nav__link">
+    Live demoの実行
   </a>
   
 </li>
@@ -727,18 +758,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../03.run/" title="JetBotでの実行" class="md-nav__link">
-      JetBotでの実行
-    </a>
   </li>
 
         
@@ -990,14 +1009,21 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    学習済みモデル
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     プロセスのシャットダウン
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notebook" class="md-nav__link">
-    学習用 Notebook
+  <a href="#live-demo" class="md-nav__link">
+    Live demoの実行
   </a>
   
 </li>
@@ -1018,24 +1044,17 @@
                   
                 
                 
-                <h1 id="jetbot">Jetbotでの学習</h1>
-<p><img alt="" src="../img/train000.png" /></p>
-<p>Jetson nanoでは、Jetson nano上で、そのまま学習が可能です。その一方で電力消費、メモリ消費が多くなるので、今まで起動しているプロセスをシャットダウンします。</p>
-<h2 id="_1">プロセスのシャットダウン</h2>
-<p><img alt="" src="../img/kill001.png" /></p>
-<p><img alt="" src="../img/kill002.png" /></p>
-<p>NotebookやTerminalのプロセスをシャットダウンします。</p>
-<p><img alt="" src="../img/kill003.png" /></p>
-<p><img alt="" src="../img/kill004.png" /></p>
-<h2 id="notebook">学習用 Notebook</h2>
-<p>Jupyter上で、~/Notebooks/collision_avoidance/train_model.ipynbを開きます。</p>
-<p><img alt="" src="../img/jet001.png" /></p>
-<p>Datasetはすでに展開済みなので、下記処理はSkipします。</p>
-<p><img alt="" src="../img/jet002.png" /></p>
-<p>順番に実行していき、最後の学習が始まるとAccuracyが表示されます。</p>
-<p><img alt="" src="../img/jet003.png" /></p>
-<p>best_model.pthが生成されれば、学習は成功です。</p>
-<p><img alt="" src="../img/jet004.png" /></p>
+                <h1 id="jetbot">JetBotでの実行</h1>
+<p><img alt="" src="../img/demo001.png" /></p>
+<h2 id="_1">学習済みモデル</h2>
+<p>Jetsonでのローカルでの学習から、学習済みモデルであるbest_model.pthが同じフォルダに、生成されています。</p>
+<h2 id="_2">プロセスのシャットダウン</h2>
+<p>実行時メモリが足りなくなるので、前回までのサンプルを終了します。</p>
+<p><img alt="" src="../img/kill006.png" /></p>
+<p><img alt="" src="../img/kill007.png" /></p>
+<h2 id="live-demo">Live demoの実行</h2>
+<p>Jupyter上で、~/Notebooks/collision_avoidance/live_demoを開きます。</p>
+<p><img alt="" src="../img/run001.png" /></p>
                 
               
               
@@ -1054,7 +1073,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="">
         
-          <a href="../01.dataset/" title="Datasetの作成" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../03.train/" title="Jetbotでの学習" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1063,19 +1082,19 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                Datasetの作成
+                Jetbotでの学習
               </div>
             </div>
           </a>
         
         
-          <a href="../03.run/" title="JetBotでの実行" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../07.Object%20Following/01.objectfollowing/" title="Object Following" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                JetBotでの実行
+                Object Following
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
