@@ -15,7 +15,7 @@
     
     
       
-        <title>JetBotのSample - FaBo JetBot Docs</title>
+        <title>4.Jupyterの注意事項 - FaBo JetBot Docs</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#jetbotsample" class="md-skip">
+        <a href="#4jupyter" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              JetBotのSample
+              4.Jupyterの注意事項
             
           </span>
         </div>
@@ -543,8 +543,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../01.%E4%BD%BF%E7%94%A8%E7%AB%AF%E6%9C%AB/" title="使用端末" class="md-nav__link">
-      使用端末
+    <a href="../01.%E4%BD%BF%E7%94%A8%E7%AB%AF%E6%9C%AB/" title="1.対応端末" class="md-nav__link">
+      1.対応端末
     </a>
   </li>
 
@@ -555,8 +555,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../02.jupyter/" title="Jupyterの注意事項" class="md-nav__link">
-      Jupyterの注意事項
+    <a href="../02.train/" title="2.学習内容" class="md-nav__link">
+      2.学習内容
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03.study/" title="3.学習のススメ方" class="md-nav__link">
+      3.学習のススメ方
     </a>
   </li>
 
@@ -576,14 +588,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        JetBotのSample
+        4.Jupyterの注意事項
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="JetBotのSample" class="md-nav__link md-nav__link--active">
-      JetBotのSample
+    <a href="./" title="4.Jupyterの注意事項" class="md-nav__link md-nav__link--active">
+      4.Jupyterの注意事項
     </a>
     
       
@@ -602,8 +614,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sample" class="md-nav__link">
-    Sample
+  <a href="#jupyter" class="md-nav__link">
+    Jupyterのメモリ管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupyterkill" class="md-nav__link">
+    JupyterのプロセスをKillする
   </a>
   
 </li>
@@ -612,18 +631,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../04.train/" title="学習" class="md-nav__link">
-      学習
-    </a>
   </li>
 
         
@@ -982,8 +989,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sample" class="md-nav__link">
-    Sample
+  <a href="#jupyter" class="md-nav__link">
+    Jupyterのメモリ管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupyterkill" class="md-nav__link">
+    JupyterのプロセスをKillする
   </a>
   
 </li>
@@ -1004,50 +1018,19 @@
                   
                 
                 
-                <h1 id="jetbotsample">JetBotのSample</h1>
-<p>JetBot用のNotebookには、下記のサンプルが用意されています。</p>
-<h2 id="sample">Sample</h2>
-<table>
-<thead>
-<tr>
-<th align="left">モデル</th>
-<th align="left">内容</th>
-<th align="left">学習方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><a href="https://github.com/FaBoPlatform/jetbot/blob/master/notebooks/basic_motion/basic_motion.ipynb">basic_motion</a></td>
-<td align="left">モーター制御周りのサンプル</td>
-<td align="left">-</td>
-</tr>
-<tr>
-<td align="left"><a href="https://github.com/FaBoPlatform/jetbot/tree/master/notebooks/collision_avoidance">collision_avoidance</a></td>
-<td align="left">画像による境界線認識</td>
-<td align="left">alexnetの転移学習</td>
-</tr>
-<tr>
-<td align="left"><a href="https://github.com/FaBoPlatform/jetbot/tree/master/notebooks/object_following">object_following</a></td>
-<td align="left">オブジェクト認識による追従</td>
-<td align="left">SSD Mobilenet</td>
-</tr>
-<tr>
-<td align="left"><a href="https://github.com/FaBoPlatform/jetbot/tree/master/notebooks/road_following">road_following</a></td>
-<td align="left">道路認識</td>
-<td align="left">resnet18の転移学習</td>
-</tr>
-<tr>
-<td align="left"><a href="https://github.com/FaBoPlatform/jetbot/tree/master/notebooks/teleoperation">teleoperation</a></td>
-<td align="left">Joystickのサンプル</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><a href="https://github.com/FaBoPlatform/jetbot/tree/master/notebooks/utils">utils</a></td>
-<td align="left">各種設定コマンド集</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+                <h1 id="4jupyter">4.Jupyterの注意事項</h1>
+<h2 id="jupyter">Jupyterのメモリ管理</h2>
+<p>Jupyterでは、開かれたNotebookは、プロセスとして常駐します。プロセスをKillする場合は、Shutdownの処理を必ず実行します。(Linuxの再起動時でも、Killしないプロセスは再び常駐します)</p>
+<p><img alt="" src="../img/jupyter001.png" /></p>
+<p>Notebookは、同時に1つ以上起動しないようにしてください。メモリ不足に至る可能性があります。</p>
+<h2 id="jupyterkill">JupyterのプロセスをKillする</h2>
+<p>Notebookを閉じます。</p>
+<p><img alt="" src="../img/kill001.png" /></p>
+<p>緑色の丸が点灯しているのでプロセス自体は残っています。</p>
+<p><img alt="" src="../img/kill002.png" /></p>
+<p>プロセスをShutdownします。</p>
+<p><img alt="" src="../img/kill003.png" /></p>
+<p>この状態で初めてメモリが開放されます。</p>
                 
               
               
@@ -1066,7 +1049,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="">
         
-          <a href="../02.jupyter/" title="Jupyterの注意事項" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../03.study/" title="3.学習のススメ方" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1075,19 +1058,19 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                Jupyterの注意事項
+                3.学習のススメ方
               </div>
             </div>
           </a>
         
         
-          <a href="../04.train/" title="学習" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../05.Basic%20Motion/01.motion/" title="Basic motionの実行" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                学習
+                Basic motionの実行
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

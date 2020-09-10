@@ -15,7 +15,7 @@
     
     
       
-        <title>Jupyterの注意事項 - FaBo JetBot Docs</title>
+        <title>3.学習のススメ方 - FaBo JetBot Docs</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#jupyter" class="md-skip">
+        <a href="#3" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Jupyterの注意事項
+              3.学習のススメ方
             
           </span>
         </div>
@@ -543,8 +543,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../01.%E4%BD%BF%E7%94%A8%E7%AB%AF%E6%9C%AB/" title="使用端末" class="md-nav__link">
-      使用端末
+    <a href="../01.%E4%BD%BF%E7%94%A8%E7%AB%AF%E6%9C%AB/" title="1.対応端末" class="md-nav__link">
+      1.対応端末
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02.train/" title="2.学習内容" class="md-nav__link">
+      2.学習内容
     </a>
   </li>
 
@@ -564,14 +576,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Jupyterの注意事項
+        3.学習のススメ方
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Jupyterの注意事項" class="md-nav__link md-nav__link--active">
-      Jupyterの注意事項
+    <a href="./" title="3.学習のススメ方" class="md-nav__link md-nav__link--active">
+      3.学習のススメ方
     </a>
     
       
@@ -590,15 +602,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jupyter_1" class="md-nav__link">
-    Jupyterのメモリ管理
+  <a href="#_1" class="md-nav__link">
+    用意されている教材
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#jupyterkill" class="md-nav__link">
-    JupyterのプロセスをKillする
+  <a href="#_2" class="md-nav__link">
+    教材のススメ方
   </a>
   
 </li>
@@ -616,20 +628,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../03.model/" title="JetBotのSample" class="md-nav__link">
-      JetBotのSample
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../04.train/" title="学習" class="md-nav__link">
-      学習
+    <a href="../04.jupyter/" title="4.Jupyterの注意事項" class="md-nav__link">
+      4.Jupyterの注意事項
     </a>
   </li>
 
@@ -989,15 +989,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jupyter_1" class="md-nav__link">
-    Jupyterのメモリ管理
+  <a href="#_1" class="md-nav__link">
+    用意されている教材
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#jupyterkill" class="md-nav__link">
-    JupyterのプロセスをKillする
+  <a href="#_2" class="md-nav__link">
+    教材のススメ方
   </a>
   
 </li>
@@ -1018,19 +1018,45 @@
                   
                 
                 
-                <h1 id="jupyter">Jupyterの注意事項</h1>
-<h2 id="jupyter_1">Jupyterのメモリ管理</h2>
-<p>Jupyterでは、開かれたNotebookは、プロセスとして常駐します。プロセスをKillする場合は、Shutdownの処理を必ず実行します。(Linuxの再起動時でも、Killしないプロセスは再び常駐します)</p>
-<p><img alt="" src="../img/jupyter001.png" /></p>
-<p>Notebookは、同時に1つ以上起動しないようにしてください。メモリ不足に至る可能性があります。</p>
-<h2 id="jupyterkill">JupyterのプロセスをKillする</h2>
-<p>Notebookを閉じます。</p>
-<p><img alt="" src="../img/kill001.png" /></p>
-<p>緑色の丸が点灯しているのでプロセス自体は残っています。</p>
-<p><img alt="" src="../img/kill002.png" /></p>
-<p>プロセスをShutdownします。</p>
-<p><img alt="" src="../img/kill003.png" /></p>
-<p>この状態で初めてメモリが開放されます。</p>
+                <h1 id="3">3.学習のススメ方</h1>
+<h2 id="_1">用意されている教材</h2>
+<table>
+<thead>
+<tr>
+<th align="left">項目</th>
+<th align="left">フォルダ</th>
+<th align="left">概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1.BasicMotion</td>
+<td align="left">/Notebook/basic_motion/</td>
+<td align="left">Jetbotの走行サンプル</td>
+</tr>
+<tr>
+<td align="left">2.Collision Avoidance</td>
+<td align="left">/Notebook/collision_avoidance/</td>
+<td align="left">指定区域内の走行や障害物の回避等が可能な学習サンプル</td>
+</tr>
+<tr>
+<td align="left">3.Object Following</td>
+<td align="left">/Notebook/object_following/</td>
+<td align="left">指定した物体に追従するサンプル</td>
+</tr>
+<tr>
+<td align="left">4.Road Following</td>
+<td align="left">/Notebook/road_following/</td>
+<td align="left">道路を認識した自動走行サンプル</td>
+</tr>
+<tr>
+<td align="left">5.util</td>
+<td align="left">/Notebook/util/</td>
+<td align="left">便利なコマンドサンプル(FaBoオリジナル)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">教材のススメ方</h2>
                 
               
               
@@ -1049,7 +1075,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="">
         
-          <a href="../01.%E4%BD%BF%E7%94%A8%E7%AB%AF%E6%9C%AB/" title="使用端末" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../02.train/" title="2.学習内容" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1058,19 +1084,19 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                使用端末
+                2.学習内容
               </div>
             </div>
           </a>
         
         
-          <a href="../03.model/" title="JetBotのSample" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../04.jupyter/" title="4.Jupyterの注意事項" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                JetBotのSample
+                4.Jupyterの注意事項
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
