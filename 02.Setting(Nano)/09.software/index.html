@@ -1178,9 +1178,11 @@
 <p>グラフ表示ライブラリをインストール</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo apt-get install -y python3-matplotlib</span>
+3
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo apt-get install -y python3-matplotlib</span>
 <span class=err>sudo -H pip3 install bokeh</span>
 <span class=err>sudo jupyter labextension install @bokeh/jupyter_bokeh</span>
+<span class=err>sudo jupyter lab build</span>
 </code></pre></div></td></tr></table></p>
 <h2 id="5w">電力モードを5Wモードに変更</h2>
 <p>MAX-Nモードのままだと、モバイルバッテリーの電力供給量が足りずにJetsonが落ちることがあります。 Jetbot使用時は、5Wモードにしておきます。</p>
