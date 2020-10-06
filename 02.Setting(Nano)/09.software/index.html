@@ -451,6 +451,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    パッケージのUpdate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notebook" class="md-nav__link">
     Notebookの同期
   </a>
@@ -1079,6 +1086,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    パッケージのUpdate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notebook" class="md-nav__link">
     Notebookの同期
   </a>
@@ -1152,10 +1166,15 @@
 <span class=err>cd jetbot</span>
 <span class=err>sudo python3 setup.py install --force </span>
 </code></pre></div></td></tr></table></p>
+<h2 id="update">パッケージのUpdate</h2>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo apt-get update</span>
+</code></pre></div></td></tr></table></p>
 <h2 id="notebook">Notebookの同期</h2>
 <p>最新版のJetbotプロジェクトのnotebookを~/Notebooksフォルダにrsyncします。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo apt-get install rsync</span>
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo apt-get install rsync</span>
+<span class=err>mv ~/Notebooks ~/Notebooks_old</span>
 <span class=err>rsync -av ~/jetbot/notebooks/ ~/Notebooks</span>
 </code></pre></div></td></tr></table></p>
 <h2 id="pip15">pipライブラリをインストール(15分)</h2>
@@ -1183,7 +1202,9 @@
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
-4</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo apt-get install -y python3-matplotlib</span>
+4
+5</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>cd</span>
+<span class=err>sudo apt-get install -y python3-matplotlib</span>
 <span class=err>sudo -H pip3 install bokeh</span>
 <span class=err>sudo jupyter labextension install @bokeh/jupyter_bokeh</span>
 <span class=err>sudo jupyter lab build</span>
