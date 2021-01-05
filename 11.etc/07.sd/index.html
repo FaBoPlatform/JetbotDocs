@@ -758,8 +758,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07.Collision%20Avoidance/01.intro/" title="1.Collision Avoidance" class="md-nav__link">
-      1.Collision Avoidance
+    <a href="../../07.Collision%20Avoidance/01.intro/" title="1.学習のススメ方" class="md-nav__link">
+      1.学習のススメ方
     </a>
   </li>
 
@@ -848,8 +848,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../08.Object%20Following/01.intro/" title="1.Object Following" class="md-nav__link">
-      1.Object Following
+    <a href="../../08.Object%20Following/01.intro/" title="1.学習のススメ方" class="md-nav__link">
+      1.学習のススメ方
     </a>
   </li>
 
@@ -902,8 +902,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../09.Road%20Following/01.intro/" title="1.Road Following" class="md-nav__link">
-      1.Road Following
+    <a href="../../09.Road%20Following/01.intro/" title="1.学習のススメ方" class="md-nav__link">
+      1.学習のススメ方
     </a>
   </li>
 
@@ -1330,10 +1330,12 @@
                 <h1 id="sd">SDカードの作成</h1>
 <h2 id="sd_1">自分でSDカードイメージを作成する場合</h2>
 <p>JetBot公式ドキュメントの<a href="https://jetbot.org/master/software_setup/sd_card.html">software_setup</a>のページが参考になります。</p>
-<p>【作業の流れ】
-*   JetBot公式イメージをSDカードに書き込む
-*   WiFiに接続する
-*   FaBoのノートブックを設定する</p>
+<p>【作業の流れ】</p>
+<ul>
+<li>JetBot公式イメージをSDカードに書き込む</li>
+<li>WiFiに接続する</li>
+<li>FaBoのノートブックを設定する</li>
+</ul>
 <h2 id="jetbotsd">JetBot公式イメージをSDカードに書き込む</h2>
 <p>JetBot公式SDカードイメージは、<a href="https://www.balena.io/etcher/">Etcher</a>を用いてSDカードに書き込みます。</p>
 <p><img alt="" src="../img/sd001.jpg" /></p>
@@ -1366,14 +1368,18 @@
 <h2 id="fabo">FaBoのノートブックを設定する</h2>
 <p>次にFaBoでforkしているJetBotのノートブックを利用方法について説明します。</p>
 <h3 id="jetpack-441-docker">JetPack 4.4.1 Docker版</h3>
-<p>【更新の概要】
-*   (前提) NVIDIA公式JetBotイメージがインストール済みであること
-*   FaBoのノートブックをhostに用意する</p>
-<p>【作業の流れ】
-*   sshコマンドでJetson Nanoにリモートログイン
-*   git cloneのためのディレクトリ作成
-*   FaBoでforkしているJetBotをgit cloneする
-*   作業用にノートブックをコピー</p>
+<p>【更新の概要】</p>
+<ul>
+<li>(前提) NVIDIA公式JetBotイメージがインストール済みであること</li>
+<li>FaBoのノートブックをhostに用意する</li>
+</ul>
+<p>【作業の流れ】</p>
+<ul>
+<li>sshコマンドでJetson Nanoにリモートログイン</li>
+<li>git cloneのためのディレクトリ作成</li>
+<li>FaBoでforkしているJetBotをgit cloneする</li>
+<li>作業用にノートブックをコピー</li>
+</ul>
 <p>PCからJetBotにsshでリモートログイン</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=n>ssh</span> <span class=n>jetbot</span><span class=mf>@192.168</span><span class=p>.</span><span class=n>xxx</span><span class=p>.</span><span class=n>xxx</span>
 </code></pre></div></td></tr></table></p>
@@ -1444,7 +1450,7 @@
     </div>
     
       <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.config.pipeline": "trimmer, stopWordFilter"}</script>
+      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.lang": "ja", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f"}</script>
       
       <script>
         app = initialize({

@@ -809,8 +809,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07.Collision%20Avoidance/01.intro/" title="1.Collision Avoidance" class="md-nav__link">
-      1.Collision Avoidance
+    <a href="../../07.Collision%20Avoidance/01.intro/" title="1.学習のススメ方" class="md-nav__link">
+      1.学習のススメ方
     </a>
   </li>
 
@@ -899,8 +899,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../08.Object%20Following/01.intro/" title="1.Object Following" class="md-nav__link">
-      1.Object Following
+    <a href="../../08.Object%20Following/01.intro/" title="1.学習のススメ方" class="md-nav__link">
+      1.学習のススメ方
     </a>
   </li>
 
@@ -953,8 +953,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../09.Road%20Following/01.intro/" title="1.Road Following" class="md-nav__link">
-      1.Road Following
+    <a href="../../09.Road%20Following/01.intro/" title="1.学習のススメ方" class="md-nav__link">
+      1.学習のススメ方
     </a>
   </li>
 
@@ -1263,16 +1263,20 @@
 <p>ここではFaBoでforkしているJetBotのノートブックを更新する方法について説明します。</p>
 <h2 id="jetpack-441-docker">JetPack 4.4.1 Docker版</h2>
 <p>Jetson Nano 2GB/4GB共通。</p>
-<p>【更新の概要】
-*   (前提) すでにFaBoのSDカードを持っていること
-*   古いノートブックを削除する
-*   FaBoのノートブックを更新する</p>
-<p>【作業の流れ】
-*   sshコマンドでJetson Nanoにリモートログインする
-*   古いディレクトリを削除する
-*   git cloneのためのディレクトリ作成する
-*   FaBoでforkしているJetBotをgit cloneする
-*   作業用にノートブックをコピーする</p>
+<p>【更新の概要】</p>
+<ul>
+<li>(前提) すでにFaBoのSDカードを持っていること</li>
+<li>古いノートブックを削除する</li>
+<li>FaBoのノートブックを更新する</li>
+</ul>
+<p>【作業の流れ】</p>
+<ul>
+<li>sshコマンドでJetson Nanoにリモートログインする</li>
+<li>古いディレクトリを削除する</li>
+<li>git cloneのためのディレクトリ作成する</li>
+<li>FaBoでforkしているJetBotをgit cloneする</li>
+<li>作業用にノートブックをコピーする</li>
+</ul>
 <p>PCからJetBotにsshでリモートログイン</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=n>ssh</span> <span class=n>jetbot</span><span class=mf>@192.168</span><span class=p>.</span><span class=n>xxx</span><span class=p>.</span><span class=n>xxx</span>
 </code></pre></div></td></tr></table></p>
@@ -1295,19 +1299,23 @@
 <p>以上です。すでにjupyterにアクセスしている場合はブラウザをリロードすると<code>/home/jetbot/Notebooks</code>が出来ているので、このノートブックを利用します。</p>
 <h2 id="jetpack-43">JetPack 4.3</h2>
 <p>Jetson Nano 4GBのみ。</p>
-<p>【更新の概要】
-*   (前提) すでにFaBoのSDカードを持っていること
-*   古いノートブックを削除する
-*   古いjetbotを削除する
-*   FaBoのjetbotをインストールする
-*   FaBoのノートブックを更新する</p>
-<p>【作業の流れ】
-*   sshコマンドでJetson Nanoにリモートログインする
-*   古いディレクトリを削除する
-*   git cloneのためのディレクトリ作成する
-*   FaBoでforkしているJetBotをgit cloneする
-*   JetBotをインストールする
-*   作業用にノートブックをコピーする</p>
+<p>【更新の概要】</p>
+<ul>
+<li>(前提) すでにFaBoのSDカードを持っていること</li>
+<li>古いノートブックを削除する</li>
+<li>古いjetbotを削除する</li>
+<li>FaBoのjetbotをインストールする</li>
+<li>FaBoのノートブックを更新する</li>
+</ul>
+<p>【作業の流れ】</p>
+<ul>
+<li>sshコマンドでJetson Nanoにリモートログインする</li>
+<li>古いディレクトリを削除する</li>
+<li>git cloneのためのディレクトリ作成する</li>
+<li>FaBoでforkしているJetBotをgit cloneする</li>
+<li>JetBotをインストールする</li>
+<li>作業用にノートブックをコピーする</li>
+</ul>
 <p>PCからJetBotにsshでリモートログイン</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=n>ssh</span> <span class=n>jetbot</span><span class=mf>@192.168</span><span class=p>.</span><span class=n>xxx</span><span class=p>.</span><span class=n>xxx</span>
 </code></pre></div></td></tr></table></p>
@@ -1435,7 +1443,7 @@
     </div>
     
       <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.config.pipeline": "trimmer, stopWordFilter"}</script>
+      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.lang": "ja", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f"}</script>
       
       <script>
         app = initialize({
