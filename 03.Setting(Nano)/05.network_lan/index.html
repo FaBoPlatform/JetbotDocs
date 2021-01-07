@@ -891,6 +891,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../07.Collision%20Avoidance/06.train_alexnet/" title="3.Jetbotでの学習" class="md-nav__link">
+      3.Jetbotでの学習
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../07.Collision%20Avoidance/07.run_alexnet/" title="5.自動走行" class="md-nav__link">
+      5.自動走行
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1321,12 +1345,20 @@
 sshクライアント環境が整っていない場合は、Secure Shell(Google製)を用いて、Chrome browserからsshでJetBotにログインします。　</p>
 <h2 id="secure-shell">Secure Shellのインストール</h2>
 <p>Chrome ウェブストアにアクセスし、<a href="https://chrome.google.com/webstore/detail/secure-shell/iodihamcpbpeioajjeobimgagajmlibd?hl=ja&amp;">Secure Shell</a>をインストールします。</p>
-<p><img alt="" src="../img/ssh001.jpg" /></p>
+<p><img alt="" src="../img/ssh001.png" />
+chromeウェブストアでSecure Shellを検索します。
+<img alt="" src="../img/ssh002.png" />
+<img alt="" src="../img/ssh003.png" />
+ポップアップ表示が出てくるので、「拡張機能を追加」をクリックしてSecure Shellをインストールします。
+<img alt="" src="../img/ssh004.png" />
+同期の有効化は特に必要ありません。
+<img alt="" src="../img/ssh005.png" /></p>
 <h2 id="secure-shell_1">Secure Shellの実行</h2>
-<p>Chrome browserのURLフォームに、<code>chrome://app</code>と入力し、Chromeアプリの一覧を表示し、Secure Shellを起動します。</p>
-<p><img alt="" src="../img/ssh002.jpg" /></p>
+<p>ブラウザの右上にあるツールアイコンからSecure Shellを起動します。
+<img alt="" src="../img/ssh006.png" /></p>
 <h2 id="jetbot">JetBotにログイン</h2>
-<p><img alt="" src="../img/ssh003.jpg" /></p>
+<p>有線LAN接続の場合はOLEDに表示されているJetBotのIPアドレスを確認してください。
+<img alt="" src="../img/ssh007.png" /></p>
 <table>
 <thead>
 <tr>
@@ -1339,11 +1371,13 @@ sshクライアント環境が整っていない場合は、Secure Shell(Google�
 </tr>
 </tbody>
 </table>
+<p><img alt="" src="../img/ssh008.png" />
+JetBotにsshログイン成功。
+<img alt="" src="../img/ssh009.png" /></p>
 <h2 id="jetbotwifi">JetBotをWiFiルータに接続</h2>
 <p>JetBotのターミナルでWiFi接続のコマンドを実行します。<code>アクセスポイント名</code>と<code>パスワード</code>はお使いのネットワーク環境に合わせた値にします。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo -S nmcli device WiFi connect &#39;アクセスポイント名&#39; password &#39;パスワード&#39; ifname wlan0</span>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo nmcli device wifi connect &#39;アクセスポイント名&#39; password &#39;パスワード&#39; ifname wlan0</span>
 </code></pre></div></td></tr></table></p>
-<p><img alt="" src="../img/connection006.jpg" /></p>
 <p>sudo実行の際に、パスワードを聞かれますので、下記を入力します。</p>
 <table>
 <thead>
@@ -1357,12 +1391,13 @@ sshクライアント環境が整っていない場合は、Secure Shell(Google�
 </tr>
 </tbody>
 </table>
+<p><img alt="" src="../img/ssh010.png" /></p>
 <h2 id="ip">IPアドレスの確認</h2>
 <p>IPアドレスの確認はifconfigコマンドを用います。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>ifconfig -a</span>
 </code></pre></div></td></tr></table></p>
-<p><img alt="" src="../img/connection007.jpg" /></p>
-<p><img alt="" src="../img/connection009.jpg" /></p>
+<p><img alt="" src="../img/ssh011.png" /></p>
+<p><img alt="" src="../img/ssh012.png" /></p>
                 
               
               
@@ -1430,7 +1465,7 @@ sshクライアント環境が整っていない場合は、Secure Shell(Google�
     </div>
     
       <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"search.config.pipeline": "trimmer, stopWordFilter", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f"}</script>
+      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.config.pipeline": "trimmer, stopWordFilter"}</script>
       
       <script>
         app = initialize({
