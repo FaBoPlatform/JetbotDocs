@@ -15,7 +15,7 @@
     
     
       
-        <title>3.Jetbotでの学習 - FaBo JetBot Docs</title>
+        <title>6.AlexNet - FaBo JetBot Docs</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#3jetbot" class="md-skip">
+        <a href="#6alexnet" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -89,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              3.Jetbotでの学習
+              6.AlexNet
             
           </span>
         </div>
@@ -829,14 +829,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        3.Jetbotでの学習
+        6.AlexNet
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="3.Jetbotでの学習" class="md-nav__link md-nav__link--active">
-      3.Jetbotでの学習
+    <a href="./" title="6.AlexNet" class="md-nav__link md-nav__link--active">
+      6.AlexNet
     </a>
     
       
@@ -855,8 +855,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#02_train_model_resnet18_jpipynb" class="md-nav__link">
-    学習(02_train_model_resnet18_JP.ipynb)
+  <a href="#_1" class="md-nav__link">
+    学習
   </a>
   
 </li>
@@ -874,8 +874,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../07.run_alexnet/" title="5.自動走行" class="md-nav__link">
-      5.自動走行
+    <a href="../07.run_alexnet/" title="5.自動走行(AlexNet)" class="md-nav__link">
+      5.自動走行(AlexNet)
     </a>
   </li>
 
@@ -1247,8 +1247,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#02_train_model_resnet18_jpipynb" class="md-nav__link">
-    学習(02_train_model_resnet18_JP.ipynb)
+  <a href="#_1" class="md-nav__link">
+    学習
   </a>
   
 </li>
@@ -1269,18 +1269,37 @@
                   
                 
                 
-                <h1 id="3jetbot">3.Jetbotでの学習</h1>
-<p>学習はJetBotに搭載しているJetson Nanoでおこなうことができます。その一方で電力消費、メモリ消費が多くなるので、今まで起動しているNotebookをすべてシャットダウンします。</p>
-<p><img alt="YOUTUBE" src="5ab0m38ZTWo" /></p>
-<h2 id="02_train_model_resnet18_jpipynb">学習(02_train_model_resnet18_JP.ipynb)</h2>
-<p>Jupyter上で、~/Notebooks/collision_avoidance/02_train_model_resnet18_JP.ipynbを開きます。</p>
-<p><img alt="" src="../img/train001.jpg" /></p>
-<p>01_data_collection_JP.ipynbのプロセスをshutdownします。</p>
-<p><img alt="" src="../img/train002.jpg" /></p>
-<p>Notebookのcellを実行していくと、最後に学習が始まります。30エポック学習します。</p>
-<p><img alt="" src="../img/how002.jpg" /></p>
+                <h1 id="6alexnet">6.AlexNet</h1>
+<p>ResNetと同じようにAlexNetでも学習が可能です。<br />
+AlexNetモデルはObject Followingの時にも利用します。<br />
+JetBot 2GBやハンズオンではこの項目は実施しません。  </p>
+<h2 id="_1">学習</h2>
+<p>学習には2つのノートブックが用意されています。</p>
+<p>|項目|ノートブック|内容|
+|:--|:--|:--|:--|
+|1.データ収集|11_train_model_JP.ipynb|通常の学習|
+|1.データ収集|13_train_model_plot_JP.ipynb|学習状況をグラフで表示|</p>
+<p>学習状況をグラフで表示する13_train_model_plot_JP.ipynbを利用する場合は、可視化ユーティリティのbokehが必要になります。<br />
+bokehがインストールされていない場合は、ターミナルで以下のコマンドを実行してインストールしてください。</p>
+<ul>
+<li>Docker版(JetPack 4.4.1以降)はjupyterのターミナルで実行してください。</li>
+</ul>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=n>pip3</span> <span class=n>install</span> <span class=n>bokeh</span>
+<span class=n>jupyter</span> <span class=n>labextension</span> <span class=n>install</span> <span class=p>@</span><span class=n>jupyter</span><span class=o>-</span><span class=n>widgets</span><span class=o>/</span><span class=n>jupyterlab</span><span class=o>-</span><span class=n>manager</span><span class=mf>@2.0</span>
+<span class=n>jupyter</span> <span class=n>labextension</span> <span class=n>install</span> <span class=p>@</span><span class=n>bokeh</span><span class=o>/</span><span class=n>jupyter_bokeh</span>
+</code></pre></div></td></tr></table></p>
+<ul>
+<li>非Docker版(JetPack 4.3以前)はjupyterのターミナルもしくはJetBotにsshログインして実行してください。</li>
+</ul>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=n>sudo</span> <span class=n>pip3</span> <span class=n>install</span> <span class=n>bokeh</span>
+<span class=n>sudo</span> <span class=n>jupyter</span> <span class=n>labextension</span> <span class=n>install</span> <span class=p>@</span><span class=n>jupyter</span><span class=o>-</span><span class=n>widgets</span><span class=o>/</span><span class=n>jupyterlab</span><span class=o>-</span><span class=n>manager</span><span class=mf>@2.0</span>
+<span class=n>sudo</span> <span class=n>jupyter</span> <span class=n>labextension</span> <span class=n>install</span> <span class=p>@</span><span class=n>bokeh</span><span class=o>/</span><span class=n>jupyter_bokeh</span>
+</code></pre></div></td></tr></table></p>
 <p>best_model.pthが生成されれば、学習は成功です。</p>
-<p><img alt="" src="../img/result001.jpg" /></p>
                 
               
               
@@ -1314,13 +1333,13 @@
           </a>
         
         
-          <a href="../07.run_alexnet/" title="5.自動走行" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../07.run_alexnet/" title="5.自動走行(AlexNet)" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                5.自動走行
+                5.自動走行(AlexNet)
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -1348,7 +1367,7 @@
     </div>
     
       <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.config.pipeline": "trimmer, stopWordFilter"}</script>
+      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.config.lang": "ja", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.pipeline": "trimmer, stopWordFilter", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044"}</script>
       
       <script>
         app = initialize({
