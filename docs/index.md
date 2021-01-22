@@ -1,7 +1,7 @@
 # JetBot Docs
 
 ![](./img/JETBOT_SIDE_VIEW1400.jpg)
-FaBo JetBot Kit
+FaBo JetBot Kit  JB-4GB-S-G
 
 ## JetBot Docsについて
 
