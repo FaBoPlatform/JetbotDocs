@@ -1,12 +1,12 @@
-# 組み立てマニュアル(Carbon 4GB)
+# 組み立てマニュアル(初期型、Bタイプ)
 
 対象モデル
 
 |コード番号|
 |:--|
-|JB-4GB-Carbon-S|
-|JB-4GB-Carbon-S-B|
-|JB-4GB-Carbon-B|
+|JB-4GB-Carbon-S（初期型）|
+|JB-4GB-Carbon-S-B（Bタイプ）|
+|JB-4GB-Carbon-B（初期型ベアボーン）|
 
 <hr>
 
