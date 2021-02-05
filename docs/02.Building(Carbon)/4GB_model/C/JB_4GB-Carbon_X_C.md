@@ -108,7 +108,7 @@
 |写真|部品または工具|個数|
 |:--|:--|:--:|
 |![](./../../img/add_caster_mini001.jpg){: style="height:210px;width:200px"}|2.キャスター固定ネジ袋|1|
-|![](./../../img_JB_4GB_Carbon_C_ballcaster_spacer.jpg){: style="height:210px;width:200px"}|ボールキャスタスペーサープレート<br>材質：アルミ|1枚|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_ballcaster_spacer.jpg){: style="height:210px;width:200px"}|ボールキャスタスペーサー<br>材質：アルミ|1枚|
 |![](./../../img/add_caster_mini003.jpg){: style="height:210px;width:200px"}|カーボン中段|1|
 |![](./../../img/add_driverplus2_001.jpg){: style="height:210px;width:200px"}|プラスドライバー +2×100|１本|
 
@@ -120,13 +120,17 @@
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_screwinsert.jpg)
 
-ドライバーで４箇所締め付けます。
+M3ナットをはめて、ドライバーで４箇所締め付けます。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_ballcasterscrewset.jpg)
 
-取り付け後
+取り付け後　裏
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_ballcastersetfin.jpg)
+
+表になります。ボールキャスターが固定できました。
+
+![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_ballcastertop.jpg)
 
 <hr>
 
@@ -219,8 +223,8 @@ Jetson固定ネジを取り付けます。
 |:--|:--|:--:|
 |![](./../../img/add_JetsonNanoB01ORA02_001.jpg){: style="height:210px;width:200px"}|Jetson Nano 開発者キット B01,A02|1|
 |![](./../../img/add_wifi_module_intel001.jpg){: style="height:210px;width:200px"}|Intel Dual Bandwireless-AC 8265 Desktop Kit|1|
-|![](./../../img_JB_4GB_Carbon_C_common_cameramount.jpg){: style="height:210px;width:200px"}|カメラマウント|１|
-|![](./../../img_JB_4GB_Carbon_C_alminuim_wifiantena_supporter.jpg){: style="height:210px;width:200px"}|Wifiアンテナ支持金具|1|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_common_cameramount.jpg){: style="height:210px;width:200px"}|カメラマウント|１|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_alminuim_wifiantena_supporter.jpg){: style="height:210px;width:200px"}|Wifiアンテナ支持金具|1|
 |![](./../../img/add_spana001.jpg){: style="height:210px;width:200px"}|スパナ|1|
 |![](./../../img/add_semitudriverset001.jpg){: style="height:210px;width:200px"}|精密ドライバセット　ED−２０|1|
 |![](./../../img/add_driverplus2_001.jpg){: style="height:210px;width:200px"}|プラスドライバー +2×100|1|
@@ -259,7 +263,6 @@ Wifi Moduleは、Intel Dual Bandwireless-AC 8265 Desktop Kitを取り付けま�
 
 ![](./../../img/Wifi_9/WifiModuleSet.jpg)
 
-![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_prepairWifiMount1.jpg)
 
 !!!Info "技適"
 	箱の横に技適番号が記載されています。
@@ -278,7 +281,7 @@ Wifi Moduleは、Intel Dual Bandwireless-AC 8265 Desktop Kitを取り付けま�
 
 ![](./../../img/Wifi_9/WifiAntennaConnetctToMoudule.jpg)
 
-取り外したアンテナ端子をWifiアンテナ支持金具に取り付けます。穴があることを確認し端子を通るようにまわし貫通させます。
+取り外したアンテナ端子をWifiアンテナ支持金具に取り付けます。Wifiアンテナ支持金具に穴確認し端子を通るようにまわしアンテナ端子を貫通させます。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_wifisuppert_hole.jpg)
 
@@ -318,7 +321,7 @@ Jetson Nano Moduleを再び装着し、２箇所ネジ止めします。
 
 ![](./../../img/Wifi_9/jetson_re.jpg)
 
-できあがり。
+できあがりとなります。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_wifi_sepa.jpg)
 
@@ -337,13 +340,9 @@ Jetson Nano Moduleを再び装着し、２箇所ネジ止めします。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_camera_munit_start.jpg)
 
-カメラモジュールをカメラマウントに取り付けます。
+カメラモジュールをカメラマウントに取り付けます。カメラモジュールの４つの穴に六角レンチ棒を使いM2.0のタッピンングビスでカメラを取り付けます。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_cameramount_prepair.jpg)
-
-カメラモジュールの４つの穴に六角レンチ棒を使いM2.0のタッピンングビスでカメラを取り付けます。
-
-![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_cameramodule_set.jpg)
 
 カメラの取り付けは終了となります。
 
@@ -359,7 +358,7 @@ Jetson Nano Moduleを再び装着し、２箇所ネジ止めします。
 |:--|:--|:--:|
 |![](./../../img/add_(5)camerakotei001.jpg){: style="height:210px;width:200px"}|５．カメラ固定|1|
 |![](./../../img/add_driverplus2_001.jpg){: style="height:210px;width:200px"}|プラスドライバー +2×100|1|
-|![](./../../img_JB_4GB_Carbon_C_nutdriver_5mm.jpg){: style="height:210px;width:200px"}|ナットドライバー ５．０|1|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_nutdriver_5mm.jpg){: style="height:210px;width:200px"}|ナットドライバー ５．０|1|
 
 カメラマウント,Wifiアンテナ支持金具とシャーシと結合します。
 
@@ -374,9 +373,9 @@ Jetson Nano Moduleを再び装着し、２箇所ネジ止めします。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_cameramount_set.jpg)
 
-カメラマウント取り付け完了。
+カメラマウントとシャーシは、取り付け完了です。
 
-![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_cameramount_fin.jpg)
+![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_resinscrewfin.jpg)
 
 シャーシ最上部と真ん中のシャーシを結合します。
 
