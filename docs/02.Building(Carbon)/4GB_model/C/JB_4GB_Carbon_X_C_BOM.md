@@ -6,6 +6,10 @@
 
 <hr>
 
+![JetBot](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_thum.jpg){: style="height:210px;width:200px"}
+<br>
+<br>
+
 対象モデル
 
 |コード番号|
@@ -16,7 +20,7 @@
 |写真|部品|個数|
 |:--|:--|:--|
 |![](./../../img/add_JetsonNanoB01ORA02_001.jpg)|Jetson Nano 開発者キット B01<br>(JetBot Kit ４GBモデルに付属)<br>※ベアボーンキットには付属しません。|１枚|
-|![](./../../img/add_camera_IMX219_160_001.jpg)|CAM026 IMX219-160°|１個|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_camera.jpg)|CAM026 IMX219-160°|１個|
 |![](./../../img/add_carbon_body_top001.jpg)|カーボン TOP|１枚|
 |![](./../../img/add_carbon_body_middle001.jpg)|カーボン MIDDLE|１枚|    
 |![](./../../img/add_carbon_body_bottom001.jpg)|カーボン BOTTOM|１枚|

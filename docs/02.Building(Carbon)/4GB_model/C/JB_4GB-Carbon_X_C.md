@@ -1,5 +1,10 @@
 # 組み立てマニュアル（Cタイプ）
 
+
+![JetBot](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_thum.jpg){: style="height:210px;width:200px"}
+<br>
+<br>
+
 対象モデル
 
 |コード番号|
@@ -539,4 +544,8 @@ DCプラグをJetsonNano開発者キットのDCジャックへ接続します。
 
 おめでとうございます。JetBotの完成です。カメラモジュールのレンズキャップを装着している場合は外します。
 
-![](./../../img/Complete_20/kansei.jpg)
+![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_finish.jpg)
+
+[SDカードの準備](https://faboplatform.github.io/JetbotDocs/03.Setting%28Nano%29/01.sd/)
+
+[モバイルバッテリーについて](https://faboplatform.github.io/JetbotDocs/03.Setting%28Nano%29/02.battery/)
