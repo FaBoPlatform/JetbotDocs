@@ -12,6 +12,10 @@
 |JB-4GB-Carbon-S-C（標準）|
 |JB-4GB-Carbon-B-C（ベアボーン）|
 
+<主な変更点>
+
+WiFi支持パーツ剛性アップ
+
 <hr>
 
 ## 1. モーターの取り付け
@@ -373,7 +377,7 @@ Jetson Nano Moduleを再び装着し、２箇所ネジ止めします。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_bottom_view.jpg)
 
-カメラモジュールには４箇所、M３のナットを使用し、ナットドライバー5.0で適度に固定します。
+カメラモジュールには４箇所、M2.6のナットを使用し、ナットドライバー5.0で適度に固定します。
 ※締めすぎると破損する可能性があります。適度なトルクでお願いいたします。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_cameramount_set.jpg)
