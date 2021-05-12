@@ -14,7 +14,7 @@
     
     
       
-        <title>JetbotとNotebookの更新 - FaBo JetBot Docs</title>
+        <title>I2Cアドレスの修正 - FaBo JetBot Docs</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#jetbotnotebook" class="md-skip">
+        <a href="#i2c" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              JetbotとNotebookの更新
+              I2Cアドレスの修正
             
           </span>
         </div>
@@ -747,18 +747,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../02.jetcard/" class="md-nav__link">
-        JetCardのインストール
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -771,12 +759,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          JetbotとNotebookの更新
+          I2Cアドレスの修正
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        JetbotとNotebookの更新
+        I2Cアドレスの修正
       </a>
       
         
@@ -794,15 +782,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#git-clone" class="md-nav__link">
-    最新のプロジェクトをGit clone
+  <a href="#i2c_1" class="md-nav__link">
+    I2Cアドレスの修正
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notebook" class="md-nav__link">
-    Notebookの同期
+  <a href="#i2c_2" class="md-nav__link">
+    モーター制御側のI2Cアドレスの修正
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oledi2c" class="md-nav__link">
+    OLED表示側のI2Cアドレスの修正
   </a>
   
 </li>
@@ -820,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08.power/" class="md-nav__link">
+      <a href="../03.power/" class="md-nav__link">
         電力モード
       </a>
     </li>
@@ -1429,15 +1424,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#git-clone" class="md-nav__link">
-    最新のプロジェクトをGit clone
+  <a href="#i2c_1" class="md-nav__link">
+    I2Cアドレスの修正
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notebook" class="md-nav__link">
-    Notebookの同期
+  <a href="#i2c_2" class="md-nav__link">
+    モーター制御側のI2Cアドレスの修正
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oledi2c" class="md-nav__link">
+    OLED表示側のI2Cアドレスの修正
   </a>
   
 </li>
@@ -1455,37 +1457,47 @@
               
                 
                 
-                <h1 id="jetbotnotebook">JetbotとNotebookの更新</h1>
-<h2 id="git-clone">最新のプロジェクトをGit clone</h2>
-<p>最新版のjetbotプロジェクト(https://github.com/NVIDIA-AI-IOT/jetbot) をFaBoでForkし、日本語訳をつけたNotebookを取り込むため、FaBoPlatformのJetbotレポをGit cloneします。中身は、本体と同じです。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span>
-<span class=normal>3</span>
-<span class=normal>4</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>cd ~/
-git clone https://github.com/FaBoPlatform/jetbot.git
-cd jetbot
-sudo python3 setup.py install --force 
+                <h1 id="i2c">I2Cアドレスの修正</h1>
+<p>Jetson Nano 2GB, 4GBではI2Cのバスは1を使用しますが、Jetson Xavier NXではI2Cのバスは8を使用します。</p>
+<h2 id="i2c_1">I2Cアドレスの修正</h2>
+<p>PCから、SSHでJetbotにログインします。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo docker ps
 </code></pre></div></td></tr></table></p>
-<p>Rebootを実行します。</p>
+<p><img alt="" src="../img/dockerps001.jpg" /></p>
+<p>2つのDockerが起動しています。NAMESのところが、<code>jetbot_jupyter</code>の方が走行用、<code>jetbot_display</code>の方がOLEDの表示用で、I2Cにアクセスしていますので、I2Cのアドレスをそれぞれ書き直します。</p>
+<h2 id="i2c_2">モーター制御側のI2Cアドレスの修正</h2>
+<p><code>jetbot_jupyter</code>のコンテナにログインします。</p>
+<div class=md-fenced-code-tabs id=tab-tab-group-1><input name=tab-group-1 type=radio id=tab-group-1-0_s5bari9ntbexb89 checked=checked class=code-tab data-lang aria-controls=tab-group-1-0_s5bari9ntbexb89-panel role=tab><label for=tab-group-1-0_s5bari9ntbexb89 class=code-tab-label data-lang id=tab-group-1-0_s5bari9ntbexb89-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-0_s5bari9ntbexb89-panel aria-labelledby=tab-group-1-0_s5bari9ntbexb89-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=nv>sudo</span> <span class=nv>docker</span> <span class=k>exec</span> <span class=o>-</span><span class=nv>it</span> コンテナ<span class=nv>ID</span> <span class=o>/</span><span class=nv>bin</span><span class=o>/</span><span class=nv>bash</span>
+</code></pre></div></td></tr></table></div><input name=tab-group-1 type=radio id=tab-group-1-1_u2bha0ll6u8ab3r class=code-tab data-lang aria-controls=tab-group-1-1_u2bha0ll6u8ab3r-panel role=tab><label for=tab-group-1-1_u2bha0ll6u8ab3r class=code-tab-label data-lang id=tab-group-1-1_u2bha0ll6u8ab3r-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-1_u2bha0ll6u8ab3r-panel aria-labelledby=tab-group-1-1_u2bha0ll6u8ab3r-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>cd /usr/local/lib/python3.6/dist-packages/jetbot-0.4.3-py3.6.egg/jetbot
+</code></pre></div></td></tr></table></div><input name=tab-group-1 type=radio id=tab-group-1-2_i05xfod8srs9hw3 class=code-tab data-lang aria-controls=tab-group-1-2_i05xfod8srs9hw3-panel role=tab><label for=tab-group-1-2_i05xfod8srs9hw3 class=code-tab-label data-lang id=tab-group-1-2_i05xfod8srs9hw3-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-2_i05xfod8srs9hw3-panel aria-labelledby=tab-group-1-2_i05xfod8srs9hw3-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>vi robot.py
+</code></pre></div></td></tr></table></div></div>
+<p><code>robot.py</code></p>
+<blockquote>
+<p>i2c_bus = traitlets.Integer(default_value=8).tag(config=True)
+を書き直します。</p>
+</blockquote>
+<p><img alt="" src="../img/i2c001.jpg" /></p>
+<p>Dockerからログアウトします。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=k>exit</span>
+</code></pre></div></td></tr></table></p>
+<h2 id="oledi2c">OLED表示側のI2Cアドレスの修正</h2>
+<p><code>jetbot_display</code>のコンテナにログインします。</p>
+<div class=md-fenced-code-tabs id=tab-tab-group-3><input name=tab-group-3 type=radio id=tab-group-3-0_lj37dxa6m683w70 checked=checked class=code-tab data-lang aria-controls=tab-group-3-0_lj37dxa6m683w70-panel role=tab><label for=tab-group-3-0_lj37dxa6m683w70 class=code-tab-label data-lang id=tab-group-3-0_lj37dxa6m683w70-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-0_lj37dxa6m683w70-panel aria-labelledby=tab-group-3-0_lj37dxa6m683w70-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=nv>sudo</span> <span class=nv>docker</span> <span class=k>exec</span> <span class=o>-</span><span class=nv>it</span> コンテナ<span class=nv>ID</span> <span class=o>/</span><span class=nv>bin</span><span class=o>/</span><span class=nv>bash</span>
+</code></pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-1_30icr4uj10n3fe5 class=code-tab data-lang aria-controls=tab-group-3-1_30icr4uj10n3fe5-panel role=tab><label for=tab-group-3-1_30icr4uj10n3fe5 class=code-tab-label data-lang id=tab-group-3-1_30icr4uj10n3fe5-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-1_30icr4uj10n3fe5-panel aria-labelledby=tab-group-3-1_30icr4uj10n3fe5-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>cd /usr/local/lib/python3.6/dist-packages/jetbot-0.4.3-py3.6.egg/jetbot/apps
+</code></pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-2_gogyyzzh9k2r7xj class=code-tab data-lang aria-controls=tab-group-3-2_gogyyzzh9k2r7xj-panel role=tab><label for=tab-group-3-2_gogyyzzh9k2r7xj class=code-tab-label data-lang id=tab-group-3-2_gogyyzzh9k2r7xj-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-2_gogyyzzh9k2r7xj-panel aria-labelledby=tab-group-3-2_gogyyzzh9k2r7xj-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>vi stats.py
+</code></pre></div></td></tr></table></div></div>
+<p><code>stats.py</code></p>
+<blockquote>
+<p>disp = Adafruit_SSD1306.SSD1306_128_32(rst=None, i2c_bus=8, gpio=1)
+を書き直します。</p>
+</blockquote>
+<p><img alt="" src="../img/i2c001.jpg" /></p>
+<p>Dockerからログアウトします。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=k>exit</span>
+</code></pre></div></td></tr></table></p>
+<p>Jetson NX Xavierを再起動します。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo reboot
 </code></pre></div></td></tr></table></p>
-<p>再起動には、2分程度かかります。2分程度経過したらBrowserをReloadすると、再びJetBotに接続されます。</p>
-<div class="admonition warning">
-<p>Rebootしないと、次の処理実行時に、下記エラーが発生します。
-E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
-E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?</p>
-</div>
-<h2 id="notebook">Notebookの同期</h2>
-<p>最新版のJetbotプロジェクトのnotebookを~/Notebooksフォルダにrsyncします。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo apt-get install rsync
-rsync -av ~/jetbot/notebooks/ ~/Notebooks
-</code></pre></div></td></tr></table></p>
-<div class="admonition warning">
-<p><code>E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
-E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
-jetbot@jetbot:~$ rm -rf /var/lib/dpkg/lock-frontend</code>のエラーが出る場合は、<code>sudo rm -rf /var/lib/dpkg/lock-frontend</code>でロックファイルを削除します。</p>
-</div>
                 
               
               
@@ -1504,7 +1516,7 @@ jetbot@jetbot:~$ rm -rf /var/lib/dpkg/lock-frontend</code>のエラーが出る�
   
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
-        <a href="../02.jetcard/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../01.docker/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1513,13 +1525,13 @@ jetbot@jetbot:~$ rm -rf /var/lib/dpkg/lock-frontend</code>のエラーが出る�
               <span class="md-footer__direction">
                 前
               </span>
-              JetCardのインストール
+              JetBot Docker
             </div>
           </div>
         </a>
       
       
-        <a href="../08.power/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../03.power/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">

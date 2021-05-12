@@ -14,7 +14,7 @@
     
     
       
-        <title>JetCardのインストール - FaBo JetBot Docs</title>
+        <title>電力モード - FaBo JetBot Docs</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#jetcard" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              JetCardのインストール
+              電力モード
             
           </span>
         </div>
@@ -747,6 +747,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../02.i2c/" class="md-nav__link">
+        I2Cアドレスの修正
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -759,12 +771,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          JetCardのインストール
+          電力モード
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        JetCardのインストール
+        電力モード
       </a>
       
         
@@ -782,22 +794,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jetcardclone" class="md-nav__link">
-    JetCardのClone
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installsh" class="md-nav__link">
-    install.shの修正
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    インストールの実行
+  <a href="#_2" class="md-nav__link">
+    モードの変更
   </a>
   
 </li>
@@ -806,30 +804,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../07.software/" class="md-nav__link">
-        JetbotとNotebookの更新
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../08.power/" class="md-nav__link">
-        電力モード
-      </a>
     </li>
   
 
@@ -1436,22 +1410,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jetcardclone" class="md-nav__link">
-    JetCardのClone
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installsh" class="md-nav__link">
-    install.shの修正
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    インストールの実行
+  <a href="#_2" class="md-nav__link">
+    モードの変更
   </a>
   
 </li>
@@ -1469,33 +1429,46 @@
               
                 
                 
-                <h1 id="jetcard">JetCardのインストール</h1>
-<h2 id="jetcardclone">JetCardのClone</h2>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span>
-<span class=normal>3</span>
-<span class=normal>4</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>git clone https://github.com/NVIDIA-AI-IOT/jetcard
-cd jetcard
-git branch -r
-git checkout jetpack_4.4dp
+                <h1 id="_1">電力モード</h1>
+<p>Jetson NXでは、5つの電力モードが存在しています。</p>
+<table>
+<thead>
+<tr>
+<th align="left">モード</th>
+<th align="left">コマンド</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">MODE_15W_2CORE</td>
+<td align="left">sudo nvpmodel -m 0</td>
+</tr>
+<tr>
+<td align="left">MODE_15W_4CORE</td>
+<td align="left">sudo nvpmodel -m 1</td>
+</tr>
+<tr>
+<td align="left">MODE_15W_6CORE</td>
+<td align="left">sudo nvpmodel -m 2</td>
+</tr>
+<tr>
+<td align="left">MODE_10W_2CORE</td>
+<td align="left">sudo nvpmodel -m 3</td>
+</tr>
+<tr>
+<td align="left">MODE_10W_4CORE</td>
+<td align="left">sudo nvpmodel -m 4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">モードの変更</h2>
+<p>MODE_10W_4COREに変更します。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo nvpmodel -m 4
 </code></pre></div></td></tr></table></p>
-<h2 id="installsh">install.shの修正</h2>
-<p>install.shのtraitletsの記述を書き直す</p>
-<p>修正前</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=n>sudo</span><span class=w> </span><span class=o>-</span><span class=n>H</span><span class=w> </span><span class=n>python3</span><span class=w> </span><span class=o>-</span><span class=n>m</span><span class=w> </span><span class=n>pip</span><span class=w> </span><span class=n>install</span><span class=w> </span><span class=n>git</span><span class=o>+</span><span class=nl>https</span><span class=p>:</span><span class=o>//</span><span class=n>github</span><span class=p>.</span><span class=n>com</span><span class=o>/</span><span class=n>ipython</span><span class=o>/</span><span class=n>traitlets</span><span class=nv>@master</span><span class=w></span>
+<p>電力モードが変更されたかの確認をおこないます。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>nvpmodel -q --verbose
 </code></pre></div></td></tr></table></p>
-<p>修正後</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=n>sudo</span> <span class=o>-</span><span class=n>H</span> <span class=n>python3</span> <span class=o>-</span><span class=n>m</span> <span class=n>pip</span> <span class=n>install</span> <span class=n>git</span><span class=o>+</span><span class=nl>https</span><span class=p>:</span><span class=c1>//github.com/ipython/traitlets@4.3.x</span>
-</code></pre></div></td></tr></table></p>
-<p>修正前</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>#git checkout v4.3
-</code></pre></div></td></tr></table></p>
-<p>修正後</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>git checkout v
-</code></pre></div></td></tr></table></p>
-<h2 id="_1">インストールの実行</h2>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>./install.sh 
-</code></pre></div></td></tr></table></p>
+<p><img alt="" src="../img/power002.png" /></p>
                 
               
               
@@ -1514,7 +1487,7 @@ git checkout jetpack_4.4dp
   
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
-        <a href="../01.docker/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../02.i2c/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1523,19 +1496,19 @@ git checkout jetpack_4.4dp
               <span class="md-footer__direction">
                 前
               </span>
-              JetBot Docker
+              I2Cアドレスの修正
             </div>
           </div>
         </a>
       
       
-        <a href="../07.software/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../../05.Study/01.%E4%BD%BF%E7%94%A8%E7%AB%AF%E6%9C%AB/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              JetbotとNotebookの更新
+              1.対応端末
             </div>
           </div>
           <div class="md-footer__button md-icon">

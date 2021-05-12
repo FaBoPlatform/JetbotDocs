@@ -792,7 +792,7 @@
       
         <li class="md-nav__item">
   <a href="#docker_1" class="md-nav__link">
-    Dockerを起動する
+    Dockerのインストールと起動
   </a>
   
 </li>
@@ -810,8 +810,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../02.jetcard/" class="md-nav__link">
-        JetCardのインストール
+      <a href="../02.i2c/" class="md-nav__link">
+        I2Cアドレスの修正
       </a>
     </li>
   
@@ -822,19 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07.software/" class="md-nav__link">
-        JetbotとNotebookの更新
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../08.power/" class="md-nav__link">
+      <a href="../03.power/" class="md-nav__link">
         電力モード
       </a>
     </li>
@@ -1465,7 +1453,7 @@
       
         <li class="md-nav__item">
   <a href="#docker_1" class="md-nav__link">
-    Dockerを起動する
+    Dockerのインストールと起動
   </a>
   
 </li>
@@ -1489,15 +1477,16 @@
 <p>Dockerベースになると、JetPackの起動時点でのSwapの設定が必須になります。Swapを設定しないと、学習時の処理がうまく動かなくなります。</p>
 </div>
 <h2 id="swap">Swapの設定</h2>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
+<div class=md-fenced-code-tabs id=tab-tab-group-0><input name=tab-group-0 type=radio id=tab-group-0-0_u2r5wlpoc4sq50m checked=checked class=code-tab data-lang aria-controls=tab-group-0-0_u2r5wlpoc4sq50m-panel role=tab><label for=tab-group-0-0_u2r5wlpoc4sq50m class=code-tab-label data-lang id=tab-group-0-0_u2r5wlpoc4sq50m-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-0_u2r5wlpoc4sq50m-panel aria-labelledby=tab-group-0-0_u2r5wlpoc4sq50m-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
 <span class=normal>4</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo systemctl disable nvzramconfig
 sudo fallocate -l 6G /mnt/6GB.swap
 sudo mkswap /mnt/6GB.swap
 sudo swapon /mnt/6GB.swap
-</code></pre></div></td></tr></table></p>
-<p>/etc/fstab</p>
+</code></pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-1_hto1ioo071ydbje class=code-tab data-lang aria-controls=tab-group-0-1_hto1ioo071ydbje-panel role=tab><label for=tab-group-0-1_hto1ioo071ydbje class=code-tab-label data-lang id=tab-group-0-1_hto1ioo071ydbje-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-1_hto1ioo071ydbje-panel aria-labelledby=tab-group-0-1_hto1ioo071ydbje-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo vi /etc/fstab
+</code></pre></div></td></tr></table></div></div>
+<p><code>/etc/fstab</code></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
@@ -1526,24 +1515,53 @@ sudo swapon /mnt/6GB.swap
 ./scripts/configure_jetson.sh
 </code></pre></div></td></tr></table></p>
 <p>JetBot Dockerに関連する環境変数の設定をおこないます。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>cd docker
-source configure.sh
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>cd docker
+</code></pre></div></td></tr></table></p>
+<p>JetPack 4.5.1向けのJetbotイメージが存在しないために(<a href="https://github.com/NVIDIA-AI-IOT/jetbot/issues/406">issues:406</a>)、<code>configure.sh</code>を下記のように修正します。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=k>if</span> <span class=p>[[</span> <span class=o>$</span><span class=n>L4T_VERSION</span> <span class=o>=</span> <span class=s2>&quot;32.4.3&quot;</span> <span class=p>]]</span>
+<span class=n>then</span>
+        <span class=n>JETBOT_BASE_IMAGE</span><span class=o>=</span><span class=n>nvcr</span><span class=o>.</span><span class=n>io</span><span class=o>/</span><span class=n>nvidia</span><span class=o>/</span><span class=n>l4t</span><span class=o>-</span><span class=n>pytorch</span><span class=p>:</span><span class=n>r32</span><span class=o>.</span><span class=mf>4.3</span><span class=o>-</span><span class=n>pth1</span><span class=o>.</span><span class=mi>6</span><span class=o>-</span><span class=n>py3</span>
+<span class=k>elif</span> <span class=p>[[</span> <span class=s2>&quot;$L4T_VERSION&quot;</span> <span class=o>==</span> <span class=s2>&quot;32.4.4&quot;</span> <span class=p>]]</span>
+<span class=n>then</span>
+        <span class=n>JETBOT_BASE_IMAGE</span><span class=o>=</span><span class=n>nvcr</span><span class=o>.</span><span class=n>io</span><span class=o>/</span><span class=n>nvidia</span><span class=o>/</span><span class=n>l4t</span><span class=o>-</span><span class=n>pytorch</span><span class=p>:</span><span class=n>r32</span><span class=o>.</span><span class=mf>4.4</span><span class=o>-</span><span class=n>pth1</span><span class=o>.</span><span class=mi>6</span><span class=o>-</span><span class=n>py3</span>
+<span class=k>elif</span> <span class=p>[[</span> <span class=s2>&quot;$L4T_VERSION&quot;</span> <span class=o>==</span> <span class=s2>&quot;32.5.1&quot;</span> <span class=p>]]</span>
+<span class=n>then</span>
+        <span class=k>export</span> <span class=n>L4T_VERSION</span><span class=o>=</span><span class=s2>&quot;32.5.0&quot;</span>
+        <span class=n>JETBOT_BASE_IMAGE</span><span class=o>=</span><span class=n>nvcr</span><span class=o>.</span><span class=n>io</span><span class=o>/</span><span class=n>nvidia</span><span class=o>/</span><span class=n>l4t</span><span class=o>-</span><span class=n>pytorch</span><span class=p>:</span><span class=n>r32</span><span class=o>.</span><span class=mf>5.0</span><span class=o>-</span><span class=n>pth1</span><span class=o>.</span><span class=mi>6</span><span class=o>-</span><span class=n>py3</span>
+<span class=k>else</span>
+        <span class=n>echo</span> <span class=s2>&quot;JETBOT_BASE_IMAGE not found for ${L4T_VERSION}.  Please manually set the JETBOT_BASE_IMAGE environment variable. (ie: export JETBOT_BASE_IMAGE=...)&quot;</span>
+<span class=n>fi</span>
+</code></pre></div></td></tr></table></p>
+<p>実行して、確認します。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>source configure.sh
 </code></pre></div></td></tr></table></p>
 <p>コンテナでCUDA関連のコンポーネントを使用するために必要となるデフォルトのdockerランタイムを設定します。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>./set_nvidia_runtime.sh
 </code></pre></div></td></tr></table></p>
-<p>Jupuyterオンテナのメモリの上限設定をおこないます。</p>
+<p>Jupuyterコンテナのメモリの上限設定をおこないます。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
 <span class=normal>2</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=k>export</span> <span class=n>JETBOT_JUPYTER_MEMORY</span><span class=o>=</span><span class=mi>500</span><span class=n>m</span>
 <span class=k>export</span> <span class=n>JETBOT_JUPYTER_MEMORY_SWAP</span><span class=o>=</span><span class=mi>3</span><span class=n>G</span>
 </code></pre></div></td></tr></table></p>
-<h2 id="docker_1">Dockerを起動する</h2>
-<p>Dockerを起動します。</p>
+<h2 id="docker_1">Dockerのインストールと起動</h2>
+<p>Dockerイメージをインストールして起動します。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
 <span class=normal>2</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo systemctl enable docker  
 ./enable.sh $HOME
 </code></pre></div></td></tr></table></p>
+<p>ネットワーク状況次第では、30分〜1時間程度、時間がかかります。</p>
                 
               
               
@@ -1577,13 +1595,13 @@ source configure.sh
         </a>
       
       
-        <a href="../02.jetcard/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../02.i2c/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              JetCardのインストール
+              I2Cアドレスの修正
             </div>
           </div>
           <div class="md-footer__button md-icon">
