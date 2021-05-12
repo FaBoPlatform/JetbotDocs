@@ -1477,16 +1477,19 @@
 <p>Dockerベースになると、JetPackの起動時点でのSwapの設定が必須になります。Swapを設定しないと、学習時の処理がうまく動かなくなります。</p>
 </div>
 <h2 id="swap">Swapの設定</h2>
-<div class=md-fenced-code-tabs id=tab-tab-group-0><input name=tab-group-0 type=radio id=tab-group-0-0_6wrj5gtn7c7m88a checked=checked class=code-tab data-lang aria-controls=tab-group-0-0_6wrj5gtn7c7m88a-panel role=tab><label for=tab-group-0-0_6wrj5gtn7c7m88a class=code-tab-label data-lang id=tab-group-0-0_6wrj5gtn7c7m88a-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-0_6wrj5gtn7c7m88a-panel aria-labelledby=tab-group-0-0_6wrj5gtn7c7m88a-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
+<p>Swapを作成します。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
 <span class=normal>4</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo systemctl disable nvzramconfig
 sudo fallocate -l 6G /mnt/6GB.swap
 sudo mkswap /mnt/6GB.swap
 sudo swapon /mnt/6GB.swap
-</code></pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-1_o2zc6keq08emhjw class=code-tab data-lang aria-controls=tab-group-0-1_o2zc6keq08emhjw-panel role=tab><label for=tab-group-0-1_o2zc6keq08emhjw class=code-tab-label data-lang id=tab-group-0-1_o2zc6keq08emhjw-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-1_o2zc6keq08emhjw-panel aria-labelledby=tab-group-0-1_o2zc6keq08emhjw-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo vi /etc/fstab
-</code></pre></div></td></tr></table></div></div>
-<p><code>/etc/fstab</code></p>
+</code></pre></div></td></tr></table></p>
+<p>fstabにswapを反映します。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo vi /etc/fstab
+</code></pre></div></td></tr></table></p>
+<p><code>/etc/fstab</code> を修正します。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
@@ -1506,6 +1509,7 @@ sudo swapon /mnt/6GB.swap
 /mnt/6GB.swap swap swap defaults 0 0
 </code></pre></div></td></tr></table></p>
 <h2 id="jetbot-docker_1">JetBot Dockerの設定</h2>
+<p>Jetbotのrepoをgit cloneします。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>git clone https://github.com/NVIDIA-AI-IOT/jetbot/
 </code></pre></div></td></tr></table></p>
 <h2 id="docker">Dockerの設定</h2>
@@ -1516,6 +1520,9 @@ sudo swapon /mnt/6GB.swap
 </code></pre></div></td></tr></table></p>
 <p>JetBot Dockerに関連する環境変数の設定をおこないます。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>cd docker
+</code></pre></div></td></tr></table></p>
+<p><code>configure.sh</code>を修正します。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>vi configure.sh
 </code></pre></div></td></tr></table></p>
 <p>JetPack 4.5.1向けのJetbotイメージが存在しないために(<a href="https://github.com/NVIDIA-AI-IOT/jetbot/issues/406">issues:406</a>)、<code>configure.sh</code>を下記のように修正します。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal> 1</span>
@@ -1544,7 +1551,7 @@ sudo swapon /mnt/6GB.swap
         <span class=n>echo</span> <span class=s2>&quot;JETBOT_BASE_IMAGE not found for ${L4T_VERSION}.  Please manually set the JETBOT_BASE_IMAGE environment variable. (ie: export JETBOT_BASE_IMAGE=...)&quot;</span>
 <span class=n>fi</span>
 </code></pre></div></td></tr></table></p>
-<p>実行して、確認します。</p>
+<p><code>configure.sh</code>実行して、確認します。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>source configure.sh
 </code></pre></div></td></tr></table></p>
 <p>コンテナでCUDA関連のコンポーネントを使用するために必要となるデフォルトのdockerランタイムを設定します。</p>
