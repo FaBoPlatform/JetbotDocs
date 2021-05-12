@@ -1477,14 +1477,14 @@
 <p>Dockerベースになると、JetPackの起動時点でのSwapの設定が必須になります。Swapを設定しないと、学習時の処理がうまく動かなくなります。</p>
 </div>
 <h2 id="swap">Swapの設定</h2>
-<div class=md-fenced-code-tabs id=tab-tab-group-0><input name=tab-group-0 type=radio id=tab-group-0-0_jwcn9racmy9k5t7 checked=checked class=code-tab data-lang aria-controls=tab-group-0-0_jwcn9racmy9k5t7-panel role=tab><label for=tab-group-0-0_jwcn9racmy9k5t7 class=code-tab-label data-lang id=tab-group-0-0_jwcn9racmy9k5t7-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-0_jwcn9racmy9k5t7-panel aria-labelledby=tab-group-0-0_jwcn9racmy9k5t7-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
+<div class=md-fenced-code-tabs id=tab-tab-group-0><input name=tab-group-0 type=radio id=tab-group-0-0_6wrj5gtn7c7m88a checked=checked class=code-tab data-lang aria-controls=tab-group-0-0_6wrj5gtn7c7m88a-panel role=tab><label for=tab-group-0-0_6wrj5gtn7c7m88a class=code-tab-label data-lang id=tab-group-0-0_6wrj5gtn7c7m88a-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-0_6wrj5gtn7c7m88a-panel aria-labelledby=tab-group-0-0_6wrj5gtn7c7m88a-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
 <span class=normal>4</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo systemctl disable nvzramconfig
 sudo fallocate -l 6G /mnt/6GB.swap
 sudo mkswap /mnt/6GB.swap
 sudo swapon /mnt/6GB.swap
-</code></pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-1_ujx0onvwb80l1xn class=code-tab data-lang aria-controls=tab-group-0-1_ujx0onvwb80l1xn-panel role=tab><label for=tab-group-0-1_ujx0onvwb80l1xn class=code-tab-label data-lang id=tab-group-0-1_ujx0onvwb80l1xn-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-1_ujx0onvwb80l1xn-panel aria-labelledby=tab-group-0-1_ujx0onvwb80l1xn-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo vi /etc/fstab
+</code></pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-1_o2zc6keq08emhjw class=code-tab data-lang aria-controls=tab-group-0-1_o2zc6keq08emhjw-panel role=tab><label for=tab-group-0-1_o2zc6keq08emhjw class=code-tab-label data-lang id=tab-group-0-1_o2zc6keq08emhjw-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-1_o2zc6keq08emhjw-panel aria-labelledby=tab-group-0-1_o2zc6keq08emhjw-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo vi /etc/fstab
 </code></pre></div></td></tr></table></div></div>
 <p><code>/etc/fstab</code></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>

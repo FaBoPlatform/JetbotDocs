@@ -1467,10 +1467,14 @@
 <p>2つのDockerが起動しています。NAMESのところが、<code>jetbot_jupyter</code>の方が走行用、<code>jetbot_display</code>の方がOLEDの表示用で、I2Cにアクセスしていますので、I2Cのアドレスをそれぞれ書き直します。</p>
 <h2 id="i2c_2">モーター制御側のI2Cアドレスの修正</h2>
 <p><code>jetbot_jupyter</code>のコンテナにログインします。</p>
-<div class=md-fenced-code-tabs id=tab-tab-group-1><input name=tab-group-1 type=radio id=tab-group-1-0_xcchcq2433h10jx checked=checked class=code-tab data-lang aria-controls=tab-group-1-0_xcchcq2433h10jx-panel role=tab><label for=tab-group-1-0_xcchcq2433h10jx class=code-tab-label data-lang id=tab-group-1-0_xcchcq2433h10jx-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-0_xcchcq2433h10jx-panel aria-labelledby=tab-group-1-0_xcchcq2433h10jx-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=nv>sudo</span> <span class=nv>docker</span> <span class=k>exec</span> <span class=o>-</span><span class=nv>it</span> コンテナ<span class=nv>ID</span> <span class=o>/</span><span class=nv>bin</span><span class=o>/</span><span class=nv>bash</span>
-</code></pre></div></td></tr></table></div><input name=tab-group-1 type=radio id=tab-group-1-1_h27kk3tefoyv4y7 class=code-tab data-lang aria-controls=tab-group-1-1_h27kk3tefoyv4y7-panel role=tab><label for=tab-group-1-1_h27kk3tefoyv4y7 class=code-tab-label data-lang id=tab-group-1-1_h27kk3tefoyv4y7-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-1_h27kk3tefoyv4y7-panel aria-labelledby=tab-group-1-1_h27kk3tefoyv4y7-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>cd /usr/local/lib/python3.6/dist-packages/jetbot-0.4.3-py3.6.egg/jetbot
-</code></pre></div></td></tr></table></div><input name=tab-group-1 type=radio id=tab-group-1-2_129ppq79pmez9rr class=code-tab data-lang aria-controls=tab-group-1-2_129ppq79pmez9rr-panel role=tab><label for=tab-group-1-2_129ppq79pmez9rr class=code-tab-label data-lang id=tab-group-1-2_129ppq79pmez9rr-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-2_129ppq79pmez9rr-panel aria-labelledby=tab-group-1-2_129ppq79pmez9rr-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>vi robot.py
-</code></pre></div></td></tr></table></div></div>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=nv>sudo</span> <span class=nv>docker</span> <span class=k>exec</span> <span class=o>-</span><span class=nv>it</span> コンテナ<span class=nv>ID</span> <span class=o>/</span><span class=nv>bin</span><span class=o>/</span><span class=nv>bash</span>
+</code></pre></div></td></tr></table></p>
+<p>下記フォルダに移動します。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>cd /usr/local/lib/python3.6/dist-packages/jetbot-0.4.3-py3.6.egg/jetbot
+</code></pre></div></td></tr></table></p>
+<p>viで編集します。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>vi robot.py
+</code></pre></div></td></tr></table></p>
 <p><code>robot.py</code></p>
 <blockquote>
 <p>i2c_bus = traitlets.Integer(default_value=8).tag(config=True)
@@ -1482,10 +1486,14 @@
 </code></pre></div></td></tr></table></p>
 <h2 id="oledi2c">OLED表示側のI2Cアドレスの修正</h2>
 <p><code>jetbot_display</code>のコンテナにログインします。</p>
-<div class=md-fenced-code-tabs id=tab-tab-group-3><input name=tab-group-3 type=radio id=tab-group-3-0_y5944xww6odz800 checked=checked class=code-tab data-lang aria-controls=tab-group-3-0_y5944xww6odz800-panel role=tab><label for=tab-group-3-0_y5944xww6odz800 class=code-tab-label data-lang id=tab-group-3-0_y5944xww6odz800-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-0_y5944xww6odz800-panel aria-labelledby=tab-group-3-0_y5944xww6odz800-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=nv>sudo</span> <span class=nv>docker</span> <span class=k>exec</span> <span class=o>-</span><span class=nv>it</span> コンテナ<span class=nv>ID</span> <span class=o>/</span><span class=nv>bin</span><span class=o>/</span><span class=nv>bash</span>
-</code></pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-1_tkomh3xgwsv5m7g class=code-tab data-lang aria-controls=tab-group-3-1_tkomh3xgwsv5m7g-panel role=tab><label for=tab-group-3-1_tkomh3xgwsv5m7g class=code-tab-label data-lang id=tab-group-3-1_tkomh3xgwsv5m7g-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-1_tkomh3xgwsv5m7g-panel aria-labelledby=tab-group-3-1_tkomh3xgwsv5m7g-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>cd /usr/local/lib/python3.6/dist-packages/jetbot-0.4.3-py3.6.egg/jetbot/apps
-</code></pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-2_yt26c4d3wycqfqo class=code-tab data-lang aria-controls=tab-group-3-2_yt26c4d3wycqfqo-panel role=tab><label for=tab-group-3-2_yt26c4d3wycqfqo class=code-tab-label data-lang id=tab-group-3-2_yt26c4d3wycqfqo-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-2_yt26c4d3wycqfqo-panel aria-labelledby=tab-group-3-2_yt26c4d3wycqfqo-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>vi stats.py
-</code></pre></div></td></tr></table></div></div>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=nv>sudo</span> <span class=nv>docker</span> <span class=k>exec</span> <span class=o>-</span><span class=nv>it</span> コンテナ<span class=nv>ID</span> <span class=o>/</span><span class=nv>bin</span><span class=o>/</span><span class=nv>bash</span>
+</code></pre></div></td></tr></table></p>
+<p>下記フォルダに移動します。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>cd /usr/local/lib/python3.6/dist-packages/jetbot-0.4.3-py3.6.egg/jetbot/apps
+</code></pre></div></td></tr></table></p>
+<p>viで<code>stats.py</code>を開きます。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>vi stats.py
+</code></pre></div></td></tr></table></p>
 <p><code>stats.py</code></p>
 <blockquote>
 <p>disp = Adafruit_SSD1306.SSD1306_128_32(rst=None, i2c_bus=8, gpio=1)
