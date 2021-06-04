@@ -213,7 +213,7 @@ Jetson固定ネジを取り付けます。
 
 ![](./../../img/add_jetson004.jpg)
 
-## 9. WiFi Moduleの取り付け
+## 9. Wi-Fi Moduleの取り付け
 
 |写真|部品または工具|個数|
 |:--|:--|:--:|
@@ -221,14 +221,14 @@ Jetson固定ネジを取り付けます。
 |![](./../../img/add_wifi_module_intel001.jpg){: style="height:210px;width:200px"}|Intel Dual Bandwireless-AC 8265 Desktop Kit（４GBモデルのみ）|1|
 |![](./../../img/add_CameraMout_Jetson4GB001.jpg){: style="height:210px;width:200px"}|Jetbot CameraMount　（４GBモデル）|1|
 |![](./../../img/add_spana001.jpg){: style="height:210px;width:200px"}|スパナ<br>※JB-4GB-Carbon-S-Bは、スパナ２枚付属|1|
-|![](./../../img/add_semitudriverset001.jpg){: style="height:210px;width:200px"}|精密ドライバセット　ED−２０|1|
+|![](./../../img/add_semitudriverset001.jpg){: style="height:210px;width:200px"}|精密ドライバーセット　ED−２０|1|
 |![](./../../img/add_driverplus2_001.jpg){: style="height:210px;width:200px"}|プラスドライバー +2×100|1|
 
 Kitに搭載されているJetson Nanoが、``Rev.B01``か``Rev.A02``かを確認します。見分け方として、CSIカメラポートが2つ付いているのが``Rev.B01``で、1つしか付いていないのがRev.A02になります。
 
 ![](./../../img/jetson001.jpg)
 
-Wifi Moduleを取り付けるために、Jetson Nano Moduleを取り外します。
+Wi-Fi Moduleを取り付けるために、真ん中のネジを外しておきます。
 
 ![](./../../img/Wifi_9/jetson_pickup.jpg)
 
@@ -254,7 +254,7 @@ Wifi Moduleを取り付けるために、真ん中のネジを外しておきま
 
 ※ネジの山カケには注意しましょう。
 
-Wifi Moduleは、Intel Dual Bandwireless-AC 8265 Desktop Kitを取り付けます。
+Wi-Fi Moduleは、Intel Dual Bandwireless-AC 8265 Desktop Kitを取り付けます。
 
 ![](./../../img/Wifi_9/WifiModuleSet.jpg)
 
@@ -301,7 +301,7 @@ Wifi Moduleは、Intel Dual Bandwireless-AC 8265 Desktop Kitを取り付けま�
 
 ![](./../../img/Wifi_9/jetsonwifipcie_driver.jpg)
 
-Wifi Moduleの取り付けが完了したら、Jetson Nano Moduleを再び取り付けます。
+Wi-Fi Moduleの取り付けが完了したら、Jetson Nano Moduleを再び取り付けます。
 
 ![](./../../img/Wifi_9/JetsonNanoAndCameraMount.jpg)
 
@@ -382,7 +382,7 @@ Jetson Nano Moduleを再び装着し、ネジ止めします。
 |写真|部品または工具|個数|
 |:--|:--|:--:|
 |![](./../../img/add_JetsonNanoB01ORA02_001.jpg){: style="height:210px;width:200px"}|Jetson Nano 開発者キット B01,A02|１枚|
-|![](./../../img/add_semitudriverset001.jpg){: style="height:210px;width:200px"}|精密ドライバセット　ED−２０|1|
+|![](./../../img/add_semitudriverset001.jpg){: style="height:210px;width:200px"}|精密ドライバーセット　ED−２０|1|
 
 Jetson Nanoとシャーシを取り付けます。
 
@@ -474,7 +474,7 @@ DC電源からの給電を有効にするために、``Rev.A02``、``Rev.B01``�
 |:--|:--|:--:|
 |![](./../../img/add_cablelock001.jpg){: style="height:210px;width:200px"}|結束バンド|1|
 
-Wifiアンテナのケーブルを結束バンドを使用してケーブルを収納します。
+Wi-Fiアンテナのケーブルを結束バンドを使用してケーブルを収納します。
 
 ![](./../../img/etc_19/cable_forming.jpg)
 
@@ -499,11 +499,11 @@ Wifiアンテナのケーブルを結束バンドを使用してケーブルを�
 
 ![](./../../img/Complete_20/usb_con_parts.jpg)
 
-Wifiのアンテナを立てます。Wifiアンテナを回してねじ込みます。
+Wi-Fiのアンテナを立てます。アンテナを回してねじ込みます。
 
 ![](./../../img/Complete_20/wifi_Antena_attachi.jpg)
 
-左右にWifiアンテナを２つ立てます。
+左右にWi-Fiアンテナを２つ立てます。
 
 ![](./../../img/Complete_20/wifi_Antena_atachi2.jpg)
 
