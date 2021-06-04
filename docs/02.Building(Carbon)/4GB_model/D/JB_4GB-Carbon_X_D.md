@@ -109,7 +109,7 @@ Wi-Fi支持パーツ素材の変更
 
 <hr>
 
-## 4. キャスターの固定
+## 4. ボールキャスターの固定
 
 <hr>
 
@@ -117,7 +117,8 @@ Wi-Fi支持パーツ素材の変更
 |写真|部品または工具|個数|
 |:--|:--|:--:|
 |![](./../../img/add_caster_mini001.jpg){: style="height:210px;width:200px"}|2.キャスター固定ネジ袋|1|
-|![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_ballcaster_spacer.jpg){: style="height:210px;width:200px"}|ボールキャスタスペーサー<br>材質：アルミ|1枚|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_ballcaster_spacer.jpg){: style="height:210px;width:200px"}|ボールキャスタスペーサー<br>材質：アルミ<br>※または、下のスペーサーになります。|1枚|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_D/ballcaster_speacer_lightweight.jpg){: style="height:210px;width:200px"}|ボールキャスタースペーサー軽量タイプ<br>材質：アルミ|1枚|
 |![](./../../img/add_caster_mini003.jpg){: style="height:210px;width:200px"}|カーボン中段|1|
 |![](./../../img/add_driverplus2_001.jpg){: style="height:210px;width:200px"}|プラスドライバー +2×100|１本|
 
