@@ -117,7 +117,7 @@ Wi-Fi支持パーツ剛性アップ
 |写真|部品または工具|個数|
 |:--|:--|:--:|
 |![](./../../img/add_caster_mini001.jpg){: style="height:210px;width:200px"}|2.キャスター固定ネジ袋|1|
-|![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_ballcaster_spacer.jpg){: style="height:210px;width:200px"}|ボールキャスタスペーサー<br>材質：アルミ|1枚|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_ballcaster_spacer.jpg){: style="height:210px;width:200px"}|ボールキャスタースペーサー<br>材質：アルミ|1枚|
 |![](./../../img/add_caster_mini003.jpg){: style="height:210px;width:200px"}|カーボン中段|1|
 |![](./../../img/add_driverplus2_001.jpg){: style="height:210px;width:200px"}|プラスドライバー +2×100|１本|
 
@@ -125,7 +125,7 @@ Wi-Fi支持パーツ剛性アップ
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_prepairBallCaster.jpg)
 
-スペーサを挟みねじでキャスター固定します。
+スペーサーを挟み、ネジでキャスター固定します。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_screwinsert.jpg)
 
@@ -143,7 +143,7 @@ M3ナットをはめて、ドライバーで４箇所締め付けます。
 
 <hr>
 
-## 5. カーボンの取り付け
+## 5. 下段と中段のカーボンの取り付け
 
 <hr>
 
@@ -151,7 +151,7 @@ M3ナットをはめて、ドライバーで４箇所締め付けます。
 |:--|:--|:--:|
 |![](./../../img/add_joint_mini001.jpg){: style="height:210px;width:200px"}|4.カーボン固定ネジ(上)|1|
 
-下段のカーボンと中段のカーボンを連結します。
+カーボン下段とカーボン中段を連結します。
 
 ![](./../../img/add_joint001.jpg)
 
@@ -159,7 +159,7 @@ M3ナットをはめて、ドライバーで４箇所締め付けます。
 
 ![](./../../img/add_joint002.jpg)
 
-白いスペーサーで、4隅を固定します。
+白いスペーサーで、四隅を固定します。
 
 ![](./../../img/add_joint003.jpg)
 
@@ -184,7 +184,7 @@ M3ナットをはめて、ドライバーで４箇所締め付けます。
 
 <hr>
 
-## 7. バッテリーの取り付け
+## 7. モバイルバッテリーの取り付け
 
 <hr>
 
@@ -194,7 +194,7 @@ M3ナットをはめて、ドライバーで４箇所締め付けます。
 |![](./../../img/add_battery_mini002.jpg){: style="height:210px;width:200px"}|モバイルバッテリー（旧パッケージの場合）|1|
 |![](./../../img/add_mobileBatterry_002.jpg){: style="height:210px;width:200px"}|モバイルバッテリー（新パッケージの場合）|1|
 
-バッテリーを両面テープで装着します。
+モバイルバッテリーを両面テープで装着します。
 
 ![](./../../img/add_battery001.jpg)
 
@@ -214,7 +214,7 @@ M3ナットをはめて、ドライバーで４箇所締め付けます。
 |:--|:--|:--:|
 |![](./../../img/add_jetson_mini001.jpg){: style="height:210px;width:200px"}|6.Jetson固定ネジ袋|1|
 |![](./../../img/add_jetson_mini002.jpg){: style="height:210px;width:200px"}|カーボン上段|1|
-|![](./../../img/add_semitudriverset001.jpg){: style="height:210px;width:200px"}|精密ドライバーセット　ED−２０|1|
+|![](./../../img/add_semitudriverset001.jpg){: style="height:210px;width:200px"}|精密ドライバーセット　ED−20|1|
 
 Jetson固定ネジを取り付けます。
 
@@ -226,7 +226,7 @@ Jetson固定ネジを取り付けます。
 
 ![](./../../img/add_jetson004.jpg)
 
-## 9. Wi-Fi Moduleの取り付け
+## 9. Wi-Fi モジュールの取り付け
 
 |写真|部品または工具|個数|
 |:--|:--|:--:|
@@ -242,7 +242,7 @@ Kitに搭載されているJetson Nanoが、``Rev.B01``か``Rev.A02``かを確�
 
 ![](./../../img/jetson001.jpg)
 
-Wi-Fi Moduleを取り付けるために、Jetson Nano Moduleを取り外します。
+Wi-Fi モジュールを取り付けるために、Jetson Nano モジュールを取り外します。
 
 ![](./../../img/Wifi_9/jetson_pickup.jpg)
 
@@ -250,25 +250,25 @@ Wi-Fi Moduleを取り付けるために、Jetson Nano Moduleを取り外しま�
 
 ![](./../../img/Wifi_9/jetson_screwless.jpg)
 
-両サイドの留め具を外に開き、Jetson Nano Moduleを取り外します。
+両サイドの留め具を外に開き、Jetson Nano モジュールを取り外します。
 
 ![](./../../img/Wifi_9/jetson_nailexpand.jpg)
 
-両サイドに広げると、Jetson Nano Moduleがポップアップします。
+両サイドに広げると、Jetson Nano モジュールがポップアップします。
 
 ![](./../../img/Wifi_9/jetson_uplight.jpg)
 
-Jetson Nano Moduleを取り外すと、ネジが見えます。
+Jetson Nano モジュールを取り外すと、ネジが見えます。
 
 ![](./../../img/Wifi_9/jetson_pcie.jpg)
 
-Wi-Fi Moduleを取り付けるために、真ん中のネジを外しておきます。
+Wi-Fi モジュールを取り付けるために、真ん中のネジを外しておきます。
 
 ![](./../../img/Wifi_9/screw_remove.jpg)
 
 ※ネジの山カケには注意しましょう。
 
-Wi-Fi Moduleは、Intel Dual Bandwireless-AC 8265 Desktop Kitを取り付けます。
+Wi-Fi モジュールは、Intel Dual Bandwireless-AC 8265 Desktop Kitを取り付けます。
 
 ![](./../../img/Wifi_9/WifiModuleSet.jpg)
 
@@ -286,7 +286,7 @@ Wi-Fi Moduleは、Intel Dual Bandwireless-AC 8265 Desktop Kitを取り付けま�
 
 ![](./../../img/Wifi_9/antenaterminalspana.jpg)
 
-Wi-Fi Moduleの端子と接続します。
+Wi-Fi モジュールの端子と接続します。
 
 ![](./../../img/Wifi_9/WifiAntennaConnetctToMoudule.jpg)
 
@@ -306,7 +306,7 @@ Wi-Fiアンテナ支持金具の左右に取り付けます。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_wifisuppert03fin.jpg)
 
-Wi-Fi Moduleの端子に２本のアンテナケーブルを接続します。
+Wi-Fi モジュールの端子に２本のアンテナケーブルを接続します。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_wifi_termminal.jpg)
 
@@ -314,11 +314,11 @@ Wi-Fi Moduleの端子に２本のアンテナケーブルを接続します。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_wifi_module_connect.jpg)
 
-Wi-Fi ModuleをJetsonNano開発者ボードにドライバーで取り付けます。
+Wi-Fi モジュールをJetson Nano開発者ボードにドライバーで取り付けます。
 
 ![](./../../img/Wifi_9/jetsonwifipcie_driver.jpg)
 
-Wifi Moduleの取り付けが完了したら、Jetson Nano Moduleを再び取り付けます。
+Wi-Fi モジュールの取り付けが完了したら、Jetson Nano モジュールを再び取り付けます。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_wifiBoardsetfin.jpg)
 
@@ -326,7 +326,7 @@ Wi-Fiアンテナケーブルの配線
 
 ![](./../../img/Wifi_9/wificableforming.jpg)
 
-Jetson Nano Moduleを再び装着し、２箇所ネジ止めします。
+Jetson Nano モジュールを再び装着し、２箇所ネジ止めします。
 
 ![](./../../img/Wifi_9/jetson_re.jpg)
 
@@ -349,7 +349,7 @@ Jetson Nano Moduleを再び装着し、２箇所ネジ止めします。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_camera_munit_start.jpg)
 
-カメラモジュールをカメラマウントに取り付けます。カメラモジュールの４つの穴に六角レンチ棒を使いM2.0のタッピンングビスでカメラを取り付けます。
+カメラモジュールをカメラマウントに取り付けます。カメラモジュールの４つの穴に六角レンチ棒を使いM2.0タッピングビスでカメラを取り付けます。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_cameramount_prepair.jpg)
 
@@ -367,13 +367,13 @@ Jetson Nano Moduleを再び装着し、２箇所ネジ止めします。
 |:--|:--|:--:|
 |![](./../../img/add_(5)camerakotei001.jpg){: style="height:210px;width:200px"}|５．カメラ固定|1|
 |![](./../../img/add_driverplus2_001.jpg){: style="height:210px;width:200px"}|プラスドライバー +2×100|1|
-|![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_nutdriver_5mm.jpg){: style="height:210px;width:200px"}|ナットドライバー ５．０|1|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_nutdriver_5mm.jpg){: style="height:210px;width:200px"}|ナットドライバー 5.0|1|
 
-カメラマウント,Wi-Fi支持金具とシャーシと結合します。
+カメラマウントとWi-Fi支持金具をカーボン上部に結合します。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_camera_convine_prepair.jpg)
 
-シャーシの裏には４箇所皿ネジを使用します。
+カーボン上段の裏から４箇所、皿ネジで固定します。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_bottom_view.jpg)
 
@@ -382,19 +382,19 @@ Jetson Nano Moduleを再び装着し、２箇所ネジ止めします。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_cameramount_set.jpg)
 
-カメラマウントとシャーシは、取り付け完了です。
+カメラマウントとカーボン上段は、取り付け完了です。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_resinscrewfin.jpg)
 
-シャーシ最上部と真ん中のシャーシを結合します。
+カーボン上部とカーボン中段を結合します。
 
 ![](./../../img/Convine_11/Parts.jpg)
 
-シャーシどおし結合します。M3ナットで4隅を固定します。
+M3ナットで四隅を固定します。
 
 ![](./../../img/Convine_11/Chassis_Mount_Middle.jpg)
 
-ナットドライバでナットを締めます。
+ナットドライバーでナットを締めます。
 
 ![](./../../img/Convine_11/ChassisMount_Middle_NutDriver.jpg)
 
@@ -410,7 +410,7 @@ Jetson Nanoとシャーシを取り付けます。
 
 ![](./../../img/JetsonNano_Conb_12/CameraAttachFin3.jpg)
 
-スクリューねじでJetsonNanoを４箇所のねじで固定します。
+スクリューねじでJetson Nanoを４箇所のねじで固定します。
 
 ![](./../../img/JetsonNano_Conb_12/JetsonNano_upon_screw.jpg)
 
@@ -425,12 +425,12 @@ Jetson Nanoとシャーシを取り付けます。
 
 ![](./../../img/camera_cable004.jpg)
 
-## 14. CPU Fanの取り付け
+## 14. CPUファンの取り付け
 
 |写真|部品または工具|個数|
 |:--|:--|:--:|
-|![](./../../img/cpufan_mini001.jpg){: style="height:210px;width:200px"}|CPU Fanと取り付けジグ|1セット|
-|![](./../../img/cpufan_mini002.jpg){: style="height:210px;width:200px"}|CPU Fan取り付け用ネジ|1|
+|![](./../../img/cpufan_mini001.jpg){: style="height:210px;width:200px"}|CPUファンと取り付けジグ|1セット|
+|![](./../../img/cpufan_mini002.jpg){: style="height:210px;width:200px"}|CPUファン取り付け用ネジ|1|
 |![](./../../img/add_pentageolench1point5_001.jpg){: style="height:210px;width:200px"}|六角レンチ|1|
 
 ![](./../../img/cpufan001.jpg)
@@ -451,12 +451,12 @@ Jetson Nanoとシャーシを取り付けます。
 
 ![](./../../img/cpufan008.jpg)
 
-## 15. Controller Boardの取り付け
+## 15. コントローラーボードの取り付け
 
 
 |写真|部品または工具|個数|
 |:--|:--|:--:|
-|![](./../../img/board_mini001.jpg){: style="height:210px;width:200px"}|ControllerBoard|1|
+|![](./../../img/board_mini001.jpg){: style="height:210px;width:200px"}|コントローラーボード|1|
 
 ![](./../../img/board001.jpg)
 
@@ -478,7 +478,7 @@ Jetson Nanoとシャーシを取り付けます。
 
 |写真|部品または工具|個数|
 |:--|:--|:--:|
-|![](./../../img/add_Jumper_pin.jpg){: style="height:210px;width:200px"}|Jumperピン（JetsonNano開発者キットB01は標準で付属）|１個|
+|![](./../../img/add_Jumper_pin.jpg){: style="height:210px;width:200px"}|Jumperピン（Jetson Nano開発者キットB01は標準で付属）|１個|
 
 使用するJetson Nanoが``Rev.A02``か、``Rev.B01``かを確認します。
 
@@ -517,11 +517,11 @@ Wi-Fiアンテナのケーブルを結束バンドを使用してケーブルを
 |![](./../../img/add_wifi_module_intel001.jpg){: style="height:210px;width:200px"}|Intel Dual Bandwireless-AC 8265 Desktop Kit<br>アンテナ２つ|1|
 
 
-いよいよ完成です。電源接続します。モバイルバッテリーからJetsonNanoのDCジャックとマイクロUSBに接続します。
+いよいよ完成です。電源接続します。モバイルバッテリーからJetson NanoのDCジャックとマイクロUSBに接続します。
 
 ![](./../../img/Complete_20/usb_con_parts.jpg)
 
-Wi-Fiのアンテナを立てます。アンテナを回してねじ込みます。
+Wi-Fiアンテナを立てます。アンテナを回してねじ込みます。
 
 ![](./../../img/Complete_20/wifi_Antena_attachi.jpg)
 
@@ -542,7 +542,7 @@ DCプラグがボディの間を通過した様子。
 
 ![](./../../img/Complete_20/usb_con_jetsonpower2.jpg)
 
-DCプラグをJetsonNano開発者キットのDCジャックへ接続します。JetsonNanoの電源が入ります。
+DCプラグをJetson Nano開発者キットのDCジャックへ接続します。Jetson Nanoの電源が入ります。
 
 ![](./../../img/Complete_20/usb_jetsonpower3.jpg)
 
