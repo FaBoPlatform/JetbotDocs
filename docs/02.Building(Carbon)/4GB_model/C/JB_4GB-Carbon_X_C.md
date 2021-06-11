@@ -82,10 +82,10 @@ Wi-Fi支持パーツ剛性アップ
 |写真|部品または工具|個数|
 |:--|:--|:--:|
 |![](./../../img/caster_mini001.jpg){: style="height:210px;width:200px"}|ボールキャスター|1|
-|![](./../../img/add_(2)_caster_kotei001.jpg){: style="height:210px;width:200px"}|２．キャスター固定|１袋|
+|![](./../../img/add_(2)_caster_kotei001.jpg){: style="height:210px;width:200px"}|２．ボールキャスター固定|１袋|
 |![](./../../img/add_driverplus2_001.jpg){: style="height:210px;width:200px"}|プラスドライバー +2×100|１本|
 
-キャスターの組み立てをおこないます。
+ボールキャスターの組み立てをおこないます。
 
 ![](./../../img/caster001.jpg)
 
@@ -125,7 +125,7 @@ Wi-Fi支持パーツ剛性アップ
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_prepairBallCaster.jpg)
 
-スペーサーを挟み、ネジでキャスター固定します。
+スペーサーを挟み、ネジでボールキャスター固定します。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_screwinsert.jpg)
 
@@ -143,7 +143,7 @@ M3ナットをはめて、ドライバーで４箇所締め付けます。
 
 <hr>
 
-## 5. 下段と中段のカーボンの取り付け
+## 5. カーボン下段とカーボン中段の連結
 
 <hr>
 
@@ -155,7 +155,7 @@ M3ナットをはめて、ドライバーで４箇所締め付けます。
 
 ![](./../../img/add_joint001.jpg)
 
-モーターの線も穴から出しておきます。
+モーターの線を穴から出しておきます。
 
 ![](./../../img/add_joint002.jpg)
 
@@ -235,7 +235,7 @@ Jetson固定ネジを取り付けます。
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_common_cameramount.jpg){: style="height:210px;width:200px"}|カメラマウント|１|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_alminuim_wifiantena_supporter.jpg){: style="height:210px;width:200px"}|Wi-Fiアンテナ支持金具|1|
 |![](./../../img/add_spana001.jpg){: style="height:210px;width:200px"}|スパナ|1|
-|![](./../../img/add_semitudriverset001.jpg){: style="height:210px;width:200px"}|精密ドライバセット　ED−２０|1|
+|![](./../../img/add_semitudriverset001.jpg){: style="height:210px;width:200px"}|精密ドライバセットED−20|1|
 |![](./../../img/add_driverplus2_001.jpg){: style="height:210px;width:200px"}|プラスドライバー +2×100|1|
 
 Kitに搭載されているJetson Nanoが、``Rev.B01``か``Rev.A02``かを確認します。見分け方として、CSIカメラポートが2つ付いているのが``Rev.B01``で、1つしか付いていないのがRev.A02になります。
@@ -504,7 +504,7 @@ Wi-Fiアンテナのケーブルを結束バンドを使用してケーブルを
 
 ![](./../../img/etc_19/cable_forming_2.jpg)
 
-束ねたケーブルは、Jetson Nano開発者キットの基板の下へ格納します。
+束ねたケーブルは、Jetson Nano 開発者キットの基板の下へ格納します。
 
 ![](./../../img/etc_19/Jetson_forming_3.jpg)
 

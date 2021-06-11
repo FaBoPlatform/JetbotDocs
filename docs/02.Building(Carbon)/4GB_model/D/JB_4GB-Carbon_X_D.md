@@ -82,10 +82,10 @@ Wi-Fi支持パーツ素材の変更
 |写真|部品または工具|個数|
 |:--|:--|:--:|
 |![](./../../img/caster_mini001.jpg){: style="height:210px;width:200px"}|ボールキャスター|1|
-|![](./../../img/add_(2)_caster_kotei001.jpg){: style="height:210px;width:200px"}|２．キャスター固定ネジ|１袋|
+|![](./../../img/add_(2)_caster_kotei001.jpg){: style="height:210px;width:200px"}|２．ボールキャスター固定ネジ|１袋|
 |![](./../../img/add_driverplus2_001.jpg){: style="height:210px;width:200px"}|プラスドライバー +2×100|１本|
 
-キャスターの組み立てをおこないます。
+ボールキャスターの組み立てをおこないます。
 
 ![](./../../img/caster001.jpg)
 
@@ -126,7 +126,7 @@ Wi-Fi支持パーツ素材の変更
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_prepairBallCaster.jpg)
 
-スペーサーを挟み、ネジでキャスターを固定します。
+スペーサーを挟み、ネジでボールキャスターを固定します。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_screwinsert.jpg)
 
@@ -291,7 +291,9 @@ Wi-Fi モジュールは、Intel Dual Bandwireless-AC 8265 Desktop Kitを取り�
 
 ![](./../../img/Wifi_9/WifiAntennaConnetctToMoudule.jpg)
 
-取り外したアンテナ端子をWi-Fiアンテナ支持金具に取り付けます。Wi-Fiアンテナ支持金具に穴確認し端子を通るようにまわしアンテナ端子を貫通させます。
+取り外したアンテナ端子をWi-Fiアンテナ支持金具に取り付けます。
+
+Wi-Fiアンテナ支持金具に穴確認し端子を通るようにまわしアンテナ端子を貫通させます。
 
 ![](./../../img/D/WifiSupportHole.jpg)
 
