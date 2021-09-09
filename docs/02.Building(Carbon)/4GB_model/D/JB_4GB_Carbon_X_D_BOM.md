@@ -43,10 +43,10 @@
 |![](./../../img/add_CPUFAN_kotejigu001.jpg)|FAN取り付け用アクリル|１個|
 |![](./../../img/add_(1)motor_kotei_lower001.jpg)|１．モーター固定部品<br><br>モーター固定金具 ・・・・2<br>皿ネジ M3×10・・・・4<br>ナット M3・・・・4<br>なべねじM3×30・・・・4|１袋|
 |![](./../../img/add_(2)_caster_kotei001.jpg)|２．キャスター固定部品<br><br>皿ネジM3×15・・・・4<br>ナットM3・・・・4|１袋|
-|![](./../../img/add(3)_carbon_kotei001.jpg)|３．カーボン連結（下）部品<br><br>六角スペーサーM3×24・・・・4<br>皿ネジM3×5・・・・4|１袋|
-|![](./../../img/add_(4)carbon_kotei_upper001.jpg)|４．カーボン連結（上）部品<br><br>六角スペーサーM3×20（白）・・・・4<br>ナットM3・・・・4|１袋|
-|![](./../../img/BOM/BOM_JB_4GB_Carbon_D/Screw5.jpg)|５．カメラ固定部品<br><br>六角穴付きボルトセルフタッピングねじ M2.0×5・・・・4<br>皿ねじ M3.0 × 15・・・・4<br>ナット M3.0・・・4<br>|１袋|
-|![](./../../img/add_(6)jetson_kotei001.jpg)|６．Jetson固定部品<br><br>六角スペーサー（両メネジ白10ミリ）・・・・4<br>皿ネジM2.6×5・・・・4<br>なべねじM2.6×5・・・・4|１袋|
+|![](./../../img/add(3)_carbon_kotei001.jpg)<br>![](./../../img/BOM/BOM_JB_4GB_Carbon_D/additionalparts/carbonrenketusita3.jpg)|３．カーボン連結（下）部品<br><br>六角スペーサーM3×24・・・・4<br>皿ネジM3×5・・・・4<br>※写真は、上または下のいずれかになります。|１袋|
+|![](./../../img/add_(4)carbon_kotei_upper001.jpg)<br>![](./../../img/BOM/BOM_JB_4GB_Carbon_D/additionalparts/carbonrenketuue4.jpg)|４．カーボン連結（上）部品<br><br>六角スペーサーM3×20（白）・・・・4<br>ナットM3・・・・4<br>※写真は、上または下のいずれかになります。|１袋|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_D/additionalparts/kamerakotei5.jpg)|５．カメラ固定部品<br><br>六角穴付きボルトセルフタッピングねじ M2.0×5・・・・4<br>皿ねじ M3.0 × 15・・・・4<br>ナット M3.0・・・4<br><br>または、<br>六角穴付きボルトセルフタッピングねじ M2.0×5・・・・4<br>皿ねじ M3.0 × 12・・・・4<br>ナット M3.0・・・4<br>|１袋|
+|![](./../../img/add_(6)jetson_kotei001.jpg)<br>![](./../../img/BOM/BOM_JB_4GB_Carbon_D/additionalparts/jetsonkotei6.jpg)|６．Jetson固定部品<br><br>六角スペーサー（両メネジ白10ミリ）・・・・4<br>皿ネジM2.6×5・・・・4<br>なべねじM2.6×5・・・・4<br><br>または、<br><br>六角スペーサー（両メネジ黒10ミリ）・・・・4<br>皿ネジM2.6×5・・・・4<br>なべねじM2.6×5・・・・4<br><br>※写真は、上または下のいずれかになります。|１袋|
 |![](./../../img/add_CPUFAN_koteineji001.jpg)|ファンねじ<br><br>M2.5×14・・・・4<br>ナットM2.5・・・・5(ヨビ１)|１袋|
 |![](./../../img/add_pentageolench1point5_001.jpg)|六角レンチ 1.5|１本|
 |![](./../../img/add_bothSideSeal001.jpg)|両面テープ|２枚|
