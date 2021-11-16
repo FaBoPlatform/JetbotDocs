@@ -1587,8 +1587,8 @@ JetBotにsshログイン成功。
 <img alt="" src="../img/ssh009.png" /></p>
 <h2 id="jetbotwi-fi">JetBotをWi-Fiルータに接続</h2>
 <p>JetBotのターミナルでWiFi接続のコマンドを実行します。<code>アクセスポイント名</code>と<code>パスワード</code>はお使いのネットワーク環境に合わせた値にします。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=nv>sudo</span> <span class=nv>nmcli</span> <span class=nv>device</span> <span class=nv>wifi</span> <span class=k>connect</span> <span class=s1>&#39;</span><span class=s>アクセスポイント名</span><span class=s1>&#39;</span> <span class=nv>password</span> <span class=s1>&#39;</span><span class=s>パスワード</span><span class=s1>&#39;</span> <span class=nv>ifname</span> <span class=nv>wlan0</span>
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>sudo nmcli device wifi connect 'アクセスポイント名' password 'パスワード' ifname wlan0
+</code></pre></p>
 <p>sudo実行の際に、パスワードを聞かれますので、下記を入力します。</p>
 <table>
 <thead>
@@ -1605,8 +1605,8 @@ JetBotにsshログイン成功。
 <p><img alt="" src="../img/ssh010.png" /></p>
 <h2 id="ip">IPアドレスの確認</h2>
 <p>IPアドレスの確認はifconfigコマンドを用います。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>ifconfig -a
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>ifconfig -a
+</code></pre></p>
 <p><img alt="" src="../img/ssh011.png" /></p>
 <p><img alt="" src="../img/ssh012.png" /></p>
                 

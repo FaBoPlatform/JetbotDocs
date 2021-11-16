@@ -1537,21 +1537,17 @@ JetBot 2GBやハンズオンではこの項目は実施しません。  </p>
 <ul>
 <li>Docker版(JetPack 4.4.1以降)はJupyterのターミナルで実行してください。</li>
 </ul>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span>
-<span class=normal>3</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=n>pip3</span> <span class=n>install</span> <span class=n>bokeh</span>
-<span class=n>jupyter</span> <span class=n>labextension</span> <span class=n>install</span> <span class=p>@</span><span class=n>jupyter</span><span class=o>-</span><span class=n>widgets</span><span class=o>/</span><span class=n>jupyterlab</span><span class=o>-</span><span class=n>manager</span><span class=mf>@2.0</span>
-<span class=n>jupyter</span> <span class=n>labextension</span> <span class=n>install</span> <span class=p>@</span><span class=n>bokeh</span><span class=o>/</span><span class=n>jupyter_bokeh</span>
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>pip3 install bokeh
+jupyter labextension install @jupyter-widgets/jupyterlab-manager@2.0
+jupyter labextension install @bokeh/jupyter_bokeh
+</code></pre></p>
 <ul>
 <li>非Docker版(JetPack 4.3以前)はJupyterのターミナルもしくはJetBotにsshログインして実行してください。</li>
 </ul>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span>
-<span class=normal>3</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=n>sudo</span> <span class=n>pip3</span> <span class=n>install</span> <span class=n>bokeh</span>
-<span class=n>sudo</span> <span class=n>jupyter</span> <span class=n>labextension</span> <span class=n>install</span> <span class=p>@</span><span class=n>jupyter</span><span class=o>-</span><span class=n>widgets</span><span class=o>/</span><span class=n>jupyterlab</span><span class=o>-</span><span class=n>manager</span><span class=mf>@2.0</span>
-<span class=n>sudo</span> <span class=n>jupyter</span> <span class=n>labextension</span> <span class=n>install</span> <span class=p>@</span><span class=n>bokeh</span><span class=o>/</span><span class=n>jupyter_bokeh</span>
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>sudo pip3 install bokeh
+sudo jupyter labextension install @jupyter-widgets/jupyterlab-manager@2.0
+sudo jupyter labextension install @bokeh/jupyter_bokeh
+</code></pre></p>
 <p>bokehインストール後はJetBotを再起動してください。</p>
                 
               

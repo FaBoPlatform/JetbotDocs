@@ -1616,20 +1616,17 @@
 <li>作業用にノートブックをコピー</li>
 </ul>
 <p>PCからJetBotにsshでリモートログイン</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=n>ssh</span> <span class=n>jetbot</span><span class=mf>@192.168</span><span class=p>.</span><span class=n>xxx</span><span class=p>.</span><span class=n>xxx</span>
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>ssh jetbot@192.168.xxx.xxx
+</code></pre></p>
 <blockquote>
 <p>パスワード：jetbot</p>
 </blockquote>
 <p>Jetsonのコンソールで以下を実行</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span>
-<span class=normal>3</span>
-<span class=normal>4</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>mkdir ~/github
+<p> <pre><code class>mkdir ~/github
 cd ~/github
 git clone https://github.com/FaBoPlatform/jetbot
 cp -r ~/github/jetbot/notebooks ~/Notebooks
-</code></pre></div></td></tr></table></p>
+</code></pre></p>
 <p>以上です。すでにJupyterにアクセスしている場合はブラウザをリロードすると<code>/home/jetbot/Notebooks</code>が出来ているので、このNotebookを利用します。</p>
 <p>再度Notebookを更新する場合は、ディレクトリを削除してやり直してください。</p>
                 

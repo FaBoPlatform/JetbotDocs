@@ -1547,18 +1547,17 @@
 <p><img alt="" src="../img/capture001.png" /></p>
 <h2 id="build-recommended">Build Recommendedのポップアップが表示されるとき</h2>
 <p>Jupyterプラグインが未ビルドの時に、次のようなポップアップが表示されます。  </p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>JupyterLab build is suggested:
+<p> <pre><code class>JupyterLab build is suggested:
 jupyter_clickable_image_widget content changed
-</code></pre></div></td></tr></table></p>
+</code></pre></p>
 <p>このとき、ブラウザからはビルドができないので、CancelでOKです。
 <img alt="" src="../img/jupyter-lab-build-popup1.png" /></p>
 <p>Buildを選択しても、ビルドに失敗します。（悪影響はありません）
 <img alt="" src="../img/jupyter-lab-build-popup2.png" /></p>
 <p>このポップアップを解決したい場合は、ターミナルでroot権限でコマンドを実行します。<br />
 Jupyterのターミナルから実行することも可能です。Docker版でsudoコマンドがない場合は、すでにroot権限のターミナルとなっているので、コマンドラインで<code>jupyter lab build</code>を実行してください。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo jupyter lab build
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>sudo jupyter lab build
+</code></pre></p>
 <p><img alt="" src="../img/jupyter-lab-build-command.png" /></p>
 <p>このポップアップは特定のJupyterプラグインをインストール後に初めてJupyterにアクセスした時に表示されます。<br />
 放置しても問題ありませんが、わずらわしい場合は上記のように解決することができます。</p>

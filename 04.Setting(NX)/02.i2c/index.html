@@ -1512,20 +1512,20 @@
 <p>Jetson Nano 2GB, 4GBではI2Cのバスは1を使用しますが、Jetson Xavier NXではI2Cのバスは8を使用します。</p>
 <h2 id="i2c_1">I2Cアドレスの修正</h2>
 <p>PCから、SSHでJetBotにログインします。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo docker ps
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>sudo docker ps
+</code></pre></p>
 <p><img alt="" src="../img/dockerps001.jpg" /></p>
 <p>2つのDockerが起動しています。NAMESのところが、<code>jetbot_jupyter</code>の方が走行用、<code>jetbot_display</code>の方がOLEDの表示用で、I2Cにアクセスしていますので、I2Cのアドレスをそれぞれ書き直します。</p>
 <h2 id="i2c_2">モーター制御側のI2Cアドレスの修正</h2>
 <p><code>jetbot_jupyter</code>のコンテナにログインします。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=nv>sudo</span> <span class=nv>docker</span> <span class=k>exec</span> <span class=o>-</span><span class=nv>it</span> コンテナ<span class=nv>ID</span> <span class=o>/</span><span class=nv>bin</span><span class=o>/</span><span class=nv>bash</span>
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>sudo docker exec -it コンテナID /bin/bash
+</code></pre></p>
 <p>下記フォルダに移動します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>cd /usr/local/lib/python3.6/dist-packages/jetbot-0.4.3-py3.6.egg/jetbot
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>cd /usr/local/lib/python3.6/dist-packages/jetbot-0.4.3-py3.6.egg/jetbot
+</code></pre></p>
 <p>viで編集します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>vi robot.py
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>vi robot.py
+</code></pre></p>
 <p><code>robot.py</code></p>
 <blockquote>
 <p>i2c_bus = traitlets.Integer(default_value=8).tag(config=True)
@@ -1533,18 +1533,18 @@
 </blockquote>
 <p><img alt="" src="../img/i2c001.jpg" /></p>
 <p>Dockerからログアウトします。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=k>exit</span>
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>exit
+</code></pre></p>
 <h2 id="oledi2c">OLED表示側のI2Cアドレスの修正</h2>
 <p><code>jetbot_display</code>のコンテナにログインします。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=nv>sudo</span> <span class=nv>docker</span> <span class=k>exec</span> <span class=o>-</span><span class=nv>it</span> コンテナ<span class=nv>ID</span> <span class=o>/</span><span class=nv>bin</span><span class=o>/</span><span class=nv>bash</span>
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>sudo docker exec -it コンテナID /bin/bash
+</code></pre></p>
 <p>下記フォルダに移動します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>cd /usr/local/lib/python3.6/dist-packages/jetbot-0.4.3-py3.6.egg/jetbot/apps
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>cd /usr/local/lib/python3.6/dist-packages/jetbot-0.4.3-py3.6.egg/jetbot/apps
+</code></pre></p>
 <p>viで<code>stats.py</code>を開きます。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>vi stats.py
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>vi stats.py
+</code></pre></p>
 <p><code>stats.py</code></p>
 <blockquote>
 <p>disp = Adafruit_SSD1306.SSD1306_128_32(rst=None, i2c_bus=8, gpio=1)
@@ -1552,11 +1552,11 @@
 </blockquote>
 <p><img alt="" src="../img/i2c002.jpg" /></p>
 <p>Dockerからログアウトします。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=k>exit</span>
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>exit
+</code></pre></p>
 <p>Jetson NX Xavierを再起動します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo reboot
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>sudo reboot
+</code></pre></p>
                 
               
               

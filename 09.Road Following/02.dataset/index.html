@@ -1508,11 +1508,11 @@
 <p>Google Chromeの一部のセッション環境ではマウスクリック時に取得できる画像のx,y座標がfloat型で返ってくるため、OpenCVの円を描画する座標の中心点が期待するint型と不一致となるために以下の画像にあるようなエラーが発生することがわかっています。</p>
 <p>このようなエラーが発生した場合は、原因となっているx,yをint型に変換するように変更してください。<br />
 変更前</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>snapshot = cv2.circle(snapshot, (x, y), 8, (0, 255, 0), 3)
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>snapshot = cv2.circle(snapshot, (x, y), 8, (0, 255, 0), 3)
+</code></pre></p>
 <p>変更後</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>snapshot = cv2.circle(snapshot, (int(x), int(y)), 8, (0, 255, 0), 3)
-</code></pre></div></td></tr></table></p>
+<p> <pre><code class>snapshot = cv2.circle(snapshot, (int(x), int(y)), 8, (0, 255, 0), 3)
+</code></pre></p>
 <p><img alt="" src="../img/data002.png" /></p>
                 
               
