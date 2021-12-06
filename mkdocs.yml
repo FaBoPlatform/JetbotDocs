@@ -11,15 +11,21 @@ extra:
         language: 'jp'
 markdown_extensions:
   - fontawesome_markdown
-  - codehilite:
-      linenums: true
+  - pymdownx.highlight:
+      use_pygments: true
+      noclasses: true
+      pygments_style: monokai
+      linenums: false
+  - pymdownx.superfences
   - admonition
   - pymdownx.keys
-  - markdown_fenced_code_tabs
   - attr_list
 extra_css:
   - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"  
   - 'stylesheets/extra.css'
+  - "https://fonts.googleapis.com/earlyaccess/notosansjp.css"
+  - "https://fonts.googleapis.com/css?family=Open+Sans:600,800"
+  - "stylesheets/custom.css"
 extra_javascript:
   - 'javascripts/extra.js'
 plugins:
