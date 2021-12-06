@@ -44,6 +44,12 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600,800">
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
     
       
 
@@ -1727,28 +1733,17 @@
 <p>Dockerベースになると、JetPackの起動時点でのSwapの設定が必須になります。Swapを設定しないと、学習時の処理がうまく動かなくなります。</p>
 </div>
 <h2 id="swap">Swapの設定</h2>
-<p>Swapを作成します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span>
-<span class=normal>3</span>
-<span class=normal>4</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo systemctl disable nvzramconfig
+<p>Swapを作成します。
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo systemctl disable nvzramconfig
 sudo fallocate -l 6G /mnt/6GB.swap
 sudo mkswap /mnt/6GB.swap
 sudo swapon /mnt/6GB.swap
-</code></pre></div></td></tr></table></p>
-<p>fstabにswapを反映します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo vi /etc/fstab
-</code></pre></div></td></tr></table></p>
-<p><code>/etc/fstab</code> を修正します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span>
-<span class=normal>3</span>
-<span class=normal>4</span>
-<span class=normal>5</span>
-<span class=normal>6</span>
-<span class=normal>7</span>
-<span class=normal>8</span>
-<span class=normal>9</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code># /etc/fstab: static file system information.
+</code></pre></div></p>
+<p>fstabにswapを反映します。
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo vi /etc/fstab
+</code></pre></div></p>
+<p><code>/etc/fstab</code> を修正します。
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code># /etc/fstab: static file system information.
 # 
 # These are the filesystems that are always mounted on boot, you can
 # override any of these by copying the appropriate line from this file into
@@ -1757,67 +1752,52 @@ sudo swapon /mnt/6GB.swap
 # &lt;file system&gt; &lt;mount point&gt;             &lt;type&gt;          &lt;options&gt;                               &lt;dump&gt; &lt;pass&gt;
 /dev/root            /                     ext4           defaults                                     0 1
 /mnt/6GB.swap swap swap defaults 0 0
-</code></pre></div></td></tr></table></p>
+</code></pre></div></p>
 <h2 id="jetbot-docker_1">JetBot Dockerの設定</h2>
-<p>Jetbotのrepoをgit cloneします。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>git clone https://github.com/NVIDIA-AI-IOT/jetbot/
-</code></pre></div></td></tr></table></p>
+<p>Jetbotのrepoをgit cloneします。
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>git clone https://github.com/NVIDIA-AI-IOT/jetbot/
+</code></pre></div></p>
 <h2 id="docker">Dockerの設定</h2>
-<p>パワーモードと他のパラメーターの初期化をおこないます。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>cd jetbot
+<p>パワーモードと他のパラメーターの初期化をおこないます。
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>cd jetbot
 ./scripts/configure_jetson.sh
-</code></pre></div></td></tr></table></p>
-<p>JetBot Dockerに関連する環境変数の設定をおこないます。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>cd docker
-</code></pre></div></td></tr></table></p>
-<p><code>configure.sh</code>を修正します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>vi configure.sh
-</code></pre></div></td></tr></table></p>
-<p>JetPack 4.5.1向けのJetbotイメージが存在しないために(<a href="https://github.com/NVIDIA-AI-IOT/jetbot/issues/406">issues:406</a>)、<code>configure.sh</code>を下記のように修正します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal> 1</span>
-<span class=normal> 2</span>
-<span class=normal> 3</span>
-<span class=normal> 4</span>
-<span class=normal> 5</span>
-<span class=normal> 6</span>
-<span class=normal> 7</span>
-<span class=normal> 8</span>
-<span class=normal> 9</span>
-<span class=normal>10</span>
-<span class=normal>11</span>
-<span class=normal>12</span>
-<span class=normal>13</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=k>if</span> <span class=p>[[</span> <span class=o>$</span><span class=n>L4T_VERSION</span> <span class=o>=</span> <span class=s2>&quot;32.4.3&quot;</span> <span class=p>]]</span>
-<span class=n>then</span>
-        <span class=n>JETBOT_BASE_IMAGE</span><span class=o>=</span><span class=n>nvcr</span><span class=o>.</span><span class=n>io</span><span class=o>/</span><span class=n>nvidia</span><span class=o>/</span><span class=n>l4t</span><span class=o>-</span><span class=n>pytorch</span><span class=p>:</span><span class=n>r32</span><span class=o>.</span><span class=mf>4.3</span><span class=o>-</span><span class=n>pth1</span><span class=o>.</span><span class=mi>6</span><span class=o>-</span><span class=n>py3</span>
-<span class=k>elif</span> <span class=p>[[</span> <span class=s2>&quot;$L4T_VERSION&quot;</span> <span class=o>==</span> <span class=s2>&quot;32.4.4&quot;</span> <span class=p>]]</span>
-<span class=n>then</span>
-        <span class=n>JETBOT_BASE_IMAGE</span><span class=o>=</span><span class=n>nvcr</span><span class=o>.</span><span class=n>io</span><span class=o>/</span><span class=n>nvidia</span><span class=o>/</span><span class=n>l4t</span><span class=o>-</span><span class=n>pytorch</span><span class=p>:</span><span class=n>r32</span><span class=o>.</span><span class=mf>4.4</span><span class=o>-</span><span class=n>pth1</span><span class=o>.</span><span class=mi>6</span><span class=o>-</span><span class=n>py3</span>
-<span class=k>elif</span> <span class=p>[[</span> <span class=s2>&quot;$L4T_VERSION&quot;</span> <span class=o>==</span> <span class=s2>&quot;32.5.1&quot;</span> <span class=p>]]</span>
-<span class=n>then</span>
-        <span class=k>export</span> <span class=n>L4T_VERSION</span><span class=o>=</span><span class=s2>&quot;32.5.0&quot;</span>
-        <span class=n>JETBOT_BASE_IMAGE</span><span class=o>=</span><span class=n>nvcr</span><span class=o>.</span><span class=n>io</span><span class=o>/</span><span class=n>nvidia</span><span class=o>/</span><span class=n>l4t</span><span class=o>-</span><span class=n>pytorch</span><span class=p>:</span><span class=n>r32</span><span class=o>.</span><span class=mf>5.0</span><span class=o>-</span><span class=n>pth1</span><span class=o>.</span><span class=mi>6</span><span class=o>-</span><span class=n>py3</span>
-<span class=k>else</span>
-        <span class=n>echo</span> <span class=s2>&quot;JETBOT_BASE_IMAGE not found for ${L4T_VERSION}.  Please manually set the JETBOT_BASE_IMAGE environment variable. (ie: export JETBOT_BASE_IMAGE=...)&quot;</span>
-<span class=n>fi</span>
-</code></pre></div></td></tr></table></p>
-<p><code>configure.sh</code>実行して、確認します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>source configure.sh
-</code></pre></div></td></tr></table></p>
-<p>コンテナでCUDA関連のコンポーネントを使用するために必要となるデフォルトのdockerランタイムを設定します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>./set_nvidia_runtime.sh
-</code></pre></div></td></tr></table></p>
-<p>Jupuyterコンテナのメモリの上限設定をおこないます。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=k>export</span> <span class=n>JETBOT_JUPYTER_MEMORY</span><span class=o>=</span><span class=mi>500</span><span class=n>m</span>
-<span class=k>export</span> <span class=n>JETBOT_JUPYTER_MEMORY_SWAP</span><span class=o>=</span><span class=mi>3</span><span class=n>G</span>
-</code></pre></div></td></tr></table></p>
+</code></pre></div></p>
+<p>JetBot Dockerに関連する環境変数の設定をおこないます。
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>cd docker
+</code></pre></div></p>
+<p><code>configure.sh</code>を修正します。
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>vi configure.sh
+</code></pre></div></p>
+<p>JetPack 4.5.1向けのJetbotイメージが存在しないために(<a href="https://github.com/NVIDIA-AI-IOT/jetbot/issues/406">issues:406</a>)、<code>configure.sh</code>を下記のように修正します。
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>if [[ $L4T_VERSION = &quot;32.4.3&quot; ]]
+then
+        JETBOT_BASE_IMAGE=nvcr.io/nvidia/l4t-pytorch:r32.4.3-pth1.6-py3
+elif [[ &quot;$L4T_VERSION&quot; == &quot;32.4.4&quot; ]]
+then
+        JETBOT_BASE_IMAGE=nvcr.io/nvidia/l4t-pytorch:r32.4.4-pth1.6-py3
+elif [[ &quot;$L4T_VERSION&quot; == &quot;32.5.1&quot; ]]
+then
+        export L4T_VERSION=&quot;32.5.0&quot;
+        JETBOT_BASE_IMAGE=nvcr.io/nvidia/l4t-pytorch:r32.5.0-pth1.6-py3
+else
+        echo &quot;JETBOT_BASE_IMAGE not found for ${L4T_VERSION}.  Please manually set the JETBOT_BASE_IMAGE environment variable. (ie: export JETBOT_BASE_IMAGE=...)&quot;
+fi
+</code></pre></div></p>
+<p><code>configure.sh</code>実行して、確認します。
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>source configure.sh
+</code></pre></div></p>
+<p>コンテナでCUDA関連のコンポーネントを使用するために必要となるデフォルトのdockerランタイムを設定します。
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>./set_nvidia_runtime.sh
+</code></pre></div></p>
+<p>Jupuyterコンテナのメモリの上限設定をおこないます。
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>export JETBOT_JUPYTER_MEMORY=500m
+export JETBOT_JUPYTER_MEMORY_SWAP=3G
+</code></pre></div></p>
 <h2 id="docker_1">Dockerのインストールと起動</h2>
-<p>Dockerイメージをインストールして起動します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo systemctl enable docker  
+<p>Dockerイメージをインストールして起動します。
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo systemctl enable docker  
 ./enable.sh $HOME
-</code></pre></div></td></tr></table></p>
+</code></pre></div></p>
 <p>ネットワーク状況次第では、30分〜1時間程度、時間がかかります。</p>
                 
               

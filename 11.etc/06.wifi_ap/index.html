@@ -44,6 +44,12 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600,800">
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
     
       
 
@@ -1642,43 +1648,33 @@
 <p>NetworkManagerはWi-Fiインターフェースをアクセスポイントとして設定することができます。NetworkManagerを使うメリットは、Wi-Fi, DHCPサーバー,　NATの設定を完全に自動化できることにあります。</p>
 <p>それでは、Wi-Fiアクセスポイントにしてみましょう。<br />
 まずはdnsmasqをインストールします。<br />
-dnsmasqは、軽量のDNSフォワーダーおよびDHCPサーバーを提供します。  </p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo apt-get install dnsmasq
-</code></pre></div></td></tr></table></p>
+dnsmasqは、軽量のDNSフォワーダーおよびDHCPサーバーを提供します。<br />
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo apt-get install dnsmasq
+</code></pre></div></p>
 <p>デフォルトではdnsmasqはスタンドアロンサービスとして実行されるため、NetworkManagerによって起動されるdnsmasqインスタンスと競合します。<br />
-競合を防ぐために、次のコマンドを実行してdnsmasqサービスを無効にします。  </p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo systemctl disable dnsmasq
+競合を防ぐために、次のコマンドを実行してdnsmasqサービスを無効にします。<br />
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo systemctl disable dnsmasq
 sudo systemctl stop dnsmasq
-</code></pre></div></td></tr></table></p>
+</code></pre></div></p>
 <p>NetworkManagerでdnsmasqをDNSサーバーとして利用するために、/etc/NetworkManager/NetworkManager.confに次の記述を追加します。<br />
-/etc/NetworkManager/NetworkManager.confを編集</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>vi /etc/NetworkManager/NetworkManager.conf
-</code></pre></div></td></tr></table></p>
-<p>追加する内容</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=k>[main]</span>
-<span class=na>dns</span><span class=o>=</span><span class=s>dnsmasq</span>
-</code></pre></div></td></tr></table></p>
-<p>全文</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span>
-<span class=normal>3</span>
-<span class=normal>4</span>
-<span class=normal>5</span>
-<span class=normal>6</span>
-<span class=normal>7</span>
-<span class=normal>8</span>
-<span class=normal>9</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=k>[main]</span>
-<span class=na>plugins</span><span class=o>=</span><span class=s>ifupdown,keyfile</span>
-<span class=na>dns</span><span class=o>=</span><span class=s>dnsmasq</span>
+/etc/NetworkManager/NetworkManager.confを編集
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>vi /etc/NetworkManager/NetworkManager.conf
+</code></pre></div>
+追加する内容
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>[main]
+dns=dnsmasq
+</code></pre></div>
+全文
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>[main]
+plugins=ifupdown,keyfile
+dns=dnsmasq
 
-<span class=k>[ifupdown]</span>
-<span class=na>managed</span><span class=o>=</span><span class=s>false</span>
+[ifupdown]
+managed=false
 
-<span class=k>[device]</span>
-<span class=na>wifi.scan-rand-mac-address</span><span class=o>=</span><span class=s>no</span>
-</code></pre></div></td></tr></table></p>
+[device]
+wifi.scan-rand-mac-address=no
+</code></pre></div></p>
 <p>Wi-Fi APを作成します。(下記はテンプレート)</p>
 <blockquote>
 <p>nmcli con add type wifi ifname wlan0 mode ap con-name &lt;name&gt; ssid &lt;ssid&gt;<br />
@@ -1695,40 +1691,31 @@ nmcli con up &lt;name&gt;  </p>
 <p>例として次のコマンドは、SSIDをJetBot_AP、帯域を2.4GHz、チャネル1、WPA2-PSKセキュリティ、CCMP暗号化、およびパスフレーズjetbot_apを使用して、インターフェイスwlan0にWIFI_APという名前のAP構成を作成します。<br />
 パスフレーズは8-63文字で設定します。<br />
 SSID: JetBot_AP<br />
-PASS: jetbot_ap  </p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal> 1</span>
-<span class=normal> 2</span>
-<span class=normal> 3</span>
-<span class=normal> 4</span>
-<span class=normal> 5</span>
-<span class=normal> 6</span>
-<span class=normal> 7</span>
-<span class=normal> 8</span>
-<span class=normal> 9</span>
-<span class=normal>10</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=n>nmcli</span> <span class=n>con</span> <span class=n>add</span> <span class=k>type</span> <span class=n>wifi</span> <span class=n>ifname</span> <span class=n>wlan0</span> <span class=n>mode</span> <span class=n>ap</span> <span class=n>con</span><span class=o>-</span><span class=n>name</span> <span class=n>WIFI_AP</span> <span class=n>ssid</span> <span class=n>JetBot_AP</span>
-<span class=n>nmcli</span> <span class=n>con</span> <span class=n>modify</span> <span class=n>WIFI_AP</span> <span class=mh>802</span><span class=o>-</span><span class=mh>11</span><span class=o>-</span><span class=n>wireless</span><span class=p>.</span><span class=n>band</span> <span class=n>bg</span>
-<span class=n>nmcli</span> <span class=n>con</span> <span class=n>modify</span> <span class=n>WIFI_AP</span> <span class=mh>802</span><span class=o>-</span><span class=mh>11</span><span class=o>-</span><span class=n>wireless</span><span class=p>.</span><span class=n>channel</span> <span class=mh>1</span>
-<span class=n>nmcli</span> <span class=n>con</span> <span class=n>modify</span> <span class=n>WIFI_AP</span> <span class=mh>802</span><span class=o>-</span><span class=mh>11</span><span class=o>-</span><span class=n>wireless</span><span class=o>-</span><span class=n>security</span><span class=p>.</span><span class=n>key</span><span class=o>-</span><span class=n>mgmt</span> <span class=n>wpa</span><span class=o>-</span><span class=n>psk</span>
-<span class=n>nmcli</span> <span class=n>con</span> <span class=n>modify</span> <span class=n>WIFI_AP</span> <span class=mh>802</span><span class=o>-</span><span class=mh>11</span><span class=o>-</span><span class=n>wireless</span><span class=o>-</span><span class=n>security</span><span class=p>.</span><span class=n>proto</span> <span class=n>rsn</span>
-<span class=n>nmcli</span> <span class=n>con</span> <span class=n>modify</span> <span class=n>WIFI_AP</span> <span class=mh>802</span><span class=o>-</span><span class=mh>11</span><span class=o>-</span><span class=n>wireless</span><span class=o>-</span><span class=n>security</span><span class=p>.</span><span class=n>group</span> <span class=n>ccmp</span>
-<span class=n>nmcli</span> <span class=n>con</span> <span class=n>modify</span> <span class=n>WIFI_AP</span> <span class=mh>802</span><span class=o>-</span><span class=mh>11</span><span class=o>-</span><span class=n>wireless</span><span class=o>-</span><span class=n>security</span><span class=p>.</span><span class=n>pairwise</span> <span class=n>ccmp</span>
-<span class=n>nmcli</span> <span class=n>con</span> <span class=n>modify</span> <span class=n>WIFI_AP</span> <span class=mh>802</span><span class=o>-</span><span class=mh>11</span><span class=o>-</span><span class=n>wireless</span><span class=o>-</span><span class=n>security</span><span class=p>.</span><span class=n>psk</span> <span class=n>jetbot_ap</span>
-<span class=n>nmcli</span> <span class=n>con</span> <span class=n>modify</span> <span class=n>WIFI_AP</span> <span class=n>ipv4</span><span class=p>.</span><span class=n>method</span> <span class=n>shared</span>
-<span class=n>nmcli</span> <span class=n>con</span> <span class=n>up</span> <span class=n>WIFI_AP</span>
-</code></pre></div></td></tr></table></p>
+PASS: jetbot_ap<br />
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>nmcli con add type wifi ifname wlan0 mode ap con-name WIFI_AP ssid JetBot_AP
+nmcli con modify WIFI_AP 802-11-wireless.band bg
+nmcli con modify WIFI_AP 802-11-wireless.channel 1
+nmcli con modify WIFI_AP 802-11-wireless-security.key-mgmt wpa-psk
+nmcli con modify WIFI_AP 802-11-wireless-security.proto rsn
+nmcli con modify WIFI_AP 802-11-wireless-security.group ccmp
+nmcli con modify WIFI_AP 802-11-wireless-security.pairwise ccmp
+nmcli con modify WIFI_AP 802-11-wireless-security.psk jetbot_ap
+nmcli con modify WIFI_AP ipv4.method shared
+nmcli con up WIFI_AP
+</code></pre></div></p>
 <p>DHCPサブネットを設定します。(下記はテンプレート)  </p>
 <blockquote>
 <p>nmcli con modify &lt;name&gt; ipv4.addr &lt;ipaddress/prefix&gt;  </p>
 </blockquote>
 <p>例として次のコマンドはDHCPサブネットを10.0.0.x/24に設定します。<br />
-このコマンドによって10.0.0.x/24のサブネットがNetWorkManagerのDHCPサーバーによって使用され、10.0.0.1アドレスがAP自体に割り当てられます。  </p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>nmcli con modify WIFI_AP ipv4.addr 10.0.0.1/24
-</code></pre></div></td></tr></table></p>
+このコマンドによって10.0.0.x/24のサブネットがNetWorkManagerのDHCPサーバーによって使用され、10.0.0.1アドレスがAP自体に割り当てられます。<br />
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>nmcli con modify WIFI_AP ipv4.addr 10.0.0.1/24
+</code></pre></div></p>
 <p>NetworkManagerは /etc/NetworkManager/system-connections/WIFI_AP に設定ファイルを作成します。
 nmcliコマンドを実行する他に、このファイルを直接編集してAP設定を変更することもできます。</p>
-<p>設定ファイルの変更を有効にするには、次のコマンドを実行してNetworkManagerを再起動します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>systemctl restart NetworkManager.service
-</code></pre></div></td></tr></table></p>
+<p>設定ファイルの変更を有効にするには、次のコマンドを実行してNetworkManagerを再起動します。
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>systemctl restart NetworkManager.service
+</code></pre></div></p>
 <p>以上でWi-Fi APの設定が完了です。PCでJetBot_APというWiFiスポットに接続して、ブラウザで<br />
 <a href="http://10.0.0.1:8888">http://10.0.0.1:8888</a><br />
 にアクセスすると、JetBotのJupyterノートブックにアクセスすることができるようになります。</p>

@@ -44,6 +44,12 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600,800">
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
     
       
 
@@ -1854,46 +1860,41 @@ SDカードのイメージは、<a href="https://www.balena.io/etcher/">Etcher</
 SWAPはZRAMで管理されているので、ここを修正します。<br />
 Jetson Nano 4GBの場合、デフォルトで2GBのSWAP領域が確保されていますが、これを4GBに拡張します。<br />
 対象ファイル：<code>/etc/systemd/nvzramconfig.sh</code>  </p>
-<p>変更前:</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=go>mem=$(((&quot;${totalmem}&quot; / 2 / &quot;${NRDEVICES}&quot;) * 1024))</span>
-</code></pre></div></td></tr></table></p>
-<p>変更後:</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=go>mem=$(((&quot;${totalmem}&quot; / 1 / &quot;${NRDEVICES}&quot;) * 1024))</span>
-</code></pre></div></td></tr></table></p>
-<p>実行するコマンド  </p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=go>sudo sed -i &#39;s|mem=\$(((&quot;\${totalmem}&quot; \/ 2 \/ &quot;\${NRDEVICES}&quot;) \* 1024))|mem=$(((&quot;${totalmem}&quot; / 1 / &quot;${NRDEVICES}&quot;) * 1024))|g&#39; /etc/systemd/nvzramconfig.sh  </span>
-<span class=go>sudo reboot</span>
-</code></pre></div></td></tr></table></p>
+<p>変更前:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>mem=$(((&quot;${totalmem}&quot; / 2 / &quot;${NRDEVICES}&quot;) * 1024))
+</code></pre></div></p>
+<p>変更後:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>mem=$(((&quot;${totalmem}&quot; / 1 / &quot;${NRDEVICES}&quot;) * 1024))
+</code></pre></div></p>
+<p>実行するコマンド<br />
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo sed -i &#39;s|mem=\$(((&quot;\${totalmem}&quot; \/ 2 \/ &quot;\${NRDEVICES}&quot;) \* 1024))|mem=$(((&quot;${totalmem}&quot; / 1 / &quot;${NRDEVICES}&quot;) * 1024))|g&#39; /etc/systemd/nvzramconfig.sh  
+sudo reboot
+</code></pre></div></p>
 <h3 id="jetbot">JetBotをインストールする</h3>
-<p>Dockerイメージをダウンロードします。(インターネットに接続されている必要があります。)</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=go>sudo docker pull faborobot/jetbot-jp46</span>
-</code></pre></div></td></tr></table></p>
-<p>JetBot自動起動スクリプトをダウンロードします。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span>
-<span class=normal>3</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=go>cd ~/</span>
-<span class=go>wget https://raw.githubusercontent.com/FaBoPlatform/jetbot/fabo_2021/docker/run-jetbot.sh</span>
-<span class=go>chmod 755 run-jetbot.sh</span>
-</code></pre></div></td></tr></table></p>
-<p>JetBotを自動起動します。これを1度実行すると、Jetsonを再起動してもJetBotが自動起動するようになります。  </p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=go>sudo ./run-jetbot.sh</span>
-</code></pre></div></td></tr></table></p>
+<p>Dockerイメージをダウンロードします。(インターネットに接続されている必要があります。)
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo docker pull faborobot/jetbot-jp46
+</code></pre></div></p>
+<p>JetBot自動起動スクリプトをダウンロードします。
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>cd ~/
+wget https://raw.githubusercontent.com/FaBoPlatform/jetbot/fabo_2021/docker/run-jetbot.sh
+chmod 755 run-jetbot.sh
+</code></pre></div></p>
+<p>JetBotを自動起動します。これを1度実行すると、Jetsonを再起動してもJetBotが自動起動するようになります。<br />
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo ./run-jetbot.sh
+</code></pre></div></p>
 <p>Dockerコンテナが起動していることを確認します。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=go>sudo docker ps -a</span>
-</code></pre></div></td></tr></table></p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo docker ps -a
+</code></pre></div>
 <h3 id="gui">GUIを無効化する</h3>
 <p>メモリ容量を確保するために、GUIログインを無効化します。(オプション)  </p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=go>sudo systemctl set-default multi-user.target</span>
-<span class=go>sudo reboot</span>
-</code></pre></div></td></tr></table></p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo systemctl set-default multi-user.target
+sudo reboot
+</code></pre></div>
 <h3 id="gui_1">GUIを有効化する</h3>
 <p>ネットワークの設定等、GUIで操作したほうが便利なことがあるので、無効化したGUIを有効化します。(オプション)  </p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=go>sudo systemctl set-default graphical.target</span>
-<span class=go>sudo reboot</span>
-</code></pre></div></td></tr></table></p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo systemctl set-default graphical.target
+sudo reboot
+</code></pre></div>
 <h2 id="jetpack">古いJetPackイメージ</h2>
 <table>
 <thead>

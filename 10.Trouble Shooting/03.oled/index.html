@@ -44,6 +44,12 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600,800">
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
     
       
 
@@ -1709,29 +1715,22 @@
                 
                 <h1 id="oled">OLEDが表示されない</h1>
 <h2 id="oled_1">OLEDのデバイスの認識の確認</h2>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code>sudo i2cdetect -r -y 1
-</code></pre></div></td></tr></table></p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo i2cdetect -r -y 1
+</code></pre></div>
 <p><img alt="" src="../img/oled001.png" /></p>
 <p>アドレス番地 '0x3c' を認識していれば、OLEDのデバイスは見えている状態です。</p>
 <h2 id="wi-fi">Wi-Fiモジュールの未装着の場合</h2>
 <p>NVIDIA公式のJetBotイメージ(Jetpack4.2, Jetpack4.3)は、Wi-Fiモジュールが装着されていない場合、OLEDが表示されません。</p>
 <p>/usr/local/lib/python3.6/dist-packages/jetbot-0.4.0-py3.6.egg/jetbot/utils/utils.py のget_ip_addressを下記のように書き直してください。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
-<span class=normal>2</span>
-<span class=normal>3</span>
-<span class=normal>4</span>
-<span class=normal>5</span>
-<span class=normal>6</span>
-<span class=normal>7</span>
-<span class=normal>8</span></pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class="s s-Atom">def</span> <span class=nf>get_ip_address</span><span class=p>(</span><span class="s s-Atom">interface</span><span class=p>)</span><span class="s s-Atom">:</span>
-    <span class=nn>try</span><span class=p>:</span>
-        <span class="s s-Atom">if</span> <span class=nf>get_network_interface_state</span><span class=p>(</span><span class="s s-Atom">interface</span><span class=p>)</span> <span class=o>==</span> <span class="s s-Atom">&#39;down&#39;:</span>
-            <span class="s s-Atom">return</span> <span class=nv>None</span>
-        <span class="s s-Atom">cmd</span> <span class=o>=</span> <span class=err>&quot;</span><span class="s s-Atom">ifconfig</span> <span class=c1>%s | grep -Eo &#39;inet (addr:)?([0-9]*\.){3}[0-9]*&#39; | grep -Eo &#39;([0-9]*\.){3}[0-9]*&#39; | grep -v &#39;127.0.0.1&#39;&quot; % interface</span>
-    <span class=nn>except</span><span class=p>:</span>
-        <span class="s s-Atom">return</span> <span class=nv>None</span>
-    <span class="s s-Atom">return</span> <span class="s s-Atom">subprocess</span><span class=p>.</span><span class=nf>check_output</span><span class=p>(</span><span class="s s-Atom">cmd</span><span class=p>,</span> <span class="s s-Atom">shell</span><span class=o>=</span><span class=nv>True</span><span class=p>).</span><span class=nf>decode</span><span class=p>(</span><span class="s s-Atom">&#39;ascii&#39;</span><span class=p>)[:-</span><span class=mi>1</span><span class=p>]</span>
-</code></pre></div></td></tr></table></p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>def get_ip_address(interface):
+    try:
+        if get_network_interface_state(interface) == &#39;down&#39;:
+            return None
+        cmd = &quot;ifconfig %s | grep -Eo &#39;inet (addr:)?([0-9]*\.){3}[0-9]*&#39; | grep -Eo &#39;([0-9]*\.){3}[0-9]*&#39; | grep -v &#39;127.0.0.1&#39;&quot; % interface
+    except:
+        return None
+    return subprocess.check_output(cmd, shell=True).decode(&#39;ascii&#39;)[:-1]
+</code></pre></div>
 <h2 id="_1">上記に該当しないケース</h2>
 <p>OLEDのデバイスが認識していて、Wi-Fiモジュールを装着しているにも関わらずOLEDが表示されない場合は、ハードウェアの故障の可能性があります。</p>
 <p><a href="https://forms.gle/KS3FdeHD4sDEmYUXA">修理依頼フォーム</a>　より修理の依頼(無償修理)をお願いいたします。</p>
