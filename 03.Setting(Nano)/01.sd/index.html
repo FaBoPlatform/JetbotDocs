@@ -1875,15 +1875,23 @@ sudo reboot
 <div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo docker pull faborobot/jetbot-jp46
 </code></pre></div></p>
 <p>JetBot自動起動スクリプトをダウンロードします。
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>cd ~/
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>cd
 wget https://raw.githubusercontent.com/FaBoPlatform/jetbot/fabo_2021/docker/run-jetbot.sh
 chmod 755 run-jetbot.sh
 </code></pre></div></p>
 <p>JetBotを自動起動します。これを1度実行すると、Jetsonを再起動してもJetBotが自動起動するようになります。<br />
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo ./run-jetbot.sh
+このコマンドはrootユーザに切り替えてから実行します。<br />
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo su
+./run-jetbot.sh
 </code></pre></div></p>
 <p>Dockerコンテナが起動していることを確認します。</p>
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo docker ps -a
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>docker ps -a
+</code></pre></div>
+<p>もしここでうまく起動していないようであれば、dockerコンテナを停止して削除し、新しく起動しなおしてください。  </p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo su
+docker stop jetbot_ipaddress jetbot_jupyter
+docker rm jetbot_ipaddress jetbot_jupyter
+./run-jetbot.sh
 </code></pre></div>
 <h3 id="gui">GUIを無効化する</h3>
 <p>メモリ容量を確保するために、GUIログインを無効化します。(オプション)  </p>
