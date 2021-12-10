@@ -1099,6 +1099,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    起動に失敗したとき
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2060,6 +2067,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    起動に失敗したとき
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2078,11 +2092,14 @@
 <p>インターネットに接続されている必要があります。
 <div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo docker pull faborobot/jetbot-jp46
 </code></pre></div></p>
+<p><img alt="" src="../../img/docker001.png" />
+<img alt="" src="../../img/docker002.png" /></p>
 <h2 id="jetbot">JetBot自動起動スクリプトをダウンロードします</h2>
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>cd
+<p><div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>cd
 wget https://raw.githubusercontent.com/FaBoPlatform/jetbot/fabo_2021/docker/run-jetbot.sh
 chmod 755 run-jetbot.sh
 </code></pre></div>
+<img alt="" src="../../img/docker003.png" /></p>
 <h2 id="jetbot_1">JetBotを自動起動します</h2>
 <p>これを1度実行すると、Jetsonを再起動してもJetBotが自動起動するようになります。<br />
 <div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo su
@@ -2091,12 +2108,16 @@ chmod 755 run-jetbot.sh
 <p>Dockerコンテナが起動していることを確認します。</p>
 <div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>docker ps -a
 </code></pre></div>
+<p><img alt="" src="../../img/docker004.png" /></p>
+<h2 id="_1">起動に失敗したとき</h2>
 <p>もしここでうまく起動していないようであれば、dockerコンテナを停止して削除し、新しいDockerを起動してください。  </p>
+<p><img alt="" src="../../img/docker005.png" /></p>
 <div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo su
 docker stop jetbot_ipaddress jetbot_jupyter
 docker rm jetbot_ipaddress jetbot_jupyter
 ./run-jetbot.sh
 </code></pre></div>
+<p><img alt="" src="../../img/docker006.png" /></p>
                 
               
               
