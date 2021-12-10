@@ -2085,7 +2085,8 @@ chmod 755 run-jetbot.sh
 </code></pre></div>
 <h2 id="jetbot_1">JetBotを自動起動します</h2>
 <p>これを1度実行すると、Jetsonを再起動してもJetBotが自動起動するようになります。<br />
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo ./run-jetbot.sh
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo su
+./run-jetbot.sh
 </code></pre></div></p>
 <p>Dockerコンテナが起動していることを確認します。</p>
 <div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>docker ps -a
