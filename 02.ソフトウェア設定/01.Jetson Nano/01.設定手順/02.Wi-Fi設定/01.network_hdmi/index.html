@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -913,6 +913,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="目次">
   
   
@@ -927,16 +929,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#jetson-nano-4gb" class="md-nav__link">
+    Jetson Nano 4GBの場合
+  </a>
+  
+    <nav class="md-nav" aria-label="Jetson Nano 4GBの場合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#wi-fi" class="md-nav__link">
     Wi-Fiアクセスポイントへ接続
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#terminalip" class="md-nav__link">
     TerminalでIPアドレスの確認
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jetson-nano-2gb" class="md-nav__link">
+    Jetson Nano 2GBの場合
+  </a>
+  
+    <nav class="md-nav" aria-label="Jetson Nano 2GBの場合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wi-fi_1" class="md-nav__link">
+    Wi-Fiアクセスポイント設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminalip_1" class="md-nav__link">
+    TerminalでIPアドレスの確認
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2017,6 +2059,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="目次">
   
   
@@ -2031,16 +2075,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#jetson-nano-4gb" class="md-nav__link">
+    Jetson Nano 4GBの場合
+  </a>
+  
+    <nav class="md-nav" aria-label="Jetson Nano 4GBの場合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#wi-fi" class="md-nav__link">
     Wi-Fiアクセスポイントへ接続
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#terminalip" class="md-nav__link">
     TerminalでIPアドレスの確認
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jetson-nano-2gb" class="md-nav__link">
+    Jetson Nano 2GBの場合
+  </a>
+  
+    <nav class="md-nav" aria-label="Jetson Nano 2GBの場合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wi-fi_1" class="md-nav__link">
+    Wi-Fiアクセスポイント設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminalip_1" class="md-nav__link">
+    TerminalでIPアドレスの確認
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2059,13 +2143,35 @@
                 
                 <h1 id="01wi-fi">01.コンソール接続でのWi-Fi設定方法</h1>
 <p>JetBotにHDMIケーブルを接続し、キーボードとマウスを装着します。通常のPC同様に、モニターを見ながら設定できます。</p>
-<h2 id="wi-fi">Wi-Fiアクセスポイントへ接続</h2>
+<h2 id="jetson-nano-4gb">Jetson Nano 4GBの場合</h2>
+<h3 id="wi-fi">Wi-Fiアクセスポイントへ接続</h3>
 <p><img alt="" src="../../../img/wifi001.jpg" /></p>
-<h2 id="terminalip">TerminalでIPアドレスの確認</h2>
+<h3 id="terminalip">TerminalでIPアドレスの確認</h3>
+<p>gnome-terminalを検索するか、
+もしくはCtrl + Alt + Tキーを押すと、ターミナルが起動します。</p>
 <p><img alt="" src="../../../img/wifi002.jpg" /></p>
 <p>ifconfig -a でwlan0のIPアドレスを確認します。</p>
 <p><img alt="" src="../../../img/wifi003.jpg" /></p>
 <p><img alt="" src="../../../img/wifi004.jpg" /></p>
+<h2 id="jetson-nano-2gb">Jetson Nano 2GBの場合</h2>
+<p>2GBのデスクトップ画面は4GBと異なります。</p>
+<h3 id="wi-fi_1">Wi-Fiアクセスポイント設定</h3>
+<p>画面左下 - Preferences - Network Connectionsを選択します。</p>
+<p><img alt="" src="../../../img/wifi-2gb-001.png" /></p>
+<p>新しいネットワーク設定を追加します。</p>
+<p><img alt="" src="../../../img/wifi-2gb-002.png" /></p>
+<p><img alt="" src="../../../img/wifi-2gb-003.png" /></p>
+<p>Wi-Fiタブを選択して、WiFiルータのSSIDを入力します。</p>
+<p><img alt="" src="../../../img/wifi-2gb-004.png" /></p>
+<p>Wi-Fi Securityタブを選択して、WiFiルータのセキュリティ種類とパスワードを入力します。</p>
+<p><img alt="" src="../../../img/wifi-2gb-005.png" /></p>
+<h3 id="terminalip_1">TerminalでIPアドレスの確認</h3>
+<p>ターミナルのアイコンをダブルクリックするか、<br />
+もしくはCtrl + Alt + Tキーを押すと、ターミナルが起動します。</p>
+<p><img alt="" src="../../../img/wifi-2gb-006.png" /></p>
+<p>ifconfig -a でwlan0のIPアドレスを確認します。</p>
+<p><img alt="" src="../../../img/wifi-2gb-007.png" /></p>
+<p><img alt="" src="../../../img/wifi-2gb-008.png" /></p>
                 
               
               
@@ -2138,10 +2244,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": [], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": [], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.b1047164.min.js"></script>
       
         <script src="../../../../../javascripts/extra.js"></script>
       

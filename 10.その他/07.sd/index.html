@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -1929,6 +1929,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="目次">
   
   
@@ -1944,49 +1946,15 @@
       
         <li class="md-nav__item">
   <a href="#sd_1" class="md-nav__link">
-    自分でSDカードイメージを作成する場合
+    SDカードイメージダウンロード
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#jetbotsd" class="md-nav__link">
-    JetBot公式イメージをSDカードに書き込む
+  <a href="#sd_2" class="md-nav__link">
+    SDカードの焼き込み
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jetbot" class="md-nav__link">
-    JetBotの起動
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wi-fi" class="md-nav__link">
-    Wi-Fiに接続する
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fabo" class="md-nav__link">
-    FaBoのノートブックを設定する
-  </a>
-  
-    <nav class="md-nav" aria-label="FaBoのノートブックを設定する">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jetpack-441-docker" class="md-nav__link">
-    JetPack 4.4.1 Docker版
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2045,6 +2013,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="目次">
   
   
@@ -2060,49 +2030,15 @@
       
         <li class="md-nav__item">
   <a href="#sd_1" class="md-nav__link">
-    自分でSDカードイメージを作成する場合
+    SDカードイメージダウンロード
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#jetbotsd" class="md-nav__link">
-    JetBot公式イメージをSDカードに書き込む
+  <a href="#sd_2" class="md-nav__link">
+    SDカードの焼き込み
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jetbot" class="md-nav__link">
-    JetBotの起動
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wi-fi" class="md-nav__link">
-    Wi-Fiに接続する
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fabo" class="md-nav__link">
-    FaBoのノートブックを設定する
-  </a>
-  
-    <nav class="md-nav" aria-label="FaBoのノートブックを設定する">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jetpack-441-docker" class="md-nav__link">
-    JetPack 4.4.1 Docker版
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2120,72 +2056,48 @@
                 
                 
                 <h1 id="sd">SDカードの作成</h1>
-<h2 id="sd_1">自分でSDカードイメージを作成する場合</h2>
-<p>JetBot公式ドキュメントの<a href="https://jetbot.org/master/software_setup/sd_card.html">software_setup</a>のページが参考になります。</p>
-<p>【作業の流れ】</p>
-<ul>
-<li>JetBot公式イメージをSDカードに書き込む</li>
-<li>Wi-Fiに接続する</li>
-<li>FaBoのノートブックを設定する</li>
-</ul>
-<h2 id="jetbotsd">JetBot公式イメージをSDカードに書き込む</h2>
-<p>JetBot公式SDカードイメージは、<a href="https://www.balena.io/etcher/">Etcher</a>を用いてSDカードに書き込みます。</p>
-<p><img alt="" src="../img/sd001.jpg" /></p>
-<p><img alt="" src="../img/sd002.jpg" /></p>
-<p><img alt="" src="../img/sd003.jpg" /></p>
-<p><img alt="" src="../img/sd004.jpg" /></p>
-<h2 id="jetbot">JetBotの起動</h2>
-<p>SDカードをJetson Nanoに差し込み起動します。</p>
-<p>本SDカードのidとpassは下記の通りです。ログイン時に使用します。</p>
+<h2 id="sd_1">SDカードイメージダウンロード</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>FaBo Storeより、JetBotをご購入の方は、ダウンロード不要です。</p>
+</div>
+<p>もし、SDイメージをダウンロードしたい方は、こちらからダウンロードお願いいたします。</p>
 <table>
 <thead>
 <tr>
-<th align="left">項目</th>
-<th align="left">内容</th>
+<th align="left">対象Jetson</th>
+<th align="left">JetPack</th>
+<th align="left">リンク先</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">ID</td>
-<td align="left">jetbot</td>
+<td align="left">JetBot<br>４GBモデル</td>
+<td align="left">Jetpack4.6</td>
+<td align="left"><a href="https://drive.google.com/file/d/1kCc8-WzXjfsZwki2hwdwUsTFAujELF6H/view?usp=sharing">jetbot-nano-4gb-jp46-2021-12-08.zip</a></td>
 </tr>
 <tr>
-<td align="left">Pass</td>
-<td align="left">jetbot</td>
+<td align="left">JetBot<br>２GBモデル</td>
+<td align="left">Jetpack4.6</td>
+<td align="left">2022年1月リリース予定</td>
 </tr>
 </tbody>
 </table>
-<h2 id="wi-fi">Wi-Fiに接続する</h2>
-<p>Wi-Fi設定は「03.Setting(Nano)」の「3.JetBotのWi-Fiネットワーク設定」を参照してください。</p>
-<h2 id="fabo">FaBoのノートブックを設定する</h2>
-<p>次にFaBoでforkしているJetBotのノートブックを利用方法について説明します。</p>
-<h3 id="jetpack-441-docker">JetPack 4.4.1 Docker版</h3>
-<p>【更新の概要】</p>
-<ul>
-<li>(前提) NVIDIA公式JetBotイメージがインストール済みであること</li>
-<li>FaBoのノートブックをhostに用意する</li>
-</ul>
-<p>【作業の流れ】</p>
-<ul>
-<li>sshコマンドでJetson Nanoにリモートログイン</li>
-<li>git cloneのためのディレクトリ作成</li>
-<li>FaBoでforkしているJetBotをgit cloneする</li>
-<li>作業用にノートブックをコピー</li>
-</ul>
-<p>PCからJetBotにsshでリモートログイン
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>ssh jetbot@192.168.xxx.xxx
-</code></pre></div></p>
-<blockquote>
-<p>パスワード：jetbot</p>
-</blockquote>
-<p>Jetsonのコンソールで以下を実行
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>mkdir ~/github
-cd ~/github
-git clone https://github.com/FaBoPlatform/jetbot
-cp -r ~/github/jetbot/notebooks ~/Notebooks
-</code></pre></div>
-以上です。すでにJupyterにアクセスしている場合はブラウザをリロードすると<code>/home/jetbot/Notebooks</code>が出来ているので、このNotebookを利用します。</p>
-<p>再度Notebookを更新する場合は、ディレクトリを削除してやり直してください。</p>
+<p>NVIDIA-AI-IOTの<a href="https://github.com/NVIDIA-AI-IOT/jetbot/wiki/software-setup">Wiki</a>のページが参考になります。</p>
+<h2 id="sd_2">SDカードの焼き込み</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>FaBo Storeより、JetBotをご購入の方は、SDカードへ焼き込みは不要です。</p>
+</div>
+<p>SDカードのイメージは、<a href="https://www.balena.io/etcher/">Etcher</a>を用いて、SDカードに焼き込む。</p>
+<p>セレクトイメージボタンを選択して、</p>
+<p><img alt="" src="../img/sd001.png" /></p>
+<p>ダウンロードして解凍したimgファイルを選択します。</p>
+<p><img alt="" src="../img/sd003.png" /></p>
+<p>焼きこむドライブを選択し、</p>
+<p><img alt="" src="../img/sd004.png" /></p>
+<p>フラッシュボタンを押します。</p>
+<p><img alt="" src="../img/sd005.png" /></p>
                 
               
               
@@ -2258,10 +2170,10 @@ cp -r ~/github/jetbot/notebooks ~/Notebooks
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
       
         <script src="../../javascripts/extra.js"></script>
       
