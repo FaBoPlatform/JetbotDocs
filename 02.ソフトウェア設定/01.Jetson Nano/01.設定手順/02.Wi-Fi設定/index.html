@@ -14,7 +14,7 @@
     
     
       
-        <title>3通りの方法 - FaBo JetBot Docs</title>
+        <title>4通りの方法 - FaBo JetBot Docs</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#3" class="md-skip">
+        <a href="#4" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3通りの方法
+              4通りの方法
             
           </span>
         </div>
@@ -890,7 +890,7 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        3通りの方法
+        4通りの方法
       </a>
       
     </li>
@@ -904,8 +904,8 @@
   
   
     <li class="md-nav__item">
-      <a href="01.network_hdmi/" class="md-nav__link">
-        01.コンソール接続でのWi-Fi設定方法
+      <a href="01.network_hdmi_nogui/" class="md-nav__link">
+        01.コンソール接続でのWi-Fi設定方法(GUI無し設定の場合)
       </a>
     </li>
   
@@ -918,8 +918,8 @@
   
   
     <li class="md-nav__item">
-      <a href="02.network_lan/" class="md-nav__link">
-        02.有線LAN接続でのWi-Fi設定方法
+      <a href="02.network_hdmi/" class="md-nav__link">
+        02.コンソール接続でのWi-Fi設定方法(GUI有り設定の場合)
       </a>
     </li>
   
@@ -932,8 +932,22 @@
   
   
     <li class="md-nav__item">
-      <a href="03.network_usb/" class="md-nav__link">
-        03.USB device modeでのWi-Fi設定方法
+      <a href="03.network_lan/" class="md-nav__link">
+        03.有線LAN接続でのWi-Fi設定方法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04.network_usb/" class="md-nav__link">
+        04.USB device modeでのWi-Fi設定方法
       </a>
     </li>
   
@@ -2000,20 +2014,22 @@
               
                 
                 
-                <h1 id="3">3通りの方法</h1>
+                <h1 id="4">4通りの方法</h1>
 <p>JetBotをPCのブラウザから操作するために、JetBotのWi-Fiを設定する必要があります。  </p>
 <p>【目標：JetBotがWi-Fiで接続された状態】</p>
 <p><img alt="" src="../../img/connection002.jpg" /></p>
 <p>Wi-Fiの設定方法はいくつか方法があります。</p>
 <ul>
-<li>コンソール接続（HDMIモニタ、キーボード、マウスを接続）してGUI画面でWi-Fiを設定する</li>
+<li>コンソール接続（HDMIモニタ、キーボード、マウスを接続）してコンソール画面でWi-Fiを設定する(GUI無し設定の場合)</li>
+<li>コンソール接続（HDMIモニタ、キーボード、マウスを接続）してGUI画面でWi-Fiを設定する(GUI有り設定の場合)</li>
 <li>有線LANを接続して、PCからsshでJetsonにリモートログインしてコマンドラインでWi-Fiを設定する</li>
 <li>Jetsonの機能として提供されるUSB device modeの仮想ネットワークを利用して、PCからsshでJetsonにリモートログインしてコマンドラインでWi-Fiを設定する</li>
 </ul>
-<p>コンソール接続の場合は「01.コンソール接続でのWi-Fi設定方法」<br />
-有線LAN接続の場合は「02.有線LAN接続でのWi-Fi設定方法」<br />
-USB device modeの場合は「03.USB device modeでのWi-Fi設定方法」<br />
+<p>コンソール接続の場合は「01.コンソール接続でのWi-Fi設定方法（GUI無し）」  「02.コンソール接続でのWi-Fi設定方法（GUI有り）」<br />
+有線LAN接続の場合は「03.有線LAN接続でのWi-Fi設定方法」<br />
+USB device modeの場合は「04.USB device modeでのWi-Fi設定方法」<br />
 を参照してください。</p>
+<p>GUIの無効化/有効化に関しては、「10.その他」「GUIを無効化」を参照してください。</p>
                 
               
               
@@ -2049,13 +2065,13 @@ USB device modeの場合は「03.USB device modeでのWi-Fi設定方法」<br />
       
       
         
-        <a href="01.network_hdmi/" class="md-footer__link md-footer__link--next" aria-label="次: 01.コンソール接続でのWi-Fi設定方法" rel="next">
+        <a href="01.network_hdmi_nogui/" class="md-footer__link md-footer__link--next" aria-label="次: 01.コンソール接続でのWi-Fi設定方法(GUI無し設定の場合)" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              01.コンソール接続でのWi-Fi設定方法
+              01.コンソール接続でのWi-Fi設定方法(GUI無し設定の場合)
             </div>
           </div>
           <div class="md-footer__button md-icon">

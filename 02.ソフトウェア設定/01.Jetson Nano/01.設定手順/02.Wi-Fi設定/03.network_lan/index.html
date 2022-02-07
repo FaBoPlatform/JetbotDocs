@@ -14,7 +14,7 @@
     
     
       
-        <title>03.USB device modeでのWi-Fi設定方法 - FaBo JetBot Docs</title>
+        <title>03.有線LAN接続でのWi-Fi設定方法 - FaBo JetBot Docs</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#03usb-device-modewi-fi" class="md-skip">
+        <a href="#03lanwi-fi" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              03.USB device modeでのWi-Fi設定方法
+              03.有線LAN接続でのWi-Fi設定方法
             
           </span>
         </div>
@@ -881,7 +881,7 @@
   
     <li class="md-nav__item">
       <a href="../" class="md-nav__link">
-        3通りの方法
+        4通りの方法
       </a>
     </li>
   
@@ -894,8 +894,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../01.network_hdmi/" class="md-nav__link">
-        01.コンソール接続でのWi-Fi設定方法
+      <a href="../01.network_hdmi_nogui/" class="md-nav__link">
+        01.コンソール接続でのWi-Fi設定方法(GUI無し設定の場合)
       </a>
     </li>
   
@@ -908,8 +908,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../02.network_lan/" class="md-nav__link">
-        02.有線LAN接続でのWi-Fi設定方法
+      <a href="../02.network_hdmi/" class="md-nav__link">
+        02.コンソール接続でのWi-Fi設定方法(GUI有り設定の場合)
       </a>
     </li>
   
@@ -932,12 +932,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          03.USB device modeでのWi-Fi設定方法
+          03.有線LAN接続でのWi-Fi設定方法
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        03.USB device modeでのWi-Fi設定方法
+        03.有線LAN接続でのWi-Fi設定方法
       </a>
       
         
@@ -955,13 +955,6 @@
       目次
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#jetbotpcusb" class="md-nav__link">
-    JetBotとPCをUSBケーブルで接続
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#pcsshjetbot" class="md-nav__link">
@@ -1009,6 +1002,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.network_usb/" class="md-nav__link">
+        04.USB device modeでのWi-Fi設定方法
+      </a>
     </li>
   
 
@@ -2070,13 +2077,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jetbotpcusb" class="md-nav__link">
-    JetBotとPCをUSBケーブルで接続
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#pcsshjetbot" class="md-nav__link">
     PCからsshでJetBotにログインする
   </a>
@@ -2131,41 +2131,7 @@
               
                 
                 
-                <h1 id="03usb-device-modewi-fi">03.USB device modeでのWi-Fi設定方法</h1>
-<p><img alt="" src="../../../img/connection001.jpg" /></p>
-<div class="admonition tip">
-<p class="admonition-title">USB device mode</p>
-</div>
-<p>USB device modeとは、マイクロUSBケーブルでPCとJetsonを接続することで仮想インターネットインターフェースが作成されることです。Jetson Nanoは電源をDCジャックにすることでこの機能を提供します。<br />
-この機能を利用するにはPCがドライバーをサポートしている必要がありますが、ドライバーをサポートしていないPCもあります。その場合は有線LANで接続してWi-Fiを設定するか、モニタとキーボード、マウスを接続してWiFiを設定する必要があります。</p>
-<h2 id="jetbotpcusb">JetBotとPCをUSBケーブルで接続</h2>
-<p>マイクロUSBケーブルとPCを接続するとIPアドレスが割り振られます。  </p>
-<div class="admonition warning">
-<p class="admonition-title">OLEDにIPアドレスは表示されません</p>
-</div>
-<p>このとき、JetBotは192.168.55.1の固定IPアドレスになります。この仮想インターフェースはOLEDの表示処理に入れていないため、OLEDにIPアドレスは表示されません。</p>
-<p><img alt="" src="../../../img/connection003.jpg" /></p>
-<p><img alt="" src="../../../img/check001.jpg" /></p>
-<p><img alt="" src="../../../img/check002.jpg" /></p>
-<p>USB経由では下記IPアドレスが割り振られます。</p>
-<table>
-<thead>
-<tr>
-<th align="left">項目</th>
-<th align="left">値</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">JetBot</td>
-<td align="left">192.168.55.1</td>
-</tr>
-<tr>
-<td align="left">PC</td>
-<td align="left">192.168.55.100</td>
-</tr>
-</tbody>
-</table>
+                <h1 id="03lanwi-fi">03.有線LAN接続でのWi-Fi設定方法</h1>
 <h2 id="pcsshjetbot">PCからsshでJetBotにログインする</h2>
 <p>sshでJetBotにログインします。ユーザ名は<code>jetbot</code>、パスワードは<code>jetbot</code>になります。<br />
 sshクライアント環境が整っていない場合は、Secure Shell(Google製)を用いて、Chrome browserからsshでJetBotにログインします。　</p>
@@ -2183,7 +2149,8 @@ chromeウェブストアでSecure Shellを検索します。
 <p>ブラウザの右上にあるツールアイコンからSecure Shellを起動します。
 <img alt="" src="../../../img/ssh006.png" /></p>
 <h2 id="jetbot">JetBotにログイン</h2>
-<p><img alt="" src="../../../img/ssh003.jpg" /></p>
+<p>有線LAN接続の場合はOLEDに表示されているJetBotのIPアドレスを確認してください。
+<img alt="" src="../../../img/ssh007.png" /></p>
 <table>
 <thead>
 <tr>
@@ -2223,33 +2190,6 @@ JetBotにsshログイン成功。
 </code></pre></div>
 <p><img alt="" src="../../../img/ssh011.png" /></p>
 <p><img alt="" src="../../../img/ssh012.png" /></p>
-<table>
-<thead>
-<tr>
-<th align="left">デバイス名</th>
-<th align="left">概要</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">l4tbr0</td>
-<td align="left">USBでPCと接続した際に使われる</td>
-</tr>
-<tr>
-<td align="left">wlan0</td>
-<td align="left">Wi-Fiで接続した際に使われる</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">USB経由でうまく接続できない場合（Mac偏)</p>
-<p>Macのシステム環境設定ー＞　ネットワークを選択し、
-<img alt="" src="../../../img/usb_LinuxForTegraSelect.png" />
-画面下の＋ボタンを押して、ダイアログが出てきますので、Linux for Tegraを選択します。
-右下の適用ボタンを押します。
-<img alt="" src="../../../img/usb_IPAddressAssignment.png" />
-成功するとIPアドレスが割り振られます。</p>
-</div>
                 
               
               
@@ -2269,7 +2209,7 @@ JetBotにsshログイン成功。
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="../02.network_lan/" class="md-footer__link md-footer__link--prev" aria-label="前: 02.有線LAN接続でのWi-Fi設定方法" rel="prev">
+        <a href="../02.network_hdmi/" class="md-footer__link md-footer__link--prev" aria-label="前: 02.コンソール接続でのWi-Fi設定方法(GUI有り設定の場合)" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2278,20 +2218,20 @@ JetBotにsshログイン成功。
               <span class="md-footer__direction">
                 前
               </span>
-              02.有線LAN接続でのWi-Fi設定方法
+              02.コンソール接続でのWi-Fi設定方法(GUI有り設定の場合)
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../../02.OS%E3%82%A2%E3%83%83%E3%83%97%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89%E6%89%8B%E9%A0%86/01.jetpack/" class="md-footer__link md-footer__link--next" aria-label="次: 01.JetPack ダウンロード" rel="next">
+        <a href="../04.network_usb/" class="md-footer__link md-footer__link--next" aria-label="次: 04.USB device modeでのWi-Fi設定方法" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              01.JetPack ダウンロード
+              04.USB device modeでのWi-Fi設定方法
             </div>
           </div>
           <div class="md-footer__button md-icon">

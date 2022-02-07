@@ -14,7 +14,7 @@
     
     
       
-        <title>02.有線LAN接続でのWi-Fi設定方法 - FaBo JetBot Docs</title>
+        <title>02.コンソール接続でのWi-Fi設定方法(GUI有り設定の場合) - FaBo JetBot Docs</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#02lanwi-fi" class="md-skip">
+        <a href="#02wi-figui" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              02.有線LAN接続でのWi-Fi設定方法
+              02.コンソール接続でのWi-Fi設定方法(GUI有り設定の場合)
             
           </span>
         </div>
@@ -881,7 +881,7 @@
   
     <li class="md-nav__item">
       <a href="../" class="md-nav__link">
-        3通りの方法
+        4通りの方法
       </a>
     </li>
   
@@ -894,8 +894,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../01.network_hdmi/" class="md-nav__link">
-        01.コンソール接続でのWi-Fi設定方法
+      <a href="../01.network_hdmi_nogui/" class="md-nav__link">
+        01.コンソール接続でのWi-Fi設定方法(GUI無し設定の場合)
       </a>
     </li>
   
@@ -918,12 +918,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          02.有線LAN接続でのWi-Fi設定方法
+          02.コンソール接続でのWi-Fi設定方法(GUI有り設定の場合)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        02.有線LAN接続でのWi-Fi設定方法
+        02.コンソール接続でのWi-Fi設定方法(GUI有り設定の場合)
       </a>
       
         
@@ -943,44 +943,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pcsshjetbot" class="md-nav__link">
-    PCからsshでJetBotにログインする
+  <a href="#jetson-nano-4gb" class="md-nav__link">
+    Jetson Nano 4GBの場合
   </a>
+  
+    <nav class="md-nav" aria-label="Jetson Nano 4GBの場合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wi-fi" class="md-nav__link">
+    Wi-Fiアクセスポイントへ接続
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminalip" class="md-nav__link">
+    TerminalでIPアドレスの確認
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#secure-shell" class="md-nav__link">
-    Secure Shellのインストール
+  <a href="#jetson-nano-2gb" class="md-nav__link">
+    Jetson Nano 2GBの場合
+  </a>
+  
+    <nav class="md-nav" aria-label="Jetson Nano 2GBの場合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wi-fi_1" class="md-nav__link">
+    Wi-Fiアクセスポイント設定
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#secure-shell_1" class="md-nav__link">
-    Secure Shellの実行
+        
+          <li class="md-nav__item">
+  <a href="#terminalip_1" class="md-nav__link">
+    TerminalでIPアドレスの確認
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#jetbot" class="md-nav__link">
-    JetBotにログイン
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jetbotwi-fi" class="md-nav__link">
-    JetBotをWi-Fiルータに接続
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ip" class="md-nav__link">
-    IPアドレスの確認
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -999,8 +1011,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../03.network_usb/" class="md-nav__link">
-        03.USB device modeでのWi-Fi設定方法
+      <a href="../03.network_lan/" class="md-nav__link">
+        03.有線LAN接続でのWi-Fi設定方法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.network_usb/" class="md-nav__link">
+        04.USB device modeでのWi-Fi設定方法
       </a>
     </li>
   
@@ -2063,44 +2089,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pcsshjetbot" class="md-nav__link">
-    PCからsshでJetBotにログインする
+  <a href="#jetson-nano-4gb" class="md-nav__link">
+    Jetson Nano 4GBの場合
   </a>
+  
+    <nav class="md-nav" aria-label="Jetson Nano 4GBの場合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wi-fi" class="md-nav__link">
+    Wi-Fiアクセスポイントへ接続
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminalip" class="md-nav__link">
+    TerminalでIPアドレスの確認
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#secure-shell" class="md-nav__link">
-    Secure Shellのインストール
+  <a href="#jetson-nano-2gb" class="md-nav__link">
+    Jetson Nano 2GBの場合
+  </a>
+  
+    <nav class="md-nav" aria-label="Jetson Nano 2GBの場合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wi-fi_1" class="md-nav__link">
+    Wi-Fiアクセスポイント設定
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#secure-shell_1" class="md-nav__link">
-    Secure Shellの実行
+        
+          <li class="md-nav__item">
+  <a href="#terminalip_1" class="md-nav__link">
+    TerminalでIPアドレスの確認
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#jetbot" class="md-nav__link">
-    JetBotにログイン
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jetbotwi-fi" class="md-nav__link">
-    JetBotをWi-Fiルータに接続
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ip" class="md-nav__link">
-    IPアドレスの確認
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2117,65 +2155,36 @@
               
                 
                 
-                <h1 id="02lanwi-fi">02.有線LAN接続でのWi-Fi設定方法</h1>
-<h2 id="pcsshjetbot">PCからsshでJetBotにログインする</h2>
-<p>sshでJetBotにログインします。ユーザ名は<code>jetbot</code>、パスワードは<code>jetbot</code>になります。<br />
-sshクライアント環境が整っていない場合は、Secure Shell(Google製)を用いて、Chrome browserからsshでJetBotにログインします。　</p>
-<h2 id="secure-shell">Secure Shellのインストール</h2>
-<p>Chrome ウェブストアにアクセスし、<a href="https://chrome.google.com/webstore/detail/secure-shell/iodihamcpbpeioajjeobimgagajmlibd?hl=ja&amp;">Secure Shell</a>をインストールします。</p>
-<p><img alt="" src="../../../img/ssh001.png" />
-chromeウェブストアでSecure Shellを検索します。
-<img alt="" src="../../../img/ssh002.png" />
-<img alt="" src="../../../img/ssh003.png" />
-ポップアップ表示が出てくるので、「拡張機能を追加」をクリックしてSecure Shellをインストールします。
-<img alt="" src="../../../img/ssh004.png" />
-同期の有効化は特に必要ありません。
-<img alt="" src="../../../img/ssh005.png" /></p>
-<h2 id="secure-shell_1">Secure Shellの実行</h2>
-<p>ブラウザの右上にあるツールアイコンからSecure Shellを起動します。
-<img alt="" src="../../../img/ssh006.png" /></p>
-<h2 id="jetbot">JetBotにログイン</h2>
-<p>有線LAN接続の場合はOLEDに表示されているJetBotのIPアドレスを確認してください。
-<img alt="" src="../../../img/ssh007.png" /></p>
-<table>
-<thead>
-<tr>
-<th align="left">password</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">jetbot</td>
-</tr>
-</tbody>
-</table>
-<p><img alt="" src="../../../img/ssh008.png" />
-JetBotにsshログイン成功。
-<img alt="" src="../../../img/ssh009.png" /></p>
-<h2 id="jetbotwi-fi">JetBotをWi-Fiルータに接続</h2>
-<p>JetBotのターミナルでWiFi接続のコマンドを実行します。<code>アクセスポイント名</code>と<code>パスワード</code>はお使いのネットワーク環境に合わせた値にします。</p>
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>sudo nmcli device wifi connect &#39;アクセスポイント名&#39; password &#39;パスワード&#39; ifname wlan0
-</code></pre></div>
-<p>sudo実行の際に、パスワードを聞かれますので、下記を入力します。</p>
-<table>
-<thead>
-<tr>
-<th align="left">password</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">jetbot</td>
-</tr>
-</tbody>
-</table>
-<p><img alt="" src="../../../img/ssh010.png" /></p>
-<h2 id="ip">IPアドレスの確認</h2>
-<p>IPアドレスの確認はifconfigコマンドを用います。</p>
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code>ifconfig -a
-</code></pre></div>
-<p><img alt="" src="../../../img/ssh011.png" /></p>
-<p><img alt="" src="../../../img/ssh012.png" /></p>
+                <h1 id="02wi-figui">02.コンソール接続でのWi-Fi設定方法(GUI有り設定の場合)</h1>
+<p>JetBotにHDMIケーブルを接続し、キーボードとマウスを装着します。通常のPC同様に、モニターを見ながら設定できます。</p>
+<h2 id="jetson-nano-4gb">Jetson Nano 4GBの場合</h2>
+<h3 id="wi-fi">Wi-Fiアクセスポイントへ接続</h3>
+<p><img alt="" src="../../../img/wifi001.jpg" /></p>
+<h3 id="terminalip">TerminalでIPアドレスの確認</h3>
+<p>gnome-terminalを検索するか、
+もしくはCtrl + Alt + Tキーを押すと、ターミナルが起動します。</p>
+<p><img alt="" src="../../../img/wifi002.jpg" /></p>
+<p>ifconfig -a でwlan0のIPアドレスを確認します。</p>
+<p><img alt="" src="../../../img/wifi003.jpg" /></p>
+<p><img alt="" src="../../../img/wifi004.jpg" /></p>
+<h2 id="jetson-nano-2gb">Jetson Nano 2GBの場合</h2>
+<p>2GBのデスクトップ画面は4GBと異なります。</p>
+<h3 id="wi-fi_1">Wi-Fiアクセスポイント設定</h3>
+<p>画面左下 - Preferences - Network Connectionsを選択します。</p>
+<p><img alt="" src="../../../img/wifi-2gb-001.png" /></p>
+<p>新しいネットワーク設定を追加します。</p>
+<p><img alt="" src="../../../img/wifi-2gb-002.png" /></p>
+<p><img alt="" src="../../../img/wifi-2gb-003.png" /></p>
+<p>Wi-Fiタブを選択して、WiFiルータのSSIDを入力します。</p>
+<p><img alt="" src="../../../img/wifi-2gb-004.png" /></p>
+<p>Wi-Fi Securityタブを選択して、WiFiルータのセキュリティ種類とパスワードを入力します。</p>
+<p><img alt="" src="../../../img/wifi-2gb-005.png" /></p>
+<h3 id="terminalip_1">TerminalでIPアドレスの確認</h3>
+<p>ターミナルのアイコンをダブルクリックすると、ターミナルが起動します。</p>
+<p><img alt="" src="../../../img/wifi-2gb-006.png" /></p>
+<p>ifconfig -a でwlan0のIPアドレスを確認します。</p>
+<p><img alt="" src="../../../img/wifi-2gb-007.png" /></p>
+<p><img alt="" src="../../../img/wifi-2gb-008.png" /></p>
                 
               
               
@@ -2195,7 +2204,7 @@ JetBotにsshログイン成功。
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="../01.network_hdmi/" class="md-footer__link md-footer__link--prev" aria-label="前: 01.コンソール接続でのWi-Fi設定方法" rel="prev">
+        <a href="../01.network_hdmi_nogui/" class="md-footer__link md-footer__link--prev" aria-label="前: 01.コンソール接続でのWi-Fi設定方法(GUI無し設定の場合)" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2204,20 +2213,20 @@ JetBotにsshログイン成功。
               <span class="md-footer__direction">
                 前
               </span>
-              01.コンソール接続でのWi-Fi設定方法
+              01.コンソール接続でのWi-Fi設定方法(GUI無し設定の場合)
             </div>
           </div>
         </a>
       
       
         
-        <a href="../03.network_usb/" class="md-footer__link md-footer__link--next" aria-label="次: 03.USB device modeでのWi-Fi設定方法" rel="next">
+        <a href="../03.network_lan/" class="md-footer__link md-footer__link--next" aria-label="次: 03.有線LAN接続でのWi-Fi設定方法" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              03.USB device modeでのWi-Fi設定方法
+              03.有線LAN接続でのWi-Fi設定方法
             </div>
           </div>
           <div class="md-footer__button md-icon">
