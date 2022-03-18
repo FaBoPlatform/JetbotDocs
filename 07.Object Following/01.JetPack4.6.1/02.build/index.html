@@ -14,7 +14,7 @@
     
     
       
-        <title>2.物体検出モデル - FaBo JetBot Docs</title>
+        <title>2.物体検出モデル ssd_mobilenet_v2_fpnlite - FaBo JetBot Docs</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2" class="md-skip">
+        <a href="#2-ssd_mobilenet_v2_fpnlite" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2.物体検出モデル
+              2.物体検出モデル ssd_mobilenet_v2_fpnlite
             
           </span>
         </div>
@@ -1636,12 +1636,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          2.物体検出モデル
+          2.物体検出モデル ssd_mobilenet_v2_fpnlite
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        2.物体検出モデル
+        2.物体検出モデル ssd_mobilenet_v2_fpnlite
       </a>
       
         
@@ -1661,8 +1661,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#01_build_ssd_engine_jpipynb" class="md-nav__link">
-    01_build_ssd_engine_JP.ipynb
+  <a href="#01_build_ssd_mobilenet_v2_fpnlite_jpipynb" class="md-nav__link">
+    01_build_ssd_mobilenet_v2_fpnlite_JP.ipynb
   </a>
   
 </li>
@@ -1684,6 +1684,48 @@
     <li class="md-nav__item">
       <a href="../03.run/" class="md-nav__link">
         3.自動走行
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.graph/" class="md-nav__link">
+        4.ONNXグラフ表示
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05.build2/" class="md-nav__link">
+        5.物体検出モデル ssd_mobilenet_v2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06.build3/" class="md-nav__link">
+        6.物体検出モデル EfficientDet D0
       </a>
     </li>
   
@@ -2104,8 +2146,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#01_build_ssd_engine_jpipynb" class="md-nav__link">
-    01_build_ssd_engine_JP.ipynb
+  <a href="#01_build_ssd_mobilenet_v2_fpnlite_jpipynb" class="md-nav__link">
+    01_build_ssd_mobilenet_v2_fpnlite_JP.ipynb
   </a>
   
 </li>
@@ -2123,13 +2165,12 @@
               
                 
                 
-                <h1 id="2">2.物体検出モデル</h1>
-<p>Tensorflow2 Object Detectionの物体検出モデルをTensorRTモデルに変換します。<br />
-本来ならば、Tensorflowの学習済みモデルをダウンロードして、ONNXモデルに変換してからTensorRTモデルに変換しますが、<br />
-高速化のために不要な低スコアの検出結果を排除するようにモデルを書き換えたONNXモデルを用意してあります。<br />
-TensorRTモデルはGPUやTensorRTバージョン毎に最適化が異なるため、実行環境上でONNXモデルからTensorRTモデルに変換する必要があります。  </p>
-<h2 id="01_build_ssd_engine_jpipynb">01_build_ssd_engine_JP.ipynb</h2>
-<p><img alt="" src="../../img/build_ssd_engine001.png" /></p>
+                <h1 id="2-ssd_mobilenet_v2_fpnlite">2.物体検出モデル ssd_mobilenet_v2_fpnlite</h1>
+<p>Tensorflow2 Object Detectionの物体検出モデルをTensorRTモデルに変換します。
+本来ならば、Tensorflowの学習済みモデルをダウンロードして、中間モデルのONNXモデルに変換してからTensorRTモデルに変換しますが、ここでは時間短縮のためにあらかじめ用意してあるONNXモデルを使うことにします。
+TensorRTモデルはGPUやTensorRTバージョン毎に最適化が異なるため、実行環境上でONNXモデルからTensorRTモデルに変換する必要があります。</p>
+<h2 id="01_build_ssd_mobilenet_v2_fpnlite_jpipynb">01_build_ssd_mobilenet_v2_fpnlite_JP.ipynb</h2>
+<p><img alt="" src="../../img/jetbot_build_ssd.png" /></p>
                 
               
               

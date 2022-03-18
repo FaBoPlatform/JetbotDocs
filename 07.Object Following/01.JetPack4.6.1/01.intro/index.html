@@ -1683,7 +1683,7 @@
   
     <li class="md-nav__item">
       <a href="../02.build/" class="md-nav__link">
-        2.物体検出モデル
+        2.物体検出モデル ssd_mobilenet_v2_fpnlite
       </a>
     </li>
   
@@ -1698,6 +1698,48 @@
     <li class="md-nav__item">
       <a href="../03.run/" class="md-nav__link">
         3.自動走行
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.graph/" class="md-nav__link">
+        4.ONNXグラフ表示
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05.build2/" class="md-nav__link">
+        5.物体検出モデル ssd_mobilenet_v2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06.build3/" class="md-nav__link">
+        6.物体検出モデル EfficientDet D0
       </a>
     </li>
   
@@ -2153,11 +2195,12 @@
                 
                 <h1 id="1">1.学習のススメ方</h1>
 <p>この項目は現在<br />
-・Jetson Nano 4GB + JetPack 4.6 + Docker faborobot/jetbot-jp46-trt823 (2022/03)<br />
-で対応しています。</p>
+・jetbot-nano-4gb-jp46-trt823-2022-03-18<br />
+・jetbot-nano-2gb-jp46-trt823-2022-03-18</p>
+<p>で対応しています。そうです、Jetson Nano 2GBもObject Followingに対応しました！</p>
 <p>Object Followingでは、データの収集と学習はおこなわず、collision avoidanceで学習したResNet18 TensorRTモデルと、90種類の物体検出が可能な既存モデルのssd mobilenet v2 fpnliteをつかって指定したオブジェクトの追従をおこないます。</p>
 <h2 id="_1">学習のススメ方</h2>
-<p>各項目が終わったらノートブックのSHUT DOWNを忘れないようにしてください。</p>
+<p>1,2の順で実行します。各項目が終わったらノートブックのSHUT DOWNを忘れないようにしてください。</p>
 <table>
 <thead>
 <tr>
@@ -2170,7 +2213,7 @@
 <tbody>
 <tr>
 <td align="left">1.物体検出モデル変換</td>
-<td align="left">01_build_ssd_engine_JP.ipynb</td>
+<td align="left">01_build_ssd_mobilenet_v2_fpnlite_JP.ipynb</td>
 <td align="left">物体検出モデルをTensorRTモデルに変換</td>
 <td align="left"></td>
 </tr>
@@ -2242,13 +2285,13 @@
       
       
         
-        <a href="../02.build/" class="md-footer__link md-footer__link--next" aria-label="次: 2.物体検出モデル" rel="next">
+        <a href="../02.build/" class="md-footer__link md-footer__link--next" aria-label="次: 2.物体検出モデル ssd_mobilenet_v2_fpnlite" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              2.物体検出モデル
+              2.物体検出モデル ssd_mobilenet_v2_fpnlite
             </div>
           </div>
           <div class="md-footer__button md-icon">
