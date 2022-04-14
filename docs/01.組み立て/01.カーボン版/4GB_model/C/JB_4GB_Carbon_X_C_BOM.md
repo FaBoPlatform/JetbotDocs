@@ -25,7 +25,7 @@
 |![](./../../img/add_carbon_body_middle001.jpg)|カーボン MIDDLE|１枚|    
 |![](./../../img/add_carbon_body_bottom001.jpg)|カーボン BOTTOM|１枚|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_ballcaster_spacer.jpg)|ボールキャスタースペーサー<br>材質：アルミ|１枚|
-|![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_alminuim_wifiantena_supporter.jpg)|Wifiアンテナ支持金具<br>材質：アルミ|１個|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_alminuim_wifiantena_supporter.jpg)|Wi-Fiアンテナ支持金具<br>材質：アルミ|１個|
 |![](./../../img/add_wifi_module_intel001.jpg)|Intel Dual Bandwireless-AC 8265 Desktop Kit|１個|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_common_cameramount.jpg)|カメラマウント|１個|
 |![](./../../img/add_GEARmoter_001.jpg)|Jetbot GearMotor　|２個|    

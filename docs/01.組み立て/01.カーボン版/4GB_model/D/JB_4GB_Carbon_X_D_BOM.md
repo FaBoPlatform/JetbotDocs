@@ -26,7 +26,7 @@
 |![](./../../img/add_carbon_body_bottom001.jpg)|カーボン BOTTOM|１枚|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_ballcaster_spacer.jpg)|ボールキャスタースペーサー<br>材質：アルミ<br>※もしくは下のスペーサーになります。<br>※製造時期により異なります。|１枚|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_D/ballcaster_speacer_lightweight.jpg)|ボールキャスタースペーサー軽量<br>材質：アルミ<br>※製造時期により異なります。|１枚|
-|![](./../../img/BOM/BOM_JB_4GB_Carbon_D/JetBot_wifi_Support.jpg)|Wifiアンテナ支持|１個|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_D/JetBot_wifi_Support.jpg)|Wi-Fiアンテナ支持|１個|
 |![](./../../img/add_wifi_module_intel001.jpg)|Intel Dual Bandwireless-AC 8265 Desktop Kit|１個|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_common_cameramount.jpg)|カメラマウント|１個|
 |![](./../../img/add_GEARmoter_001.jpg)|Jetbot GearMotor　|２個|    

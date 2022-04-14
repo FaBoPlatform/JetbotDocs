@@ -248,7 +248,7 @@ Jetson Nano Moduleを取り外すと、ネジが見えます。
 
 ![](./../../img/Wifi_9/jetson_pcie.jpg)
 
-Wifi Moduleを取り付けるために、真ん中のネジを外しておきます。
+Wi-Fi Moduleを取り付けるために、真ん中のネジを外しておきます。
 
 ![](./../../img/Wifi_9/screw_remove.jpg)
 
