@@ -21,7 +21,7 @@
 |:--|:--|:--|
 |![](./../../img/add_JetsonNanoB01ORA02_001.jpg)|Jetson Nano 開発者キット B01<br>(JetBot Kit ４GBモデルに付属)<br>※ベアボーンキットには付属しません。|１枚|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_camera.jpg)|CAM026 IMX219-160°|１個|
-|![](./../../img/add_carbon_body_top001.jpg)|カーボン TOP|１枚|
+|![](./../../img/bom_carbon_top_2022model.JPG)<br>![](./../../img/add_carbon_body_top001.jpg)|カーボン TOP<br>※上または、下になります。|１枚|
 |![](./../../img/add_carbon_body_middle001.jpg)|カーボン MIDDLE|１枚|    
 |![](./../../img/add_carbon_body_bottom001.jpg)|カーボン BOTTOM|１枚|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_ballcaster_spacer.jpg)|ボールキャスタースペーサー<br>材質：アルミ<br>※もしくは下のスペーサーになります。<br>※製造時期により異なります。|１枚|
@@ -31,7 +31,8 @@
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_common_cameramount.jpg)|カメラマウント|１個|
 |![](./../../img/add_GEARmoter_001.jpg)|Jetbot GearMotor　|２個|    
 |![](./../../img/add_tire_001.jpg)|Jetbot タイヤ,タイヤ取り付けネジ　|２袋|
-|![](./../../img/add_ballcaster001.jpg)|ボールキャスター　（70144）| １箱|		
+|![](./../../img/add_ballcaster001.jpg)|ボールキャスター　（70144）| １箱|
+|![](./../../img/bom_jetbot_ormdenki_MobileCharger.JPG)|モバイルバッテリー<br>SMP-JV53W<br>05-1196<br>定格容量 DC5V/6300mAh<br>繰り返し充電回数　約５００回<br>※もしくは、下のモバイルバッテリーのいづれか| １個|		
 |![](./../../img/add_mobileBatterry_002.jpg)|モバイルバッテリー　（BI-B3）<br>※新パッケージの場合| １個|
 |![](./../../img/add_mobileBatterry_001.jpg)|モバイルバッテリー　（BI-B3）<br>※旧パッケージの場合| １個|
 |![](./../../img/add_USB_A-B001.jpg)|マイクロUSBケーブル<br><br>※このケーブルでは充電できません。モバイルバッテリー付属の充電ケーブルをお使いください。 |１本|
