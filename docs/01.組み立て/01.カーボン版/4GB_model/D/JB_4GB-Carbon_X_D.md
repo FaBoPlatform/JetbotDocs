@@ -119,10 +119,10 @@ Wi-Fi支持パーツ素材の変更
 |![](./../../img/add_caster_mini001.jpg){: style="height:210px;width:200px"}|2.キャスター固定ネジ袋|1|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_ballcaster_spacer.jpg){: style="height:210px;width:200px"}|ボールキャスタースペーサー<br>材質：アルミ<br>※または、下のスペーサーになります。|1枚|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_D/ballcaster_speacer_lightweight.jpg){: style="height:210px;width:200px"}|ボールキャスタースペーサー軽量タイプ<br>材質：アルミ|1枚|
-|![](./../../img/add_caster_mini003.jpg){: style="height:210px;width:200px"}|カーボン中段|1|
+|![](./../../img/add_caster_mini003.jpg){: style="height:210px;width:200px"}|カーボンMIDDLE|1|
 |![](./../../img/add_driverplus2_001.jpg){: style="height:210px;width:200px"}|プラスドライバー +2×100|１本|
 
-ボールキャスターをカーボン中段に取り付けます。
+ボールキャスターをカーボンMIDDLEに取り付けます。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_prepairBallCaster.jpg)
 
@@ -144,7 +144,7 @@ M3ナットをはめて、ドライバーで４箇所締め付けます。
 
 <hr>
 
-## 5. カーボン下段とカーボン中段の取り付け
+## 5. カーボンBOTTOMとカーボンMIDDLEの取り付け
 
 <hr>
 
@@ -152,7 +152,7 @@ M3ナットをはめて、ドライバーで４箇所締め付けます。
 |:--|:--|:--:|
 |![](./../../img/add_joint_mini001.jpg){: style="height:210px;width:200px"}|4.カーボン固定ネジ(上)|1|
 
-カーボン下段とカーボン中段を連結します。
+カーボンBOTTOMとカーボンMIDDLEを連結します。
 
 ![](./../../img/add_joint001.jpg)
 
@@ -373,11 +373,11 @@ Jetson Nano モジュールを再び装着し、２箇所ネジ止めします�
 |![](./../../img/add_driverplus2_001.jpg){: style="height:210px;width:200px"}|プラスドライバー +2×100|1|
 |![](./../../img/add_nutDriver001.jpg){: style="height:210px;width:200px"}|ナットドライバー 5.5mm|1|
 
-カメラマウントとWi-Fiアンテナ支持金具をカーボン上段に固定します。
+カメラマウントとWi-Fiアンテナ支持金具をカーボンTOPに固定します。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_camera_convine_prepair.jpg)
 
-カーボン上段の裏から４箇所、皿ネジで固定します。
+カーボンTOPの裏から４箇所、皿ネジで固定します。
 
 ![](./../../img/D/WifiBottom.jpg)
 
@@ -390,11 +390,11 @@ Jetson Nano モジュールを再び装着し、２箇所ネジ止めします�
 
 ![](./../../img/D/WifiViewUpprt.jpg)
 
-カーボン上段とカーボン中段を結合します。
+カーボンTOPとカーボンMIDDLEを結合します。
 
 ![](./../../img/Convine_11/Parts.jpg)
 
-カーボン上段とカーボン中段を結合します。M3ナットで四隅を固定します。
+カーボンTOPとカーボンMIDDLEを結合します。M3ナットで四隅を固定します。
 
 ![](./../../img/Convine_11/Chassis_Mount_Middle.jpg)
 
