@@ -292,9 +292,9 @@ Wi-Fi モジュールは、Intel Dual Bandwireless-AC 8265 Desktop Kitを取り�
 
 ![](./../../img/Wifi_9/WifiAntennaConnetctToMoudule.jpg)
 
-取り外したアンテナ端子をWi-Fiアンテナ支持金具に取り付けます。
+取り外したアンテナ端子をWi-Fiアンテナ支持に取り付けます。
 
-Wi-Fiアンテナ支持金具に穴確認し端子を通るようにまわしアンテナ端子を貫通させます。
+Wi-Fiアンテナ支持に穴確認し端子を通るようにまわしアンテナ端子を貫通させます。
 
 ![](./../../img/D/WifiSupportHole.jpg)
 
@@ -306,7 +306,7 @@ Wi-Fiアンテナ支持金具に穴確認し端子を通るようにまわしア
 
 ![](./../../img/D/WifiSupportRotation.jpg)
 
-Wi-Fiアンテナ支持金具の左右に取り付けます。
+Wi-Fiアンテナ支持の左右に取り付けます。
 
 ![](./../../img/D/WifiSupport2.jpg)
 
@@ -373,7 +373,7 @@ Jetson Nano モジュールを再び装着し、２箇所ネジ止めします�
 |![](./../../img/add_driverplus2_001.jpg){: style="height:210px;width:200px"}|プラスドライバー +2×100|1|
 |![](./../../img/add_nutDriver001.jpg){: style="height:210px;width:200px"}|ナットドライバー 5.5mm|1|
 
-カメラマウントとWi-Fiアンテナ支持金具をカーボンTOPに固定します。
+カメラマウントとWi-Fiアンテナ支持をカーボンTOPに固定します。
 
 ![](./../../img/BUILD/Build_JB_4GB_Carbon_C/build_camera_convine_prepair.jpg)
 
