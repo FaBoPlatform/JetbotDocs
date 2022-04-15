@@ -192,6 +192,7 @@ M3ナットをはめて、ドライバーで４箇所締め付けます。
 |写真|部品または工具|個数|
 |:--|:--|:--:|
 |![](./../../img/add_bothSideSeal001.jpg){: style="height:210px;width:200px"}|両面テープ|1|
+|![](./../../img/bom_jetbot_ormdenki_MobileCharger.JPG){: style="height:210px;width:200px"}|モバイルバッテリー（SMP-JV53W付属の場合）|1|
 |![](./../../img/add_battery_mini002.jpg){: style="height:210px;width:200px"}|モバイルバッテリー（旧パッケージの場合）|1|
 |![](./../../img/add_mobileBatterry_002.jpg){: style="height:210px;width:200px"}|モバイルバッテリー（新パッケージの場合）|1|
 
@@ -207,14 +208,14 @@ M3ナットをはめて、ドライバーで４箇所締め付けます。
 
 <hr>
 
-## 8. カーボン上段の取り付け
+## 8. カーボンTOPの取り付け
 
 <hr>
 
 |写真|部品または工具|個数|
 |:--|:--|:--:|
 |![](./../../img/add_jetson_mini001.jpg){: style="height:210px;width:200px"}|6.Jetson固定ネジ袋|1|
-|![](./../../img/add_jetson_mini002.jpg){: style="height:210px;width:200px"}|カーボン上段|1|
+|![](./../../img/bom_carbon_top_2022model.JPG){: style="height:210px;width:200px"}<br>![](./../../img/add_jetson_mini002.jpg){: style="height:210px;width:200px"}|カーボンTOP<br>※上または下のもの。|1|
 |![](./../../img/add_semitudriverset001.jpg){: style="height:210px;width:200px"}|精密ドライバーセット　ED−20|1|
 
 Jetson固定ネジを取り付けます。
@@ -538,13 +539,23 @@ Wi-Fiアンテナを立てます。アンテナを回してねじ込みます。
 ![](./../../img/Complete_20/wifi_Antena_atachi2.jpg)
 
 
-マイクロUSBケーブルは下記のようにコントローラーボードと繋ぎます。
+モバイルバッテリー（SMP-JV53W）の場合は、マイクロUSBケーブルは下記のようにコントローラーボードと繋ぎます。
+
+![](./../../img/Complete_20/assy_jb4gb_cable_con1.JPG)
+
+
+モバイルバッテリー（INIU　BI-B3)の場合は、マイクロUSBケーブルは下記のようにコントローラーボードと繋ぎます。
 
 ![](./../../img/Complete_20/usb_con_motorpower.jpg)
 
-次に、DCプラグケーブルをモバイルバッテリーと刺し、DCプラグ側は、モーターの間を前方にケーブルを通します。
+モバイルバッテリー（SMP-JV53W）の場合は、DCプラグケーブルをモバイルバッテリーに刺し、DCプラグ側は、モーターの間を前方にケーブルを通します。
+
+![](./../../img/Complete_20/assy_jb4gb_cable_con2.JPG)
+
+モバイルバッテリー（INIU　BI-B3)の場合は、DCプラグケーブルをモバイルバッテリーに刺し、DCプラグ側は、モーターの間を前方にケーブルを通します。
 
 ![](./../../img/Complete_20/usb_con_jetsonpower1.jpg)
+
 
 DCプラグがボディの間を通過した様子。
 
@@ -557,7 +568,3 @@ DCプラグをJetson Nano 開発者キットのDCジャックへ接続します�
 おめでとうございます。JetBotの完成です。カメラモジュールのレンズキャップを装着している場合は外します。
 
 ![](./../../img/D/JetBotComplete.jpg)
-
-[SDカードの準備](https://faboplatform.github.io/JetbotDocs/03.Setting%28Nano%29/01.sd/)
-
-[モバイルバッテリーについて](https://faboplatform.github.io/JetbotDocs/03.Setting%28Nano%29/02.battery/)
