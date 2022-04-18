@@ -173,7 +173,7 @@ M3ナットをはめて、ドライバーで４箇所締め付けます。
 
 |写真|部品または工具|個数|
 |:--|:--|:--:|
-|![](./../../img/add_wheel_mini001.jpg){: style="height:210px;width:200px"}|タイヤ|2|
+|![](./../../img/add_wheel_mini001.jpg){: style="height:210px;width:200px"}|タイヤ<br><br>※固定ねじ付き　各1本|2|
 |![](./../../img/add_plasemitu_driver001.jpg){: style="height:210px;width:200px"}|精密ドライバー|1|
 
 タイヤを装着します。
