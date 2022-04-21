@@ -21,7 +21,7 @@ markdown_extensions:
   - pymdownx.keys
   - attr_list
 extra_css:
-  - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"  
+  - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
   - 'stylesheets/extra.css'
   - "https://fonts.googleapis.com/earlyaccess/notosansjp.css"
   - "https://fonts.googleapis.com/css?family=Open+Sans:600,800"
@@ -30,3 +30,163 @@ extra_javascript:
   - 'javascripts/extra.js'
 plugins:
   - macros
+nav:
+  #- JetBot Docs:
+  - 'index.md'
+  #- 00.更新履歴:
+  - '00.更新履歴.md'
+  - 01.組み立て:
+    - 01.カーボン版:
+      - 2GB_model:
+        - '01.組み立て/01.カーボン版/2GB_model/00.bom_bom_early.md'
+        - '01.組み立て/01.カーボン版/2GB_model/01.build_2gb.md'
+      - 4GB_model:
+        - D:
+          - '01.組み立て/01.カーボン版/4GB_model/D/JB_4GB_Carbon_X_D_BOM.md'
+          - '01.組み立て/01.カーボン版/4GB_model/D/JB_4GB-Carbon_X_D.md'
+        - C:
+          - '01.組み立て/01.カーボン版/4GB_model/C/JB_4GB_Carbon_X_C_BOM.md'
+          - '01.組み立て/01.カーボン版/4GB_model/C/JB_4GB-Carbon_X_C.md'
+        - Early,B:
+          - '01.組み立て/01.カーボン版/00.build_nano.md'
+          - '01.組み立て/01.カーボン版/4GB_model/Early,B/JB_4GB-Carbon_X_AB.md'
+      - nx_model:
+          #- '01.組み立て/01.カーボン版/00.build_nano.md'
+          - '01.組み立て/01.カーボン版/nx_model/00.build_nx.md'
+      #- ハードウェア構成:
+      - '01.組み立て/01.カーボン版/04.block.md'
+      #- チェックポイント:
+      - '01.組み立て/01.カーボン版/05.checkpoint.md'
+    - 02.3Dプリンタ版(旧式):
+      #- BOM(Nano):
+      - '01.組み立て/02.3Dプリンタ版(旧式)/00.build_nano.md'
+      #- BOM(NX):
+      - '01.組み立て/02.3Dプリンタ版(旧式)/00.build_nx.md'
+      #- 組み立てマニュアル(その１):
+      - '01.組み立て/02.3Dプリンタ版(旧式)/01.build1.md'
+      #- 組み立てマニュアル(その２):
+      - '01.組み立て/02.3Dプリンタ版(旧式)/02.build2.md'
+      #- 組み立てマニュアル(その３):
+      - '01.組み立て/02.3Dプリンタ版(旧式)/03.build3.md'
+      #- ハードウェア構成:
+      - '01.組み立て/02.3Dプリンタ版(旧式)/04.block.md'
+      #- チェックポイント:
+      - '01.組み立て/02.3Dプリンタ版(旧式)/05.checkpoint.md'
+
+  - 02.ソフトウェア設定:
+    - 01.Jetson Nano:
+      - 01.Jetson Nano:
+        - '02.ソフトウェア設定/01.Jetson Nano/index.md'
+        - 01.設定手順:
+          - '02.ソフトウェア設定/01.Jetson Nano/01.設定手順/index.md'
+          - '02.ソフトウェア設定/01.Jetson Nano/01.設定手順/01.os.md'
+          - 02.Wi-Fi設定:
+            - '02.ソフトウェア設定/01.Jetson Nano/01.設定手順/02.Wi-Fi設定/index.md'
+            - '02.ソフトウェア設定/01.Jetson Nano/01.設定手順/02.Wi-Fi設定/01.network_hdmi_nogui.md'
+            - '02.ソフトウェア設定/01.Jetson Nano/01.設定手順/02.Wi-Fi設定/02.network_hdmi.md'
+            - '02.ソフトウェア設定/01.Jetson Nano/01.設定手順/02.Wi-Fi設定/03.network_lan.md'
+            - '02.ソフトウェア設定/01.Jetson Nano/01.設定手順/02.Wi-Fi設定/04.network_usb.md'
+        - 02.OSアップグレード手順:
+          - '02.ソフトウェア設定/01.Jetson Nano/02.OSアップグレード手順/01.bootrom.md'
+          - '02.ソフトウェア設定/01.Jetson Nano/02.OSアップグレード手順/02.sd.md'
+          - '02.ソフトウェア設定/01.Jetson Nano/02.OSアップグレード手順/03.jetbot.md'
+    - 02.Jetson NX:
+      - '02.ソフトウェア設定/02.Jetson NX/00.sd.md'
+      - '02.ソフトウェア設定/02.Jetson NX/01.docker.md'
+      - '02.ソフトウェア設定/02.Jetson NX/02.i2c.md'
+      - '02.ソフトウェア設定/02.Jetson NX/03.power.md'
+
+  - 03.ハードウェア認識確認:
+    - 01.カメラの認識確認:
+      - '03.ハードウェア認識確認/01.カメラの認識確認.md'
+    - 02.I2Cの認識確認:
+      - '03.ハードウェア認識確認/02.I2Cの認識確認.md'
+
+  - 04.学習の前に:
+    #- 01.対応端末:
+      - '04.学習の前に/01.対応端末.md'
+    #- 02.学習内容:
+      - '04.学習の前に/02.学習内容.md'
+    #- 03.学習のススメ方:
+      - '04.学習の前に/03.学習の進め方.md'
+    #- 04.Jupyterの注意事項:
+      - '04.学習の前に/04.Jupyterのポイント.md'
+  - 05.Basic Motion:
+    - Basic motionの実行:
+      - '05.Basic Motion/01.run.md'
+
+  - 06.Collision Avoidance:
+    #- 1.学習のススメ方:
+    - '06.Collision Avoidance/01.intro.md'
+    #- 2.Datasetの作成:
+    - '06.Collision Avoidance/02.dataset.md'
+    #- 3.JetBotでの学習:
+    - '06.Collision Avoidance/03.train.md'
+    #- 4.TensorRTに変換:
+    - '06.Collision Avoidance/04.convert.md'
+    #- 5.自動走行:
+    - '06.Collision Avoidance/05.run.md'
+    #- 6.AlexNet:
+    - '06.Collision Avoidance/06.train_alexnet.md'
+    #- 7.自動走行(AlexNet):
+    - '06.Collision Avoidance/07.run_alexnet.md'
+
+  - 07.Object Following:
+    #01.JetPack4.6.1
+    - 01.JetPack4.6.1:
+      #1.学習のススメ方
+      - '07.Object Following/01.JetPack4.6.1/01.intro.md'
+      #2.物体検出モデル ssd_mobilenet_v2_fpnlite
+      - '07.Object Following/01.JetPack4.6.1/02.build.md'
+      #3.自動走行
+      - '07.Object Following/01.JetPack4.6.1/03.run.md'
+      #4.ONNXグラフ表示
+      - '07.Object Following/01.JetPack4.6.1/04.graph.md'
+      #5.物体検出モデル ssd_mobilenet_v2
+      - '07.Object Following/01.JetPack4.6.1/05.build2.md'
+      #6.物体検出モデル EfficientDet D0
+      - '07.Object Following/01.JetPack4.6.1/06.build3.md'
+    #02.JetPack4.3
+    - 02.JetPack4.3:
+      #1.学習のススメ方
+      - '07.Object Following/02.JetPack4.3/01.intro.md'
+      #2.自動走行
+      - '07.Object Following/02.JetPack4.3/02.run.md'
+
+  - 08.Road Following:
+    #- 1.学習のススメ方:
+    - '08.Road Following/01.intro.md'
+    #2.データ収集
+    - '08.Road Following/02.dataset.md'
+    #3.学習
+    - '08.Road Following/03.train.md'
+    #4.TensorRTに変換
+    - '08.Road Following/04.convert.md'
+    #5.自動走行
+    - '08.Road Following/05.run.md'
+
+  - 09.トラブルシューティング:
+    #- カメラが認識しない:
+    - '09.トラブルシューティング/02.camera.md'
+    #- OLEDが表示されない:
+    - '09.トラブルシューティング/03.oled.md'
+    #- 動作が重すぎる:
+    - '09.トラブルシューティング/04.process.md'
+
+  - 10.その他:
+    #- 対応カメラ:
+    - '10.その他/03.camera.md'
+    #- 対応Wi-Fi:
+    - '10.その他/05.wifi_hardware.md'
+    #- SSHでJetBotに接続:
+    - '10.その他/06.secure_shell.md'
+    #- Wi-Fiをアクセスポイントに設定する:
+    - '10.その他/06.wifi_ap.md'
+    #- SDカードの作成:
+    - '10.その他/07.sd.md'
+    #- 電力モード:
+    - '10.その他/08.電力モード.md'
+    #- GUIを無効化:
+    - '10.その他/09.GUIを無効化.md'
+    #- Dockerが起動しない:
+    - '10.その他/10.docker.md'
