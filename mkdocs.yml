@@ -50,7 +50,7 @@ nav:
         - Early,B:
           - '01.組み立て/01.カーボン版/00.build_nano.md'
           - '01.組み立て/01.カーボン版/4GB_model/Early,B/JB_4GB-Carbon_X_AB.md'
-      - nx_model:
+      - NX_model:
           #- '01.組み立て/01.カーボン版/00.build_nano.md'
           - '01.組み立て/01.カーボン版/nx_model/00.build_nx.md'
       #- ハードウェア構成:
