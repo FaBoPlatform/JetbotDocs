@@ -37,11 +37,12 @@
 |![](./../../img/bom_jetbot_ormdenki_MobileCharger.JPG)|モバイルバッテリー<br>SMP-JV53W<br>05-1196<br>定格容量 DC5V/6300mAh<br>繰り返し充電回数　約５００回<br>※もしくは、下のモバイルバッテリーのいづれか| １個|		
 |![](./../../img/add_mobileBatterry_002.jpg)|モバイルバッテリー　（BI-B3）<br>※新パッケージの場合| １個|
 |![](./../../img/add_mobileBatterry_001.jpg)|モバイルバッテリー　（BI-B3）<br>※旧パッケージの場合| １個|
-|![](./../../img/add_USB_A-B001.jpg)|マイクロUSBケーブル<br><br>※このケーブルでは充電できません。モバイルバッテリー付属の充電ケーブルをお使いください。 |１本|
-|![](./../../img/add_DC_A_cable001.jpg)|DCプラグ-USBケーブル|１本|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_D/DC-USB_Cable_Rightside.JPG)|DCプラグ-USBケーブル<br>右向き|１本|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_D/DC-USB_Cable_Leftside.JPG)|DCプラグ-USBケーブル<br>左向き<br><br>※2022年8月出荷以降|１本|
+|![](./../../img/add_USB_A-B001.jpg)|マイクロUSBケーブル<br><br>※このケーブルでは充電できません。モバイルバッテリー付属の充電ケーブルをお使いください。 <br><br>2022年7月以前|１本|
 |![](./../../img/add_usb_A_microB_3m001.jpg)|転送用USBケーブル(3m)|１本|
 |![](./../../img/add_sdcard64GB001.jpg)|SD Card(64GB),SDカードケース<br>SunDisk|１個|
-|![](./../../img/add_611Controller125_001.jpg)|JetBot　ControllerBoard<br>（FaBo #611）    |１枚|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_D/Controller010208.JPG)<br>![](./../../img/add_611Controller125_001.jpg)|JetBot　ControllerBoard.JPG<br>（FaBo #611）<br>上または下のの基板　<br>Rev1.2.8(上)<br>Rev1.2.5(下)    |１枚|
 |![](./../../img/add_CPUFAN001.jpg)|CPU Fan|１個|
 |![](./../../img/add_CPUFAN_kotejigu001.jpg)|FAN取り付け用アクリル|１個|
 |![](./../../img/add_(1)motor_kotei_lower001.jpg)|１．モーター固定部品<br><br>モーター固定金具 ・・・・2<br>皿ネジ M3×10・・・・4<br>ナット M3・・・・4<br>なべねじM3×30・・・・4|１袋|

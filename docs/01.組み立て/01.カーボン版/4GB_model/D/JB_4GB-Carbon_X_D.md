@@ -16,6 +16,8 @@
 
 Wi-Fi支持パーツ素材の変更
 
+2022年8月以降からは、コントローラ基板をUSBマイクロコネクタからDCジャックへの変更。
+
 <hr>
 
 ## 1. ギヤモーターの取り付け
@@ -527,13 +529,17 @@ Wi-Fiアンテナのケーブルを結束バンドを使用してケーブルを
 
 |写真|部品または工具|個数|
 |:--|:--|:--:|
-|![](./../../img/add_USB_A-B001.jpg){: style="height:210px;width:200px"}|マイクロUSBケーブル | 1|
-|![](./../../img/add_DC_A_cable001.jpg){: style="height:210px;width:200px"}|DCプラグ-USBケーブル|1|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_D/DC-USB_Cable_Rightside.JPG){: style="height:210px;width:200px"}|DCプラグ-USBケーブル<br>右向き|1|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_D/DC-USB_Cable_Leftside.JPG){: style="height:210px;width:200px"}|DCプラグ-USBケーブル<br>左向き<br><br>※2022年8月出荷以降|1|
+|![](./../../img/add_USB_A-B001.jpg){: style="height:210px;width:200px"}|マイクロUSBケーブル <br><br>※2022年7月出荷以前| 1|
 |![](./../../img/add_wifi_module_intel001.jpg){: style="height:210px;width:200px"}|Intel Dual Bandwireless-AC 8265 Desktop Kit|1|
 
+いよいよ完成です。電源接続します。モバイルバッテリーからJetson NanoのDCジャックとコントローラー基板に接続します。
 
-いよいよ完成です。電源接続します。モバイルバッテリーからJetson NanoのDCジャックとマイクロUSBに接続します。
+2022年8月以降出荷
+![](./../../img/D/2022Summer/DSC06539.JPG)
 
+2022年７月以前出荷
 ![](./../../img/Complete_20/usb_con_parts.jpg)
 
 Wi-Fiアンテナを立てます。アンテナを回してねじ込みます。
@@ -544,6 +550,33 @@ Wi-Fiアンテナを立てます。アンテナを回してねじ込みます。
 
 ![](./../../img/Complete_20/wifi_Antena_atachi2.jpg)
 
+
+## 2022年8月出荷以降の場合（JetBot コントローラ基板　Rev１.２.８）
+
+USBケーブルの左向きをモバイルバッテリー左側に刺します。USBケーブルのDCプラグ側を本体下段にケーブルを通します。
+
+![](./../../img/D/2022Summer/DSC06529.JPG)
+
+DCプラグを通した様子。
+
+![](./../../img/D/2022Summer/DSC06530.JPG)
+
+DCプラグをJetson NanoのDCジャックへ接続します。(Jetson Nanoに給電が始まります。)
+
+![](./../../img/D/2022Summer/DSC06531.JPG)
+
+次にモバイルバッテリー左側にUSBケーブル右向きを刺します。
+
+![](./../../img/D/2022Summer/DSC06532.JPG)
+
+以下の写真のように、ボールキャスターに巻きつけコントローラー基板のDCジャックに繋ぎます。（モータードライバーに給電が始まります。）
+
+![](./../../img/D/2022Summer/DSC06537.JPG)
+
+※給電が始まらない時は、モバイルバッテリーの側面にありますボタンを押してください。
+
+
+## 2022年７月出荷以前の場合
 
 モバイルバッテリー（SMP-JV53W）の場合は、マイクロUSBケーブルは下記のようにコントローラーボードと繋ぎます。
 
@@ -570,6 +603,8 @@ DCプラグがボディの間を通過した様子。
 DCプラグをJetson Nano 開発者キットのDCジャックへ接続します。Jetson Nanoの電源が入ります。
 
 ![](./../../img/Complete_20/usb_jetsonpower3.jpg)
+
+## 組立て完了
 
 おめでとうございます。JetBotの完成です。カメラモジュールのレンズキャップを装着している場合は外します。
 
