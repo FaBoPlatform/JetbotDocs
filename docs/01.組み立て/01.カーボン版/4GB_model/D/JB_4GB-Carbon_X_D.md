@@ -18,6 +18,8 @@ Wi-Fi支持パーツ素材の変更
 
 2022年8月以降出荷より、コントローラ基板をUSBマイクロコネクタからDCジャックへの変更。
 
+2023年10月以降出荷より、パーツ入手困難のため、Wi-Fiモジュールの変更をしました。（Intel８２６５からIntelAX200へ変更　ドライバーインストール済み）
+
 <hr>
 
 ## 1. ギヤモーターの取り付け
@@ -241,7 +243,7 @@ Jetson固定ネジを取り付けます。
 |写真|部品または工具|個数|
 |:--|:--|:--:|
 |![](./../../img/add_JetsonNanoB01ORA02_001.jpg){: style="height:210px;width:200px"}|Jetson Nano 開発者キット B01,A02|1|
-|![](./../../img/add_wifi_module_intel001.jpg){: style="height:210px;width:200px"}|Intel Dual Bandwireless-AC 8265 Desktop Kit|1|
+|![](./../../img/AX200DesktopKit.jpeg){: style="height:210px;width:200px"}<br>![](./../../img/add_wifi_module_intel001.jpg){: style="height:210px;width:200px"}|Intel　AX200.NGWG.DTK<br>または、<br>Intel Dual Bandwireless-AC 8265 Desktop Kit|1|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_common_cameramount.jpg){: style="height:210px;width:200px"}|カメラマウント|１|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_D/JetBot_wifi_Support.jpg){: style="height:210px;width:200px"}|Wi-Fiアンテナ支持|1|
 |![](./../../img/add_spana001.jpg){: style="height:210px;width:200px"}|スパナ|1|
@@ -278,12 +280,26 @@ Wi-Fi モジュールを取り付けるために、真ん中のネジを外し�
 
 ※ネジの山カケには注意しましょう。
 
-Wi-Fi モジュールは、Intel Dual Bandwireless-AC 8265 Desktop Kitを取り付けます。
+Wi-Fi モジュールは、Intel　AX200.NGWG.DTK　または、　Intel Dual Bandwireless-AC 8265 Desktop Kitを取り付けます。
 
 ![](./../../img/Wifi_9/WifiModuleSet.jpg)
 
+!!!Info "技適"
+
+	Intel　AX200.NGWG.DTK
+
+	箱の横に技適番号が記載されています。
+	![](./../../img/telecAX200.JPG)
+
+	|項目|認証番号|
+	|:--|:--|
+	|R|003‐190022|
+	|T|D190021003|
 
 !!!Info "技適"
+
+	Intel Dual Bandwireless-AC 8265 Desktop Kit
+
 	箱の横に技適番号が記載されています。
 	![](./../../img/telec.jpg)
 

@@ -22,14 +22,14 @@
 |写真|部品|個数|
 |:--|:--|:--|
 |![](./../../img/add_JetsonNanoB01ORA02_001.jpg)|Jetson Nano 開発者キット B01<br>(JetBot Kit ４GBモデルに付属)<br>※ベアボーンキットには付属しません。|１枚|
-|![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_camera.jpg)|CAM026 IMX219-160°|１個|
+|![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_camera.jpg)|CAM026 IMX219-160°<br><br>※ピントがずれている場合は、フォーカス調整願います。|１個|
 |![](./../../img/bom_carbon_top_2022model.JPG)<br>![](./../../img/add_carbon_body_top001.jpg)|カーボン TOP<br>※上または、下になります。|１枚|
 |![](./../../img/add_carbon_body_middle001.jpg)|カーボン MIDDLE|１枚|    
 |![](./../../img/add_carbon_body_bottom001.jpg)|カーボン BOTTOM|１枚|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_ballcaster_spacer.jpg)|ボールキャスタースペーサー<br>材質：アルミ<br>※もしくは下のスペーサーになります。<br>※製造時期により異なります。|１枚|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_D/ballcaster_speacer_lightweight.jpg)|ボールキャスタースペーサー軽量<br>材質：アルミ<br>※製造時期により異なります。|１枚|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_D/JetBot_wifi_Support.jpg)|Wi-Fiアンテナ支持|１個|
-|![](./../../img/add_wifi_module_intel001.jpg)|Intel Dual Bandwireless-AC 8265 Desktop Kit|１個|
+|![](./../../img/AX200DesktopKit.jpeg)<br>![](./../../img/add_wifi_module_intel001.jpg)|Intel　AX200.NGWG.DTK<br>※2023年10月出荷分より<br><br>もしくは、<br><br>Intel Dual Bandwireless-AC 8265 Desktop Kit<br>|１個|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_common_cameramount.jpg)|カメラマウント|１個|
 |![](./../../img/add_GEARmoter_001.jpg)|Jetbot GearMotor　|２個|    
 |![](./../../img/add_tire_001.jpg)|Jetbot タイヤ,タイヤ取り付けネジ　|２袋|
@@ -41,7 +41,7 @@
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_D/DC-USB_Cable_Leftside.JPG)|DCプラグ-USBケーブル<br>左向き<br><br>※2022年8月出荷以降|１本|
 |![](./../../img/add_USB_A-B001.jpg)|マイクロUSBケーブル<br><br>※このケーブルでは充電できません。モバイルバッテリー付属の充電ケーブルをお使いください。 <br><br>2022年7月以前|１本|
 |![](./../../img/add_usb_A_microB_3m001.jpg)|転送用USBケーブル(3m)|１本|
-|![](./../../img/add_sdcard64GB001.jpg)|SD Card(64GB),SDカードケース<br>SunDisk|１個|
+|![](./../../img/add_sdcard64GB001.jpg)|SD Card(64GB),SDカードケース<br>SunDisk<br>※２０２３年10月出荷分よりAX200ドライバインストール済み（Wi-Fiモジュール）|１個|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_D/Controller010208.JPG)<br>![](./../../img/add_611Controller125_001.jpg)|JetBot　ControllerBoard.JPG<br>（FaBo #611）<br>上または下の基板　<br>Rev1.2.8(上)<br>Rev1.2.5(下)    |１枚|
 |![](./../../img/add_CPUFAN001.jpg)|CPU Fan|１個|
 |![](./../../img/add_CPUFAN_kotejigu001.jpg)|FAN取り付け用アクリル|１個|
