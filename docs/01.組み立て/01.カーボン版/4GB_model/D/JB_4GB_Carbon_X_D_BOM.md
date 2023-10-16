@@ -43,16 +43,16 @@
 |![](./../../img/add_usb_A_microB_3m001.jpg)|転送用USBケーブル(3m)|１本|
 |![](./../../img/add_sdcard64GB001.jpg)|SD Card(64GB),SDカードケース<br>SunDisk<br>※２０２３年10月出荷分よりAX200ドライバインストール済み（Wi-Fiモジュール）|１個|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_D/Controller010208.JPG)<br>![](./../../img/add_611Controller125_001.jpg)|JetBot　ControllerBoard.JPG<br>（FaBo #611）<br>上または下の基板　<br>Rev1.2.8(上)<br>Rev1.2.5(下)    |１枚|
-|![](./../../img/add_CPUFAN001.jpg)|CPU Fan|１個|
-|![](./../../img/add_CPUFAN_kotejigu001.jpg)|FAN取り付け用アクリル|１個|
+|![](./../../img/FANPWM4020.jpeg)<br>![](./../../img/add_CPUFAN001.jpg)|PWM調整DCファン　FAN-4020-PWM-5V、ねじパック<br>※2023年10月出荷分より<br><br>または、<br><br>DCファン FD401B1H-AP00 DC5V,0.16A|１個|
+|![](./../../img/add_CPUFAN_kotejigu001.jpg)|FAN取り付け用アクリル<br>※PWM調整DCファンの場合は、付属しません。|１個|
 |![](./../../img/add_(1)motor_kotei_lower001.jpg)|１．モーター固定部品<br><br>モーター固定金具 ・・・・2<br>皿ネジ M3×10・・・・4<br>ナット M3・・・・4<br>なべねじM3×30・・・・4|１袋|
 |![](./../../img/add_(2)_caster_kotei001.jpg)|２．キャスター固定部品<br><br>皿ネジM3×15・・・・4<br>ナットM3・・・・4|１袋|
 |![](./../../img/add(3)_carbon_kotei001.jpg)<br>![](./../../img/BOM/BOM_JB_4GB_Carbon_D/additionalparts/carbonrenketusita3.jpg)|３．カーボン連結（下）部品<br><br>六角スペーサーM3×24・・・・4<br>皿ネジM3×5・・・・4<br>※写真は、上または下のいずれかになります。|１袋|
 |![](./../../img/add_(4)carbon_kotei_upper001.jpg)<br>![](./../../img/BOM/BOM_JB_4GB_Carbon_D/additionalparts/carbonrenketuue4.jpg)|４．カーボン連結（上）部品<br><br>六角スペーサーM3×20（白）・・・・4<br>ナットM3・・・・4<br>※写真は、上または下のいずれかになります。|１袋|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_D/additionalparts/kamerakotei5.jpg)|５．カメラ固定部品<br><br>六角穴付きボルトセルフタッピングねじ M2.0×5・・・・4<br>皿ねじ M3.0 × 15・・・・4<br>ナット M3.0・・・4<br><br>または、<br>六角穴付きボルトセルフタッピングねじ M2.0×5・・・・4<br>皿ねじ M3.0 × 12・・・・4<br>ナット M3.0・・・4<br>|１袋|
 |![](./../../img/add_(6)jetson_kotei001.jpg)<br>![](./../../img/BOM/BOM_JB_4GB_Carbon_D/additionalparts/jetsonkotei6.jpg)|６．Jetson固定部品<br><br>六角スペーサー（両メネジ白10ミリ）・・・・4<br>皿ネジM2.6×5・・・・4<br>なべねじM2.6×5・・・・4<br><br>または、<br><br>六角スペーサー（両メネジ黒10ミリ）・・・・4<br>皿ネジM2.6×5・・・・4<br>なべねじM2.6×5・・・・4<br><br>※写真は、上または下のいずれかになります。|１袋|
-|![](./../../img/add_CPUFAN_koteineji001.jpg)|ファンねじ<br><br>M2.5×14・・・・4<br>ナットM2.5・・・・5(ヨビ１)|１袋|
-|![](./../../img/add_pentageolench1point5_001.jpg)|六角レンチ 1.5|１本|
+|![](./../../img/add_CPUFAN_koteineji001.jpg)|ファンねじ<br><br>M2.5×14・・・・4<br>ナットM2.5・・・・5(ヨビ１)<br><br>※PWM調整DCファンの場合は、付属しません。|１袋|
+|![](./../../img/add_pentageolench1point5_001.jpg)|六角レンチ 1.5<br><br>※PWM調整DCファンの場合は、付属しません。|１本|
 |![](./../../img/add_bothSideSeal001.jpg)|両面テープ|２枚|
 |![](./../../img/add_driverplus2_001.jpg)|プラスドライバー +2×100|１本|
 |![](./../../img/add_plasemitu_driver001.jpg)|精密ドライバー　P柄|１本|
