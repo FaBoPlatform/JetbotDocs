@@ -508,6 +508,26 @@
     14. CPUファンの取り付け
   </a>
   
+    <nav class="md-nav" aria-label="14. CPUファンの取り付け">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dc-fan-4020-pwm-5v" class="md-nav__link">
+    DCファン（回転速度制御あり　FAN-4020-PWM-5V）付属の場合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dc-fd401b1h-ap00" class="md-nav__link">
+    DCファン（回転速度制御なし　FD401B1H-AP00）　付属の場合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2463,6 +2483,26 @@
     14. CPUファンの取り付け
   </a>
   
+    <nav class="md-nav" aria-label="14. CPUファンの取り付け">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dc-fan-4020-pwm-5v" class="md-nav__link">
+    DCファン（回転速度制御あり　FAN-4020-PWM-5V）付属の場合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dc-fd401b1h-ap00" class="md-nav__link">
+    DCファン（回転速度制御なし　FD401B1H-AP00）　付属の場合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2560,6 +2600,7 @@
 <p>Wi-Fi支持パーツ素材の変更</p>
 <p>2022年8月以降出荷より、コントローラ基板をUSBマイクロコネクタからDCジャックへの変更。</p>
 <p>2023年10月以降出荷より、パーツ入手困難のため、Wi-Fiモジュールの変更をしました。（Intel８２６５からIntelAX200へ変更　ドライバーインストール済み）</p>
+<p>2023年10月以降出荷より、回転速度が調節できるPWMのDCファンに変更いたしました。</p>
 <hr>
 
 <h2 id="1">1. ギヤモーターの取り付け</h2>
@@ -3103,11 +3144,51 @@
 <p>スクリューねじでJetson Nanoを４箇所のネジで固定します。</p>
 <p><img alt="" src="../../../img/JetsonNano_Conb_12/JetsonNano_upon_screw.jpg" /></p>
 <h2 id="13">13. カメラケーブルの取り付け</h2>
+<div class="admonition info">
+<p class="admonition-title">カメラのコネクタ</p>
+<p>Jetson Nano 開発者キット B-01は、カメラのコネクタ（CSI)は２つあります（CAM0、CAM1）どちらかに接続します。
+※ご注意　写真は、Jetson Nano 開発者キット　2GBです。</p>
+</div>
 <p><img alt="" src="../../../img/camera_cable001.jpg" /></p>
 <p><img alt="" src="../../../img/camera_cable002.jpg" /></p>
 <p><img alt="" src="../../../img/camera_cable003.jpg" /></p>
 <p><img alt="" src="../../../img/camera_cable004.jpg" /></p>
 <h2 id="14-cpu">14. CPUファンの取り付け</h2>
+<h3 id="dc-fan-4020-pwm-5v">DCファン（回転速度制御あり　FAN-4020-PWM-5V）付属の場合</h3>
+<table>
+<thead>
+<tr>
+<th align="left">写真</th>
+<th align="left">部品または工具</th>
+<th align="center">個数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img alt="" src="../../../img/FANPWM4020.jpeg" style="height:210px;width:200px" /></td>
+<td align="left">PWM調整DCファン　FAN-4020-PWM-5V、ねじパック</td>
+<td align="center">1セット</td>
+</tr>
+</tbody>
+</table>
+<p>PWM調整DCファンを用意します。</p>
+<p><img alt="" src="../../../img/BUILD/JR_FAN.jpeg" /></p>
+<p>ビスセットは５本のねじが入っており、１本は予備となります。</p>
+<p><img alt="" src="../../../img/BUILD/JR_FAN_prepaire.jpeg" /></p>
+<p>ファンをヒートシンクに載せます。</p>
+<p><img alt="" src="../../../img/BUILD/JR_FAN_SET.jpeg" /></p>
+<p>ケーブルをファーンとヒートシンクに挟まないようケーブルの位置を調整します。</p>
+<p><img alt="" src="../../../img/BUILD/JR_FAN_UPON.jpeg" /></p>
+<p>ドライバーにてビスを４箇所締め付けます。</p>
+<p><img alt="" src="../../../img/BUILD/JR_FAN_SCREW.jpeg" /></p>
+<p>ファンのコネクタをJetsonNanoのコネクタに接続します。</p>
+<p><img alt="" src="../../../img/BUILD/JR_FAN_InsertCon.jpeg" /></p>
+<div class="admonition info">
+<p class="admonition-title">回転速度方法</p>
+<p>回転速度調整ができます。状況に合わせて回転速度を調整していただくか、設定により回転速度調整できます。</p>
+</div>
+<h3 id="dc-fd401b1h-ap00">DCファン（回転速度制御なし　FD401B1H-AP00）　付属の場合</h3>
+<p>※PWM調整DCファンを取り付けた方はスキップしてください。</p>
 <table>
 <thead>
 <tr>
@@ -3272,6 +3353,10 @@
 <p>左右にWi-Fiアンテナを２つ立てます。</p>
 <p><img alt="" src="../../../img/Complete_20/wifi_Antena_atachi2.jpg" /></p>
 <h2 id="20228jetbot-rev128">2022年8月出荷以降の場合（JetBot コントローラ基板　Rev１.２.８）</h2>
+<div class="admonition info">
+<p class="admonition-title">コントロールボード</p>
+<p>コントロールボード　Rev1.2.8の場合は、モーターの電源がDCジャック入力タイプになります。</p>
+</div>
 <p>USBケーブル左向きをモバイルバッテリー左側に刺します。USBケーブルのDCプラグ側を本体下段にケーブルを通します。</p>
 <p><img alt="" src="../../../img/D/2022Summer/DSC06529.JPG" /></p>
 <p>DCプラグを通した様子。</p>
@@ -3284,6 +3369,10 @@
 <p><img alt="" src="../../../img/D/2022Summer/DSC06537.JPG" /></p>
 <p>※給電が始まらない時は、モバイルバッテリーの側面にありますボタンを押してください。</p>
 <h2 id="20227">2022年７月出荷以前の場合</h2>
+<div class="admonition info">
+<p class="admonition-title">コントロールボード</p>
+<p>モーターの電源入力は、マイクロUSB入力タイプになります。</p>
+</div>
 <p>モバイルバッテリー（SMP-JV53W）の場合は、マイクロUSBケーブルは下記のようにコントローラーボードと繋ぎます。</p>
 <p><img alt="" src="../../../img/Complete_20/assy_jb4gb_cable_con1.JPG" /></p>
 <p>モバイルバッテリー（INIU　BI-B3)の場合は、マイクロUSBケーブルは下記のようにコントローラーボードと繋ぎます。</p>
