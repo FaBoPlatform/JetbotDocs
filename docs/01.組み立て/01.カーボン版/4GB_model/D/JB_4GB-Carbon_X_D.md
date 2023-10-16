@@ -494,6 +494,8 @@ PWM調整DCファンを用意します。
 
 !!!Info "回転速度方法"
 	回転速度調整ができます。状況に合わせて回転速度を調整していただくか、設定により回転速度調整できます。
+	制御方法に関してましてこちらをご覧ください。
+	[CPU FAN制御方法](https://faboplatform.github.io/JetbotDocs/10.%E3%81%9D%E3%81%AE%E4%BB%96/11.funcontrol/)
 
 
 
