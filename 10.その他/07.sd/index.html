@@ -2266,7 +2266,32 @@
 <h2 id="sd_1">SDカードイメージダウンロード</h2>
 <p>FaBoで作成しているSDカードイメージはこちらからダウンロードできます。<br />
 32GBのSDカードはSWAPの処理効率に問題が生じるため、SDカードは64GBを使ってください。</p>
-<p>最新SDカードイメージ</p>
+<p>最新SDカードイメージ(2023/04/04)</p>
+<table>
+<thead>
+<tr>
+<th align="left">対象Jetson</th>
+<th align="left">JetPack</th>
+<th align="left">特徴</th>
+<th align="left">リンク先</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">JetBot<br>2GBモデル</td>
+<td align="left">JetPack 4.6.1</td>
+<td align="left">Wi-Fiモジュールドライバーの追加</td>
+<td align="left"><a href="https://drive.google.com/file/d/1I6WWpOtn7vxTzfvzzgqnS2cP6u8IFZMP/view?usp=sharing">jetbot-nano-2gb-jp461-2023-10-18.zip</a></td>
+</tr>
+<tr>
+<td align="left">JetBot<br>4GBモデル</td>
+<td align="left">JetPack 4.6.1</td>
+<td align="left">Wi-Fiモジュールドライバーの追加</td>
+<td align="left"><a href="https://drive.google.com/file/d/1GSHxNA8qqoKDpCUKwn_NB535Nf5HpDMf/view?usp=sharing">jetbot-nano-4gb-jp461-2023-10-18.zip</a></td>
+</tr>
+</tbody>
+</table>
+<p>SDカードイメージ（2022/04/04）</p>
 <table>
 <thead>
 <tr>
@@ -2301,6 +2326,10 @@
 <p><img alt="" src="../img/sd004.png" /></p>
 <p>フラッシュボタンを押します。</p>
 <p><img alt="" src="../img/sd005.png" /></p>
+<div class="admonition caution">
+<p class="admonition-title">初回起動</p>
+<p>本ペーシからダウンロードしたイメージを使って初回起動した場合、起動直後、自動にてパーティションの拡張を行います。そのため、Jupyterlabが立ち上がらない場合がございます。パーティションが拡張後、再起動をお願いたします。</p>
+</div>
 
 
 
