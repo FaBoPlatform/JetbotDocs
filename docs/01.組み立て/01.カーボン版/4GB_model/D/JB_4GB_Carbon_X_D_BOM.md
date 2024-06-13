@@ -31,7 +31,7 @@
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_D/JetBot_wifi_Support.jpg)|Wi-Fiアンテナ支持|１個|
 |![](./../../img/AX200DesktopKit.jpeg)<br>![](./../../img/add_wifi_module_intel001.jpg)|Intel　AX200.NGWG.DTK<br>※2023年10月出荷分より<br><br>もしくは、<br><br>Intel Dual Bandwireless-AC 8265 Desktop Kit<br>|１個|
 |![](./../../img/BOM/BOM_JB_4GB_Carbon_C/bom_common_cameramount.jpg)|カメラマウント|１個|
-|![](./../../img/add_GEARmoter_001.jpg)|Jetbot GearMotor　|２個|    
+|![](./../../img/add_GEARmoter_001.jpg)|Jetbot GearMotor<br><br>2024年6月分出荷より接続ピンがありません。カットされております。　|２個|    
 |![](./../../img/add_tire_001.jpg)|Jetbot タイヤ,タイヤ取り付けネジ　|２袋|
 |![](./../../img/add_ballcaster001.jpg)|ボールキャスター　（70144）| １箱|
 |![](./../../img/bom_jetbot_ormdenki_MobileCharger.JPG)|モバイルバッテリー<br>SMP-JV53W<br>05-1196<br>定格容量 DC5V/6300mAh<br>繰り返し充電回数　約５００回<br>※もしくは、下のモバイルバッテリーのいづれか| １個|		
